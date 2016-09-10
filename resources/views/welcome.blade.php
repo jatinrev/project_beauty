@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{ asset('/assets/custom.css') }}">
 
         <!-- Styles -->
         <style>
@@ -74,6 +75,7 @@
             @endif
 
             <div class="content">
+                {{ asset('/assets') }}
                 <div class="title m-b-md">
                     Laravel
                 </div>
