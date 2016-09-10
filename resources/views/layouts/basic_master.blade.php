@@ -37,7 +37,10 @@
                     @if (Auth::guest())
                         <button class="pink_btn login_btn" onclick='window.location.href="{{ url('/login') }}"'>login</button>
                     @else
-                        {{ Auth::user()->name }}
+                        <button class="pink_btn login_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     @endif
                 </div>
                 
