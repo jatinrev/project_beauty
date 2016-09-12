@@ -8,8 +8,8 @@ a{ text-decoration:none}
 
 @font-face {
     font-family: 'ralewayregular';
-    src: url('../fonts/raleway-regular.woff2') format('woff2'),
-         url('../fonts/raleway-regular.woff') format('woff');
+    src: url('fonts/raleway-regular.woff2') format('woff2'),
+         url('fonts/raleway-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -58,7 +58,8 @@ h2, h3{ line-height:40px;}
 
 .border_right_z{ border-right:0}
 
-.main_all_sections_heading{ text-transform: uppercase; color: #6d243f; background-image:url(../images/red-heading-line.png); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+.main_all_sections_heading{ text-transform: uppercase; color: #6d243f; 
+	background-image:url("assets/images/red-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
 
 .hd_bg{background-color:#952650; color: #fff; font-family: ralewayregular; }
 .body_bg{background-color: #ebebeb; color: #000; font-family: ralewayregular;}
@@ -133,10 +134,10 @@ h2, h3{ line-height:40px;}
 #test_cont{ float:left; padding-top:4%; padding-bottom:4%}
 
 /* products css */
-#prd_outr{ float:left; width:100%; background-image:url(../images/prd-area-bg.jpg); background-repeat:no-repeat; background-size:100% auto}
+#prd_outr{ float:left; width:100%; background-image:url("assets/images/prd-area-bg.jpg"); background-repeat:no-repeat; background-size:100% auto}
 #prd_inr{ float:none; margin:2% auto; max-width:900px; width:100%; background-color:rgba(0,0,0,0.8); padding:1% 2%}
 #prd_cont{ float:left; background-color:rgba(0,0,0,0.5); padding:2%}
-#prd_cont h3{background-image:url(../images/white-heading-line.png); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+#prd_cont h3{background-image:url("assets/images/white-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
 .products ul{ padding:0; margin:0}
 .products ul li{ display:inline; list-style:none; padding:2%; position:relative;}
 .products ul li a{ display:block; background-color:#fff; position:relative; height:200px; padding:15px; text-decoration:none}
@@ -188,7 +189,8 @@ h2, h3{ line-height:40px;}
 	margin: 0 3px 6px 3px; border-radius: 2px;}
 .profile_info .table td{ border: 0}
 .profile_info .table{ border-spacing: 3px; border-collapse: separate;   border-bottom: 4px solid #952650;}
-.profile_info .table-responsive{background-image: url("../images/profile-shadow.png");  padding-left: 29px;
+.profile_info .table-responsive
+{background-image: url("images/profile-shadow.png");  padding-left: 29px;
 background-repeat: no-repeat; overflow-x: 0 auto;}
 
 
@@ -201,8 +203,9 @@ background-repeat: no-repeat; overflow-x: 0 auto;}
 .panel{box-shadow: 0 0 0 rgba(0,0,0,0); margin-top: 0; margin-bottom: 0;}
 .panel-title{font-size: 24px;}
 .panel-title h3{font-weight: bold; color: #333;}
-.panel-collapse{background-color: #f8f8f8; color: #333;}
-.panel-collapse p{font-size: 16px; top: 10px; padding-bottom: 10px;}
+.panel-collapse{background-color: #f8f8f8; color: #333; padding-bottom: 18px;}
+.panel-collapse a{font-size: 14px; top: 10px; padding-bottom: 10px; color: #333;}
+.panel-collapse p{padding-bottom: 10px; top: 10px;}
 .panel-collapse .price{color: #952650;}
 .panel-heading{padding: 16px 0 28px;}
 #prf_detail{background-color: #f8f8f8; left: -17px; border-bottom: 5px solid #952650;}
