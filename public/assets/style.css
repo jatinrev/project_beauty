@@ -8,8 +8,8 @@ a{ text-decoration:none}
 
 @font-face {
     font-family: 'ralewayregular';
-    src: url('fonts/raleway-regular.woff2') format('woff2'),
-         url('fonts/raleway-regular.woff') format('woff');
+    src: url('../fonts/raleway-regular.woff2') format('woff2'),
+         url('../fonts/raleway-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -38,16 +38,30 @@ h2, h3{ line-height:40px;}
 .padd_left_right_all_zero{ padding-left: 0; padding-right: 0;}
 .padd_top_30px{ padding-top:30px;}
 .padd_top_25px{ padding-top:25px;}
+#padd_top_10{padding-top: 10px;}
+#padd_botm_8{padding-bottom: 8px;}
+.padd_top_botm_5px{padding-top: 5px; padding-bottom: 5px;}
+.padd_top_botm_10px{padding-top: 10px; padding-bottom: 10px;}
+.padd_top_botm_20px{padding-top: 20px; padding-bottom: 20px;}
+.padd_botm_30px{padding-bottom: 30px;}
 
 .margin_top_z{ margin-top:0}
+.margin_top_10px{margin-top: 10px;}
 .margin_top_20px{ margin-top:20px;}
 .margin_top_25px{ margin-top:25px;}
 .margin_top_50px{ margin-top:50px;}
+.margin_top_65px{margin-top: 65px;}
 .margin_top_100px{ margin-top:100px;}
+
+.margin_botm_z{margin-bottom: 0}
+.margin_botm_65px{margin-bottom: 65px}
 
 .border_right_z{ border-right:0}
 
-.main_all_sections_heading{ text-transform: uppercase; color: #6d243f; background-image:url(images/red-heading-line.png); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+.main_all_sections_heading{ text-transform: uppercase; color: #6d243f; background-image:url(../images/red-heading-line.png); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+
+.hd_bg{background-color:#952650; color: #fff; font-family: ralewayregular; }
+.body_bg{background-color: #ebebeb; color: #000; font-family: ralewayregular;}
 
 /* header css */
 #header_outr{ float:left; width:100%; position:absolute}
@@ -119,10 +133,10 @@ h2, h3{ line-height:40px;}
 #test_cont{ float:left; padding-top:4%; padding-bottom:4%}
 
 /* products css */
-#prd_outr{ float:left; width:100%; background-image:url(images/prd-area-bg.jpg); background-repeat:no-repeat; background-size:100% auto}
+#prd_outr{ float:left; width:100%; background-image:url(../images/prd-area-bg.jpg); background-repeat:no-repeat; background-size:100% auto}
 #prd_inr{ float:none; margin:2% auto; max-width:900px; width:100%; background-color:rgba(0,0,0,0.8); padding:1% 2%}
 #prd_cont{ float:left; background-color:rgba(0,0,0,0.5); padding:2%}
-#prd_cont h3{background-image:url(images/white-heading-line.png); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+#prd_cont h3{background-image:url(../images/white-heading-line.png); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
 .products ul{ padding:0; margin:0}
 .products ul li{ display:inline; list-style:none; padding:2%; position:relative;}
 .products ul li a{ display:block; background-color:#fff; position:relative; height:200px; padding:15px; text-decoration:none}
@@ -148,6 +162,57 @@ h2, h3{ line-height:40px;}
 .social_links a:hover{ opacity:0.7}
 .social_links a:last-child{ border:0}
 .copy_right{ background-color:#6d243f; padding-top:2%; padding-bottom:2%; float:left; width:100%} 
+
+
+/* profile page css */
+
+	/*profile header css*/
+#inr_pages_header{background-color:#952650 ; width:100%}
+
+	/*profile information secton css*/
+#profile_outr{float: left; width: 100%; background-color: #ffffff;}
+#profile_inr{float: none; margin: 0 auto; max-width: 1100px; width: 100%;}
+#profile_cont{float: left;}
+.profile_img{background-color: #ffffff; float: left;}
+.profile_img h2{color: #000; font-family: ralewayregular;}
+.profile_img .girl_prf{border: 10px solid #ebebeb; border-radius: 50%; height: 252px; width: 244px; position: relative; }
+.prf_rating img{position: relative; top: 11%;}
+.prf_icons img{position: relative;}
+
+.profile_info{background-color: #ffffff;}
+.prf_heading{ font-weight: normal; font-size: 20px;}
+.prf_desc{font-size: 20px;}
+.prf_link{color: #952650; font-size: 14px; }
+.prf_about{font-size: 14px;}
+.expert{background-color: #ffffff; color: #952650; display: inline-block; font-size: 13px; padding: 3px 9px;
+	margin: 0 3px 6px 3px; border-radius: 2px;}
+.profile_info .table td{ border: 0}
+.profile_info .table{ border-spacing: 3px; border-collapse: separate;   border-bottom: 4px solid #952650;}
+.profile_info .table-responsive{background-image: url("../images/profile-shadow.png");  padding-left: 29px;
+background-repeat: no-repeat; overflow-x: 0 auto;}
+
+
+		/*Profile Service Section css*/
+#prf_service_outr{float: left; width: 100%; background-color: #ffffff;}
+#prf_service_inr{float: none; margin: 0 auto; max-width: 1100px; width: 100%;}
+#prf_cont{width: 100%;}
+.panel-default > .panel-heading{ background-color: #ffffff; border-bottom: 1px solid #ddd; }
+#prf_service_cont .panel-default{border-color: #ffffff;}
+.panel{box-shadow: 0 0 0 rgba(0,0,0,0); margin-top: 0; margin-bottom: 0;}
+.panel-title{font-size: 24px;}
+.panel-title h3{font-weight: bold; color: #333;}
+.panel-collapse{background-color: #f8f8f8; color: #333;}
+.panel-collapse p{font-size: 16px; top: 10px; padding-bottom: 10px;}
+.panel-collapse .price{color: #952650;}
+.panel-heading{padding: 16px 0 28px;}
+#prf_detail{background-color: #f8f8f8; left: -17px; border-bottom: 5px solid #952650;}
+#prf_detail h2{line-height: 1;}
+.prf_det_info{font-family: ralewayregular; font-weight: bold;}
+.prf_info{word-spacing: 20px;}
+.prf_info img{border-bottom: 5px solid #952650;}
+.prf_info p{line-height: 1.6; font-size: 14px; word-spacing: 5px; padding-top: 12px; margin: 0}
+.check_btn:hover{color: #94264e;}
+
 
 
 /* responsive css start */

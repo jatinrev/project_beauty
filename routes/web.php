@@ -19,4 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+/*** User Routes ***/
+Route::get('/user/profile', 'UserCtrl@index');
+
+/*** Admin Routes ***/
 Route::match(['get', 'post'], '/admin/login', 'AdminCtrl@index');
