@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" type="text/css" />
     <script type="text/javascript" src="{{ asset('assets/bower_components/jquery/dist/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/bower_components/angular/angular.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/bower_components/angular-bootstrap/ui-bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/bower_components/bootstrap/dist/js/bootstrap.js') }}"></script>
 </head>
 <body>
