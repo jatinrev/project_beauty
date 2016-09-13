@@ -139,37 +139,32 @@
               </div>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                 <div class="row">
-                     <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                       <div>
-                       <a class="col-md-5 col-sm-5 col-xs-12">
-                         - Women's HairCut
-                       </a>
-                       <p class="col-md-4 col-sm-4 col-xs-6 price">
-                        <span>1 hr 30 min |</span> $100</p>
-                       <p class="col-md-3 col-sm-3 col-xs-6 cart">
-                         Added to cart&nbsp;
-                         <img src="{{ asset('assets/images/green-tick.png') }}" alt>
-                       </p>
-                       </div>
-                       <div>
-                         <a class="col-md-5 col-sm-5 col-xs-12">
-                         - HairCut Brands
-                       </a>
-                       <p class="col-md-4 col-sm-4 col-xs-6 price">
-                        <span>1 hr 30 min |</span> $100</p>
-                        <p class="col-md-3 col-sm-3 col-xs-6 cart">
-                         Added to cart&nbsp;
-                         <img src="{{ asset('assets/images/green-tick.png') }}" alt>
-                       </div>
-                       <div>
-                         <a class="col-md-5 col-sm-5 col-xs-12">
-                         - Colouring Hair Strands
-                       </a>
-                       <p class="col-md-4 col-sm-4 col-xs-6 price">
-                        <span>1 hr 30 min |</span> $100</p>
-                       </div>
-                     </div>
-                   </div>
+                        <a class="col-md-5 col-sm-5 col-xs-12">- Women's HairCut</a>
+                        <p class="col-md-4 col-sm-4 col-xs-6 price">
+                          <span>1 hr 30 min |</span> $100
+                        </p>
+                        <p class="col-md-3 col-sm-3 col-xs-6 cart">Added to cart&nbsp;
+                          <img src="{{ asset('assets/images/green-tick.png') }}" alt>
+                        </p>
+                      </div>
+                      <div>
+                        <a class="col-md-5 col-sm-5 col-xs-12">- HairCut Brands</a>
+                        <p class="col-md-4 col-sm-4 col-xs-6 price">
+                          <span>2 hr 30 min |</span> $100</p>
+                        <p class="col-md-3 col-sm-3 col-xs-6 cart">Added to cart&nbsp;
+                          <img src="{{ asset('assets/images/green-tick.png') }}" alt>
+                        </p>
+                      </div>
+                      <div>
+                        <a class="col-md-5 col-sm-5 col-xs-12">- Colouring Hair Strands</a>
+                        <p class="col-md-4 col-sm-4 col-xs-6 price">
+                          <span>3 hr 30 min |</span> $100
+                        </p>
+                      </div>
+                    </div>
+                </div>
               </div>
             </div>
                 <!-- 2nd Accordion Starts -->
@@ -182,40 +177,29 @@
                 </h4>
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <p>Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. </p>
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <div>
+                        <a class="col-md-5 col-sm-5 col-xs-12"> - Women's Hairstylish</a>
+                        <p class="col-md-4 col-sm-4 col-xs-6 price">
+                          <span>1 hr 30 min |</span> $100
+                        </p>
+                        <p class="col-md-3 col-sm-3 col-xs-6 cart">Added to cart&nbsp;
+                          <img src="{{ asset('assets/images/green-tick.png') }}" alt>
+                        </p>
+                      </div>
+                      <div>
+                        <a class="col-md-5 col-sm-5 col-xs-12"> - Colouring Hair Strands</a>
+                        <p class="col-md-4 col-sm-4 col-xs-6 price">
+                          <span>2 hr 30 min |</span> $100
+                        </p>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
 
             <!-- 3rd Accordion Starts -->
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    HAIR SERVICES FOR MEN
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <p>Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.<p> 
-              </div>
-            </div>
-
-            <!-- 4th Accordion Starts -->
-            <div class="panel panel-default">
-              <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    HAIR SERVICES FOR MEN
-                  </a>
-                </h4>
-              </div>
-              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-              </div>
-            </div>
-
-                <!--5th Accordion Starts -->
-
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
@@ -225,7 +209,90 @@
                 </h4>
               </div>
               <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <p>3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+                <div class="row">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div>
+                      <a class="col-md-5 col-sm-5 col-xs-12"> - Men's HairCutting</a>
+                      <p class="col-md-4 col-sm-4 col-xs-6 price">
+                        <span>1 hr 30 min |</span> $100
+                      </p>
+                      <p class="col-md-3 col-sm-3 col-xs-6 cart">Added to cart&nbsp;
+                        <img src="{{ asset('assets/images/green-tick.png') }}" alt>
+                      </p>
+                    </div>
+                    <div>
+                      <a class="col-md-5 col-sm-5 col-xs-12"> - Colouring Hair Strands</a>
+                      <p class="col-md-4 col-sm-4 col-xs-6 price">
+                        <span>2 hr 30 min |</span> $100
+                      </p>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+
+            <!-- 4th Accordion Starts -->
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    HAIR SERVICES FOR MEN
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div>
+                      <a class="col-md-5 col-sm-5 col-xs-12"> - Men's HairStylish</a>
+                      <p class="col-md-4 col-sm-4 col-xs-6 price">
+                        <span>1 hr 30 min |</span> $100
+                      </p>
+                      <p class="col-md-3 col-sm-3 col-xs-6 cart">Added to cart&nbsp;
+                        <img src="{{ asset('assets/images/green-tick.png') }}" alt>
+                      </p>
+                    </div>
+                    <div>
+                      <a class="col-md-5 col-sm-5 col-xs-12"> - Colouring Hair Strands</a>
+                      <p class="col-md-4 col-sm-4 col-xs-6 price">
+                        <span>2 hr 30 min |</span> $100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                <!--5th Accordion Starts -->
+
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFive">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    HAIR SERVICES FOR MEN
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div>
+                      <a class="col-md-5 col-sm-5 col-xs-12"> - Men's Hair Brands</a>
+                      <p class="col-md-4 col-sm-4 col-xs-6 price">
+                        <span>1 hr 30 min |</span> $100
+                      </p>
+                      <p class="col-md-3 col-sm-3 col-xs-6 cart">Added to cart&nbsp;
+                        <img src="{{ asset('assets/images/green-tick.png') }}" alt>
+                      </p>
+                    </div>
+                    <div>
+                      <a class="col-md-5 col-sm-5 col-xs-12"> - Colouring Hair Strands</a>
+                      <p class="col-md-4 col-sm-4 col-xs-6 price">
+                        <span>2 hr 30 min |</span> $100
+                      </p>
+                    </div>
+                  </div>
+                </div> 
               </div>
             </div>
           </div>
@@ -242,7 +309,7 @@
                 <img src="{{ asset('assets/images/profile-service1.png') }}" alt >
                 <img src="{{ asset('assets/images/profile-service2.png') }}" alt >
               </div>
-              <div class="prf_info padd_botm_20px padd_left_right_20px">
+              <div class="prf_info padd_botm_20px pad_left_right_20px">
                 <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has the industries of standard dummy text ever since 1500s. when an unknow printer took a gallery of type and scramble into make a type specimen book.
                 </p>
                 <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has the industries of standard dummy text ever since 1500s.</p>
@@ -258,40 +325,55 @@
 
     <!--Image gallery starts -->
 <div id="gallery_outr">
-  <div id="gallery_inr" class="row">
-    <div id="gallery_cont" class="text-center">
-      <div class="gallery_head padd_top_botm_40px">
+  <div id="gallery_inr">
+    <div id="gallery_cont">
+      <div class="gallery_head padd_top_botm_40px text-center">
         <h2>GALLERY</h2>
-      <img src="{{ asset('assets/images/red-heading-line.png') }}" alt height="2px" width="90px">
+        <img src="{{ asset('assets/images/red-heading-line.png') }}" alt height="2px" 
+        width="90px">
       </div>
-      <div class="gallery_coll">
-
+      
+      <div class="gallery_coll row">
         <!--Image album starts -->
-        <p>
-    <a class="fancybox" href="{{ asset('assets/images/profile-service2.png') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/profile-service2.png') }}" alt="" /></a>
+        <p class="col-md-12 col-sm-12 col-xs-12 text-center">
+          <a class="fancybox" href="{{ asset('assets/images/profile-service2.png') }}" 
+          data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/profile-service2.png') }}" alt="" />
+          </a>
 
-    <a class="fancybox" href="{{ asset('assets/images/profile-img.jpg') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" /></a>
+          <a class="fancybox" href="{{ asset('assets/images/profile-img.jpg') }}" 
+          data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
+          </a>
 
-    <a class="fancybox" href="{{ asset('assets/images/profile-service1.png') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" /></a>
+          <a class="fancybox" href="{{ asset('assets/images/profile-service1.png') }}" 
+          data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
+          </a>
 
-    <a class="fancybox" href="{{ asset('assets/images/product1.jpg') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/product1.jpg') }}" alt="" /></a>
+          <a class="fancybox" href="{{ asset('assets/images/product1.jpg') }}" 
+          data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/product1.jpg') }}" alt="" />
+          </a>
 
-    <a class="fancybox" href="{{ asset('assets/images/product3.jpg') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/product3.jpg') }}" alt="" /></a>
+          <a class="fancybox" href="{{ asset('assets/images/product3.jpg') }}" 
+          data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/product3.jpg') }}" alt="" />
+          </a>
 
-    <a class="fancybox" href="{{ asset('assets/images/profile-service1.png') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" /></a>
+          <a class="fancybox" href="{{ asset('assets/images/profile-service1.png') }}" 
+          data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
+          </a>
 
-    <a class="fancybox" href="{{ asset('assets/images/profile-service2.png') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/profile-service2.png') }}" alt=""/></a>
+          <a class="fancybox" href="{{ asset('assets/images/profile-service2.png') }}" data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/profile-service2.png') }}" alt=""/>
+          </a>
 
-    <a class="fancybox" href="{{ asset('assets/images/profile-img.jpg') }}" data-fancybox-group="gallery">
-      <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" /></a>
-    </p>
+          <a class="fancybox" href="{{ asset('assets/images/profile-img.jpg') }}" data-fancybox-group="gallery">
+            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
+          </a>
+        </p>
       <!--Image album close -->
       </div>
     </div>
@@ -308,10 +390,10 @@
         height="2px">
       </div>
       <div class="cal_img text-center">
-      <img src="{{ asset('assets/images/cal.jpg') }}" alt >
+        <img src="{{ asset('assets/images/cal.jpg') }}" alt >
       </div>
       <div class="cal_time text-center">
-      <img src="{{ asset('assets/images/time-slots.jpg') }}" alt >
+        <img src="{{ asset('assets/images/time-slots.jpg') }}" alt >
       </div>
     </div>
   </div>
@@ -341,3 +423,12 @@
 
 @include('layouts.footer')
 
+ <!--fancybox main JS and Css files -->
+  <script type="text/javascript" src="{{ asset('js/jquery.fancybox.js?v=2.1.5') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /* Simple image gallery. Uses default settings*/
+      $('.fancybox').fancybox();
+    });
+  </script>
