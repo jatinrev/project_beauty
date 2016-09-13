@@ -5,9 +5,7 @@
     <title>BRC : Home</title>
     <link rel="stylesheet" href="{{ asset('assets/bower_components/bootstrap/dist/css/bootstrap.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" type="text/css" />
-    <script type="text/javascript" src="{{ asset('assets/bower_components/jquery/dist/jquery.js') }}"></script>
-   
-    <script type="text/javascript" src="{{ asset('assets/bower_components/angular/angular.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/bower_components/bootstrap/dist/js/bootstrap.js') }}"></script>
+
+    @yield('css')
 </head>
 <body>
