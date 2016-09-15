@@ -12,7 +12,7 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/flexslider.css') }}">
 @endsection
 
 

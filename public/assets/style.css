@@ -65,7 +65,7 @@ h2, h3{ line-height:40px;}
 .border_right_z{ border-right:0}
 
 .main_all_sections_heading{ text-transform: uppercase; color: #6d243f; 
-	background-image:url("assets/images/red-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+	background-image:url("images/red-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
 
 .hd_bg{background-color:#952650; color: #fff;}
 .body_bg{background-color: #ebebeb; color: #000;}
@@ -141,10 +141,10 @@ h2, h3{ line-height:40px;}
 #test_cont{ float:left; padding-top:4%; padding-bottom:4%}
 
 /* products css */
-#prd_outr{ float:left; width:100%; background-image:url("assets/images/prd-area-bg.jpg"); background-repeat:no-repeat; background-size:100% auto}
+#prd_outr{ float:left; width:100%; background-image:url("images/prd-area-bg.jpg"); background-repeat:no-repeat; background-size:100% auto}
 #prd_inr{ float:none; margin:2% auto; max-width:900px; width:100%; background-color:rgba(0,0,0,0.8); padding:1% 2%}
 #prd_cont{ float:left; background-color:rgba(0,0,0,0.5); padding:2%}
-#prd_cont h3{background-image:url("assets/images/white-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+#prd_cont h3{background-image:url("images/white-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
 .products ul{ padding:0; margin:0}
 .products ul li{ display:inline; list-style:none; padding:2%; position:relative;}
 .products ul li a{ display:block; background-color:#fff; position:relative; height:200px; padding:15px; text-decoration:none}
