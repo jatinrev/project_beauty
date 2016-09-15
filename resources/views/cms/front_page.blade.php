@@ -1,5 +1,20 @@
 @extends('layouts.basic_master')
 
+@section('script')
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide"
+            });
+        });
+    </script>
+@endsection
+
+@section('css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
+@endsection
+
 
 @section('content')
     <div id="book_online_outr">
@@ -180,6 +195,8 @@
         </div>
     </div>
 @endsection
+
+
 
 
 
