@@ -17,12 +17,13 @@
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
             <p>Login in. To see it in action.</p>
-            <form class="m-t" role="form" action="index.html">
+            <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                {{ csrf_field() }}
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Username" required="">
+                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" required="">
+                    <input id="password" type="password" class="form-control" name="password" required>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
