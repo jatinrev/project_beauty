@@ -19,6 +19,10 @@
                                 <li class="divider"></li>
                                 <li><a href="login.html">Logout</a></li>
                             </ul>
+                            {{-- <button class="pink_btn login_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form> --}}
                         </div>
                         <div class="logo-element">
                             IN+
