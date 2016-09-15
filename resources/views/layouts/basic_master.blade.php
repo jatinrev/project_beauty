@@ -53,7 +53,25 @@
     </div>
 
     <div id="banner_outr">
-    	<img src="{{ asset('assets/images/home-slider.jpg') }}" />
+    	<section class="slider">
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                    <img src="{{ asset('assets/images/banner1.jpg') }}" />
+                    <p class="flex-caption"><b>Lorem Ipsum is dummy text</b><span>Lorem Ipsum is dummy text</span></p>
+                </li>
+                <li>
+                  <img src="{{ asset('assets/images/banner2.jpg') }}" />
+                  <p class="flex-caption">Adventurer Lemon</p>
+              </li>
+              <li>
+                 <img src="{{ asset('assets/images/banner3.jpg') }}" />
+                 <p class="flex-caption">Adventurer Donut</p>
+             </li>
+
+            </ul>
+            </div>
+        </section>
     </div>
 
 

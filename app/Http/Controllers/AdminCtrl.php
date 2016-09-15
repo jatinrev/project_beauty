@@ -15,7 +15,7 @@ class AdminCtrl extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        return view('admin.login');
     }
 
     /**
@@ -45,9 +45,9 @@ class AdminCtrl extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function profile() //$id
     {
-        //
+        return view('admin.index');
     }
 
     /**

@@ -1,5 +1,5 @@
-	
-	<script type="text/javascript" src="{{ asset('assets/bower_components/jquery/dist/jquery.js') }}"></script>
+
+	<script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <!--fancybox main JS and Css files -->
 	<script type="text/javascript" src="{{ asset('assets/js/jquery.fancybox.js?v=2.1.5') }}"></script>
 	<script type="text/javascript">

@@ -65,13 +65,13 @@ h2, h3{ line-height:40px;}
 .border_right_z{ border-right:0}
 
 .main_all_sections_heading{ text-transform: uppercase; color: #6d243f; 
-	background-image:url("assets/images/red-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+	background-image:url("images/red-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
 
 .hd_bg{background-color:#952650; color: #fff;}
 .body_bg{background-color: #ebebeb; color: #000;}
 
 /* header css */
-#header_outr{ float:left; width:100%; position:absolute}
+#header_outr{ float:left; width:100%; position:absolute;  z-index: 9999;}
 #header_inr{ float:none; margin:0 auto; max-width:1300px; width:100%}
 #header_cont{ float:left; width:100%; padding-top:2%; padding-bottom:2%}
 .header_left{ float:left;}
@@ -93,7 +93,7 @@ h2, h3{ line-height:40px;}
 
 
 /* banner css */
-#banner_outr{ float:left; width:100%; height:600px; overflow:hidden}
+#banner_outr{ float:left; width:100%; }
 #banner_outr img{ width:100%}
 
 /* book online css */
@@ -142,10 +142,10 @@ h2, h3{ line-height:40px;}
 #test_cont{ float:left; padding-top:4%; padding-bottom:4%}
 
 /* products css */
-#prd_outr{ float:left; width:100%; background-image:url("assets/images/prd-area-bg.jpg"); background-repeat:no-repeat; background-size:100% auto}
+#prd_outr{ float:left; width:100%; background-image:url("images/prd-area-bg.jpg"); background-repeat:no-repeat; background-size:100% auto}
 #prd_inr{ float:none; margin:2% auto; max-width:900px; width:100%; background-color:rgba(0,0,0,0.8); padding:1% 2%}
 #prd_cont{ float:left; background-color:rgba(0,0,0,0.5); padding:2%}
-#prd_cont h3{background-image:url("assets/images/white-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
+#prd_cont h3{background-image:url("images/white-heading-line.png"); background-repeat:no-repeat; background-position:center bottom; padding-bottom:5px}
 .products ul{ padding:0; margin:0}
 .products ul li{ display:inline; list-style:none; padding:2%; position:relative;}
 .products ul li a{ display:block; background-color:#fff; position:relative; height:200px; padding:15px; text-decoration:none}
@@ -254,6 +254,28 @@ background-repeat: no-repeat;} */
 .cal_heading h2{line-height: 1; font-weight: bold;}
 
 
+.flex-caption {
+  width: 96%;
+  padding: 2%;
+  left: 0;
+  bottom: 30%;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size:50px;
+  line-height: normal;
+  position:absolute;
+  z-index:99999;
+  text-align:center
+}
+.flex-caption > b {
+    float: left;
+    width: 100%;
+}
+.flex-caption > span {
+    float: left;
+	font-size:20px;
+    width: 100%;
+}
 
 
 
