@@ -5,6 +5,8 @@
     <title>BRC : Home</title>
     <link rel="stylesheet" href="{{ asset('assets/bower_components/bootstrap/dist/css/bootstrap.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome.css') }}" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
 
     @yield('css')
 </head>

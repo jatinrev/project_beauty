@@ -1,8 +1,7 @@
 	
 	<script type="text/javascript" src="{{ asset('assets/bower_components/jquery/dist/jquery.js') }}"></script>
     <!--fancybox main JS and Css files -->
-	<script type="text/javascript" src="{{ asset('js/jquery.fancybox.js?v=2.1.5') }}"></script>
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
+	<script type="text/javascript" src="{{ asset('assets/js/jquery.fancybox.js?v=2.1.5') }}"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			/* Simple image gallery. Uses default settings*/
