@@ -9,6 +9,6 @@ use App\Http\Requests;
 class UserCtrl extends Controller
 {
     public function index() {
-    	return view('layouts.cms_master');
+    	return view('cms.profile');
     }
 }
