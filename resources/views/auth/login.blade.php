@@ -39,27 +39,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">User Type</label>
-
-                            <div class="col-md-6">
-                                <div class="checkbox">
-                                    <label class="padding_r10">
-                                        <input type="checkbox" name="Customer"> Customer
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" name="Customer"> Business
-                                    </label>
-                                </div>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
