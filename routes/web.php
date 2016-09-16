@@ -25,5 +25,7 @@ Route::get('/user/profile', 'UserCtrl@index');
 
 
 /*** Admin Routes ***/
-Route::match(['get', 'post'], '/admin/login', 'AdminCtrl@index');
-Route::match(['get', 'post'], '/admin/profile', 'AdminCtrl@profile');
+	Route::match(['get', 'post'], '/admin/login', 'AdminCtrl@index');
+// Route::group(['middleware' => ['adminAuth']], function () {
+	Route::match(['get', 'post'], '/admin/profile', 'AdminCtrl@profile')->middleware('adminAuth');
+// });
