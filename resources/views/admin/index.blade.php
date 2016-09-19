@@ -6,9 +6,6 @@
         <div class="col-lg-10">
             <h2>Users Data</h2>
         </div>
-        <div class="col-lg-2">
-
-        </div>
     </div>
 
     <!-- Start : Table -->
