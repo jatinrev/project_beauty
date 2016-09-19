@@ -1,5 +1,9 @@
 <?php
 
+/*
+	ROUTES WHICH SHOWS OR USES THINGS RELATED TO USER(COMMON TO BOTH TYPE OF USER)
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('cms.front_page');
-});
+Route::match(['get', 'post'], '/', 'withoutLogin@index');
 
 Auth::routes();
 

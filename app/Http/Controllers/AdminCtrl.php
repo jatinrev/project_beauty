@@ -1,5 +1,7 @@
 <?php
-
+/*
+    USED FOR ONLY ADMIN ROUTES
+ */
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

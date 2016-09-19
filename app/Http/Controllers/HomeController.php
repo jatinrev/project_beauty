@@ -1,5 +1,9 @@
 <?php
 
+/*
+    ROUTES WHICH COULD ONLY BE VISITED WHEN USER IS LOGGED IN.
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;

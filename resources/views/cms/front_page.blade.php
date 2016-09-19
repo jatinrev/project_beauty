@@ -17,6 +17,7 @@
 
 
 @section('content')
+    
     <div id="book_online_outr">
     	<div id="book_online_inr" class="row">
         	<div id="book_online_cont" class="col-md-12 col-sm-12 col-xs-12">
@@ -183,8 +184,10 @@
             	<div class="col-md-6 col-sm-12 col-xs-12 news_ltr">
                 	<h4 class="text-uppercase color_white">subscribe to our newsletter for latest news</h4>
                     <p class="color_white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <form class="margin_top_20px">
-                    	<input type="text" class="white_input_field col-xs-12 col-md-8 col-sm-8" placeholder="EMAIL ID..." /> <input type="submit" value="Send" class="light_red_btn text-uppercase col-xs-12 col-md-3 col-sm-3" />
+                    <form class="margin_top_20px" method="POST">
+                        {{ csrf_field() }}
+                    	<input type="text" name="email" class="white_input_field col-xs-12 col-md-8 col-sm-8" placeholder="EMAIL ID..." />
+                        <input type="submit" value="Send" name="newsletter_submit" class="light_red_btn text-uppercase col-xs-12 col-md-3 col-sm-3" />
                     </form>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 sign_up_now text-center">
