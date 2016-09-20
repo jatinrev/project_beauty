@@ -1,7 +1,7 @@
 @include('layouts.header')
 <style type="text/css">
     .form_alert_msg{ display: none; position: absolute; text-align: center; top: 0}
-    .alert_click{color: #ffffff; background: transparent; font-size: 16px;} 
+    .alert_click{color: #ffffff; background: transparent; font-size: 16px; display: none;} 
 </style>
 
 
@@ -69,33 +69,34 @@
     </div>
 
     <div id="banner_outr">
-    	<section class="slider row">
-            <div class="flexslider col-md-12 col-sm-12 col-xs-12">
-                <ul class="slides">
-                    <li>
-                        <img src="{{ asset('assets/images/stationary-banner.jpg') }}">
-                        
-                        <h3 class="flex-caption"> 
-                            <p style="display:inline-block; width:400px">Refer Your Favourate</p>
-                            <div id="rotate"> 
-                            <span>hairstylist</span> <span>make-up looks</span> 
-                            <span>skincare</span> <span>nail-art</span> 
-                            </div>    
-                        </h3>
-                        <div class="slide_link">
-                            <a href="#">Lorem Ipsum 1&nbsp;</a>
-                            <a href="#">Lorem Ipsum 2&nbsp;</a>
-                            <a href="#" class="last">Lorem Ipsum 3&nbsp;</a>
-                            <div><button type="button" class="light_red_btn banner_btn">
-                                Get Started </button></div>
-                        </div>
-                        
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div id="banner_cont">
+            <img src="{{ asset('assets/images/stationary-banner.jpg') }}">
+        </div>
     </div>
 
+<div class="banner_text">
+    <h3 class="text_on_img"> Refer Your Favourate
+        <div id="rotate"> 
+            <span>hairstylist</span> <span>make-up looks</span> 
+            <span>skincare</span> <span>nail-art</span> 
+        </div> 
+    </h3>
+</div>
+
+<div class="banner_scrolling_text_outr">
+    <div class="banner_text_inr">
+        <div class="banner_text_cont">    
+            <div class="slide_link">
+                <a href="#">Lorem Ipsum 1&nbsp;</a>
+                <a href="#">Lorem Ipsum 2&nbsp;</a>
+                <a href="#" class="last">Lorem Ipsum 3&nbsp;</a>    
+            </div>
+            <div class="slide_btn">
+                <button type="button" class="light_red_btn banner_btn">Get Started </button>
+            </div>
+        </div>    
+    </div>
+</div>
 
     @yield('content')
 

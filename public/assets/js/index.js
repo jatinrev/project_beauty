@@ -3,9 +3,9 @@
         rotaterator: function(options) {
  
             var defaults = {
-                fadeSpeed: 1500,
-                pauseSpeed: 50,
-				child:null
+                fadeSpeed: 500,
+                pauseSpeed: 100,
+                child:null
             };
              
             var options = $.extend(defaults, options);
@@ -14,24 +14,24 @@
                   var o =options;
                   var obj = $(this);                
                   var items = $(obj.children(), obj);
-				  items.each(function() {$(this).hide();})
-				  if(!o.child){var next = $(obj).children(':first');
-				  }else{var next = o.child;
-				  }
-				  $(next).fadeIn(o.fadeSpeed, function() {
-						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
-							var next = $(this).next();
-							if (next.length == 0){
-									next = $(obj).children(':first');
-							}
-							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
-						})
-					});
+                  items.each(function() {$(this).hide();})
+                  if(!o.child){var next = $(obj).children(':first');
+                  }else{var next = o.child;
+                  }
+                  $(next).fadeIn(o.fadeSpeed, function() {
+                        $(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+                            var next = $(this).next();
+                            if (next.length == 0){
+                                    next = $(obj).children(':first');
+                            }
+                            $(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+                        })
+                    });
             });
         }
     });
 })(jQuery);
 
  $(document).ready(function() {
-        $('#rotate').rotaterator({fadeSpeed:1500, pauseSpeed:50});
+        $('#rotate').rotaterator({fadeSpeed:500, pauseSpeed:100});
  });

@@ -202,47 +202,7 @@
             </div>
         </div>
     </div>
-
-
-    <div id="prd_outr">
-    	<div id="prd_inr" class="row">
-        	<div id="prd_cont" class="col-md-12 col-sm-12 col-xs-12">
-            	<h3 class="text-uppercase margin_top_z color_white text-center">we love</h3>
-                <div class="col-md-12 col-sm-12 col-xs-12 products">
-                	<ul class="col-md-12 col-sm-12 col-xs-12 text-center">
-                    	<li class="col-md-4 col-sm-12 col-xs-12">
-                        	<a href="#">
-                                <img src="{{ asset('assets/images/product1.jpg') }}" />
-                                <div class="products_detail">
-                                    <span>Lorem Ipsum
-                                    <b>$50</b></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12">
-                        	<a href="#">
-                                <img src="{{ asset('assets/images/product2.jpg') }}" />
-                                <div class="products_detail">
-                                    <span>Lorem Ipsum
-                                    <b>$50</b></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-md-4 col-sm-12 col-xs-12">
-                        	<a href="#">
-                                <img src="{{ asset('assets/images/product3.jpg') }}" />
-                                <div class="products_detail">
-                                    <span>Lorem Ipsum
-                                    <b>$50</b></span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                 
-                </div>
-            </div>
-        </div>
-    </div>
+  
     <div id="news_outr">
     	<div id="news_inr" class="row">
         	<div id="news_cont" class="col-md-12 col-sm-12 col-xs-12">
