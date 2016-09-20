@@ -8,7 +8,7 @@
           </div>
             
             <!-- -->
-                <div class="header_right col-md-8 col-sm-12 col-xs-12">
+                <div class="header_right col-md-8 col-sm-11 col-xs-12">
                     <nav class="navbar navbar-default col-md-10 padd_left_right_all_zero">
                           <div class="container-fluid">
                               <div class="col-md-12 padd_left_right_all_zero">

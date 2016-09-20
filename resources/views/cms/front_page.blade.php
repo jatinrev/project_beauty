@@ -9,6 +9,15 @@
             });
         });
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          //carousel options
+          $('#quote-carousel').carousel({
+            pause: true, interval: 6000,
+          });
+        });
+    </script>
 @endsection
 
 @section('css')
@@ -130,14 +139,71 @@
             </div>
         </div>
     </div>
+
+    <!--Testimonial slider -->
     <div id="test_outr">
     	<div id="test_inr" class="row">
         	<div id="test_cont" class="col-md-12 col-sm-12 col-xs-12 text-center">
-            	<img src="{{ asset('assets/images/quote.png') }}" class="inline_block"/>
-                <p class="margin_top_50px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <img src="{{ asset('assets/images/quote.png') }}" class="inline_block"/>
+
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                          
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#quote-carousel" data-slide-to="1"></li>
+                      <li data-target="#quote-carousel" data-slide-to="2"></li>
+                    </ol>
+                            
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner">
+
+                    <!-- Quote 1 -->
+                    <div class="item active">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.</p>
+                          <h4><strong>Richard McClintock</strong></h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Quote 2 -->
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam.</p>
+                          <h4><strong>Fringilla A., Vulputate Sit</strong></h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Quote 3 -->
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.</p>
+                          <h4><strong>Aenean A., Justo Cras</strong></h4>
+                        </div>
+                      </div>
+                    </div>
+                      
+                    </div>
+                    
+
+                  </div>                          
+                </div>
+              </div>
+            </div>
+               
             </div>
         </div>
     </div>
+
+
     <div id="prd_outr">
     	<div id="prd_inr" class="row">
         	<div id="prd_cont" class="col-md-12 col-sm-12 col-xs-12">
