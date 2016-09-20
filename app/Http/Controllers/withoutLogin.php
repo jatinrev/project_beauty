@@ -19,8 +19,9 @@ class withoutLogin extends Controller
     		return view('cms.front_page');
     	} else {
     		$this->validate($request, [
-                'email'     => 'required|email'
+                'email' => 'required|email'
             ]);
+            
     		/* SAVEING DATA IN MODEL */
     		$newsletter_subscriber_obj = new NewsletterSubscriber;
     		$newsletter_subscriber_obj->save_newsletter($request);
