@@ -12,9 +12,7 @@
 */
 
 Route::match(['get', 'post'], '/', 'withoutLogin@index');
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
 
 
@@ -25,7 +23,7 @@ Route::get('/user/profile', 'UserCtrl@index');
 
 
 /*** Admin Routes ***/
-Route::match(['get', 'post'], '/admin/login', 'AdminCtrl@index');
+Route::match(['get', 'post'], '/admin/login', 'AdminCtrl@login');
 Route::match(['get', 'post'], '/admin/profile', 'AdminCtrl@profile')->middleware('adminAuth');
 	
 // Route::group(['middleware' => ['adminAuth']], function () {

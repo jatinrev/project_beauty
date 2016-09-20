@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\NewsletterSubscriber;
+
 class AdminCtrl extends Controller
 {
     /**
@@ -15,7 +17,7 @@ class AdminCtrl extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function login()
     {
         return view('admin.login');
     }
@@ -47,9 +49,12 @@ class AdminCtrl extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function profile() //$id
+    public function profile()
     {
-        return view('admin.index');
+        $newsletters = NewsletterSubscriber::paginate();
+        return view('admin.profile')->with([
+            'newsletters' => $newsletters->toArray()
+        ]);
     }
 
     /**

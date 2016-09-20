@@ -10,6 +10,7 @@
 	</script>
     <script type="text/javascript" src="{{ asset('assets/bower_components/angular/angular.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/bower_components/bootstrap/dist/js/bootstrap.js') }}"></script>
+    
 	@yield('script')
 
 </body>

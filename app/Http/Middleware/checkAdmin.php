@@ -16,6 +16,7 @@ class checkAdmin
      */
     public function handle($request, Closure $next)
     {
+        // dd(Auth::user()->user_type);
         if( Auth::user()->user_type != 'isAdmin' ) {
             return redirect('/');
         }
