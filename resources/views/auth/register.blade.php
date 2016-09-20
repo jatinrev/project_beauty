@@ -7,6 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
+                    {{ dd($errors) }}
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 
@@ -66,7 +67,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('user_type') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">User Type</label>
                             <div class="col-md-6">
                                 <div class="checkbox">
@@ -78,9 +79,9 @@
                                     </label>
                                 </div>
 
-                                @if ($errors->has('password'))
+                                @if ($errors->has('user_type'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('user_type') }}</strong>
                                     </span>
                                 @endif
                             </div>

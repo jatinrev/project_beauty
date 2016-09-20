@@ -40,12 +40,16 @@
                         <div class="prof_memerbship col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero text-center">
                             <h3 class="color_red">JOIN. GROW. EARN</h3>
                             <img src="{{ asset('assets/images/prof-membership.png') }}" class="margin_top_25px">
-                            <a href="#" class="membership_btn margin_top_25px">Register Now & Create Your Account</a>
+                            @if (Auth::guest())
+                                <a href="{{ url('/login') }}"  class="membership_btn margin_top_25px">Register Now & Create Your Account</a>
+                            @endif
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero cust_membership text-center">
                             <h3 class="color_red text-center">JOIN. SHARE. EARN</h3>
                             <img src="{{ asset('assets/images/customer-membersip.png') }}" class="margin_top_25px">
-                            <a href="#" class="membership_btn margin_top_25px">Create A Free Account & Earn Money</a>
+                            @if (Auth::guest())
+                                <a href="{{ url('/register') }}" class="membership_btn margin_top_25px">Create A Free Account & Earn Money</a>
+                            @endif
                     	</div>
                 </div>
             </div>
@@ -139,6 +143,7 @@
             </div>
         </div>
     </div>
+    {{--
     <div id="prd_outr">
     	<div id="prd_inr" class="row">
         	<div id="prd_cont" class="col-md-12 col-sm-12 col-xs-12">
@@ -178,6 +183,7 @@
             </div>
         </div>
     </div>
+    --}}
     <div id="news_outr">
     	<div id="news_inr" class="row">
         	<div id="news_cont" class="col-md-12 col-sm-12 col-xs-12">
