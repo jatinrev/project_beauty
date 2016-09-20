@@ -1,17 +1,30 @@
 @include('layouts.header')
+<style type="text/css">
+    .form_alert_msg{ display: none; position: absolute; text-align: center; top: 0}
+    .alert_click{color: #ffffff; background: transparent; font-size: 16px;} 
+</style>
+
 
     <div id="header_outr">
     	<div id="header_inr" class="row">
         	<div id="header_cont" class="col-md-12 col-xs-12">
+                    <div class="form_alert_msg col-md-6 col-md-offset-3 col-sm-offset-3 
+                        col-sm-6 col-xs-11 col-xs-offset-0">
+                        <div class="alert alert-warning">
+                              <strong>Warning!</strong> Indicates a warning that might need attention. 
+                        </div>
+                    </div>
+                        
+                    <!---->
             	<div class="header_left col-md-1 col-sm-12 col-xs-12 text-center">
-                	<a href="#"><img src="{{ asset('assets/images/logo.png') }}" title="BRC"/></a>
+                	<a href="#"><img src="{{ asset('assets/images/logo.png')}}" title="BRC"/></a>
            		</div>
                 
                 <!-- -->
-                <div class="header_right col-md-8 col-sm-12 col-xs-12">
+                <div class="header_right col-md-8 col-sm-11 col-xs-12">
             		<nav class="navbar navbar-default col-md-10 padd_left_right_all_zero">
                     	<div class="container-fluid">
-                        	<div class="col-md-12 padd_left_right_all_zero">
+                        	<div class="col-md-12 col-sm-12 padd_left_right_all_zero">
                             	<div class="navbar-header">
                                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                         <span class="sr-only">Toggle navigation</span>
@@ -42,9 +55,12 @@
                                 {{ csrf_field() }}
                             </form>
                         @endif
+                        
+
+
                     </div>
-                    
-                    <!---->
+                                            <a href="#" class="alert_click">Click</a>
+                   
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <!-- /.navbar-collapse -->
     			</div>
@@ -53,23 +69,29 @@
     </div>
 
     <div id="banner_outr">
-    	<section class="slider">
-            <div class="flexslider">
-              <ul class="slides">
-                <li>
-                    <img src="{{ asset('assets/images/banner1.jpg') }}" />
-                    <p class="flex-caption"><b>Lorem Ipsum is dummy text</b><span>Lorem Ipsum is dummy text</span></p>
-                </li>
-                <li>
-                  <img src="{{ asset('assets/images/banner2.jpg') }}" />
-                  <p class="flex-caption">Adventurer Lemon</p>
-              </li>
-              <li>
-                 <img src="{{ asset('assets/images/banner3.jpg') }}" />
-                 <p class="flex-caption">Adventurer Donut</p>
-             </li>
-
-            </ul>
+    	<section class="slider row">
+            <div class="flexslider col-md-12 col-sm-12 col-xs-12">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ asset('assets/images/stationary-banner.jpg') }}">
+                        
+                        <h3 class="flex-caption"> 
+                            <p style="display:inline-block; width:400px">Refer Your Favourate</p>
+                            <div id="rotate"> 
+                            <span>hairstylist</span> <span>make-up looks</span> 
+                            <span>skincare</span> <span>nail-art</span> 
+                            </div>    
+                        </h3>
+                        <div class="slide_link">
+                            <a href="#">Lorem Ipsum 1&nbsp;</a>
+                            <a href="#">Lorem Ipsum 2&nbsp;</a>
+                            <a href="#" class="last">Lorem Ipsum 3&nbsp;</a>
+                            <div><button type="button" class="light_red_btn banner_btn">
+                                Get Started </button></div>
+                        </div>
+                        
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
@@ -92,5 +114,17 @@
         </div>
         <div class="copy_right text-center color_white">Copyright &copy; 2016 BRC.</div>
     </div>
+
+
+
 @include('layouts.footer')
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".alert_click").click(function(){
+            $(".form_alert_msg").show();
+
+        });
+            setTimeout(function() { $(".form_alert_msg").hide(); }, 5000);
+    });
+</script>

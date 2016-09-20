@@ -50,6 +50,7 @@ h2, h3{ line-height:40px;}
 .padd_botm_100px{ padding-bottom: 100px;}
 .padd_top_20px{padding-top: 20px;}
 .padd_botm_20px{padding-bottom: 20px;}
+.padd_top_botm_90px{padding-top: 90px; padding-bottom: 90px}
 
 .margin_top_z{ margin-top:0}
 .margin_top_10px{margin-top: 10px;}
@@ -71,9 +72,10 @@ h2, h3{ line-height:40px;}
 .body_bg{background-color: #ebebeb; color: #000;}
 
 /* header css */
-#header_outr{ float:left; width:100%; position:absolute;  z-index: 9999;}
+#header_outr{ float:left; width:100%; position:absolute;  z-index: 9999;
+	background-color: #952650}
 #header_inr{ float:none; margin:0 auto; max-width:1300px; width:100%}
-#header_cont{ float:left; width:100%; padding-top:2%; padding-bottom:2%}
+#header_cont{ float:left; width:100%; padding-top:1%; padding-bottom:1%}
 .header_left{ float:left;}
 .header_right{ float:right;color:#fff;margin-bottom: 0;margin-top: 0; padding-top: 15px; border:0;}
 /*.header_right .navbar-default{ background-color:transparent; border:0}*/
@@ -95,6 +97,43 @@ h2, h3{ line-height:40px;}
 /* banner css */
 #banner_outr{ float:left; width:100%; }
 #banner_outr img{ width:100%}
+
+.flex-caption { 
+	padding: 2%; 
+	left: 0; 
+	bottom: 35%; 
+	font-size:40px; 
+	position:absolute; 
+	text-align:center; 
+	width:96%; 
+	color: #333; 
+	line-height: 1.5
+}
+.flex-caption > span {float: left; width: 100%;}
+
+#rotate{
+	text-transform: uppercase; 
+	color: #94264e; 
+	font-size: 35px;
+	display: inline;
+}
+.slide_link{
+	padding: 3%;
+	text-align: center; 
+	bottom: 30%; 
+	position: absolute; 
+	width: 96%;
+}
+.slide_link a{
+	border-right: 2px solid #333; 
+	color: #333; 
+	font-size: 18px; 
+	font-weight: bold;
+}
+.slide_link a.last{border-right: 0}
+.banner_btn{padding: 10px 22px; text-transform: uppercase; position: absolute;}
+.banner_btn:hover{color: #94264e; font-weight: bold;}
+
 
 /* book online css */
 #book_online_outr{ float:left; width:100%; background-color:#6D243F}
@@ -136,10 +175,45 @@ h2, h3{ line-height:40px;}
 #call_to_action_inr{ float:none; margin:0 auto; max-width:1300px; width:100%;}
 #call_to_action_cont{ float:left; padding-top:2%; padding-bottom:2%}
 
+
 /* testimonials css */
 #test_outr{ float:left; width:100%; background:#fff}
 #test_inr{ float:none; margin:0 auto; max-width:1300px; width:100%;}
 #test_cont{ float:left; padding-top:4%; padding-bottom:4%}
+
+
+
+
+/* carousel */
+#quote-carousel {
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+  text-align:center;
+}
+/* indicator position */
+#quote-carousel .carousel-indicators {
+  right: 50%;
+  top: auto;
+  bottom: -10px;
+  margin-right: -19px;
+}
+/* indicator color */
+#quote-carousel .carousel-indicators li {
+  background: #c0c0c0;
+}
+/* active indicator */
+#quote-carousel .carousel-indicators .active {
+  background: #6d243f;
+  height:10px;
+  width:10px;
+  margin-bottom:1px;
+}
+
+.item h4{
+	color: #6d243f;
+}
+
+
 
 /* products css */
 #prd_outr{ float:left; width:100%; background-image:url("images/prd-area-bg.jpg"); background-repeat:no-repeat; background-size:100% auto}
@@ -254,31 +328,23 @@ background-repeat: no-repeat;} */
 .cal_heading h2{line-height: 1; font-weight: bold;}
 
 
-.flex-caption {
-  width: 96%;
-  padding: 2%;
-  left: 0;
-  bottom: 30%;
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
-  font-size:50px;
-  line-height: normal;
-  position:absolute;
-  z-index:99999;
-  text-align:center
-}
-.flex-caption > b {
-    float: left;
-    width: 100%;
-}
-.flex-caption > span {
-    float: left;
-	font-size:20px;
-    width: 100%;
-}
 
 
+/*SignUp Join_Form Css */
+#join_form_outr{float: left; width: 100%; background-color: #f9f9f9;}
+#join_form_inr{float: none; margin: 0 auto; max-width: 1300px; width: 100%;}
+#join_form_cont{width: 100%;}
+.join_form_top{padding-bottom: 12%;}
+.join_form_top h3{font-weight: 400; color: #333; padding-bottom: 5%;}
+.left_join h4{line-height: 3; padding-top: 2%; color: #9a9a9a; font-weight: bold}
+.left_join p{color: #9a9a9a; font-weight: normal; font-size: 18px; padding-bottom: 4%;}
+.right_join h4{line-height: 3; padding-top: 2%; color: #9a9a9a; font-weight: bold}
+.right_join p{color: #9a9a9a; font-weight: normal; font-size: 18px; padding-bottom: 4%;}
+.join_btn{padding: 10px 14px; height: 42px; font-size: 15px}
+.join_btn:hover{color: #333;}
+.div_join h3{color: #94264e; font-weight: bold;}
 
+.alert{padding: 8px}
 
 /* responsive css start */
 
@@ -288,7 +354,7 @@ background-repeat: no-repeat;} */
 
 @media screen and (max-width: 1024px){
 	.header_menu li a{ font-size:14px;}
-	#banner_outr img{ width:auto}
+
 	.girl_img img{ margin-top:170px;}
 	.membership_area img{ height:330px;}
 	.membership_btn{ font-size:11px}
