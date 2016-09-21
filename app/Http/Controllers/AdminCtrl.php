@@ -30,7 +30,6 @@ class AdminCtrl extends Controller
         $site_settings = [
             'frontpage_slider_text' => []
         ];
-        // dd( $request->hasFile('banner_image') );
 
         // -------------Frontpage Image Text-------------
         if( !empty($request_data['action']) && trim($request_data['action']) == 'frontpage_slider_text' ) {
@@ -43,6 +42,13 @@ class AdminCtrl extends Controller
             // $site_settings_frontpage_text = SiteSettings::where('key', '=', 'frontpage_slider_text')->update(['value' => $request_data['frontpage_slider_text']]);
             redirect('admin/frontpage');
         }
+
+        // -------------Upload banner image-------------
+        if ( !empty($request_data['action']) && trim($request['action']) == 'frontpage_image_uploading_banner' && $request->hasFile('banner_image') ) {
+            $file = $request->banner_image->storeAs('uploaded_images', 'banner_image.jpg');
+            redirect('admin/frontpage');
+        }
+
 
         // -------------getting old Data-------------
         $site_settings = SiteSettings::get_site_settings(['frontpage_slider_text', 'twitter_link', 'facebook_link', 'instagram_link', 'copyright', 'text_right']);

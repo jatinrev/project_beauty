@@ -44,6 +44,10 @@ class CreateSiteSettings extends Migration
             'key'   => 'text_right',
             'value' => 'YOU WILL EARN UP TO 20% COMMISSION FROM EVERY REPEATED APPOINTMENT FROM YOUR REFERRALS'
         ]);
+        SiteSettings::create([
+            'key'   => 'banner_image',
+            'value' => 'banner_image.jpg'
+        ]);
     }
 
     /**

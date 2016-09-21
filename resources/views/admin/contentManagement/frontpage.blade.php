@@ -25,6 +25,21 @@
             $('.click2edit').destroy();
         };
 
+        /*** File upload ***
+        var form    = document.getElementById('upload');
+        var request = new XMLHttpRequest();
+
+        form.addEventListner('submit', function(e) {
+            e.preventDefault();
+            var formdata = new FormData(form);
+
+            request.open('post', '/admin/frontpage');
+            request.addEventListner('load', transferComplete);
+            request.send(formdata);
+        });
+        function transferComplete(data) {
+            console.log(data.currentTarget.response);
+        }*/
     </script>
 @endsection
 
@@ -134,7 +149,7 @@
                         </div>
                     </div>
                     <div class="ibox-content">
-                        <form class="form-horizontal" method="POST">
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="action" value="frontpage_image_uploading_banner">
                             {{ csrf_field() }}
                             <p>Banner image</p>
@@ -146,7 +161,7 @@
                                     <button class="btn btn-sm btn-white" type="submit">Submit</button>
                                 </div>
                             </div>
-{{--                             <div class="form-group">
+                            {{-- <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
                                 </div>
                             </div> --}}
