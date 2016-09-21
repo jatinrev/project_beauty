@@ -17,14 +17,22 @@ Route::get('/home', 'HomeController@index');
 
 
 /*** User Routes ***/
+//   			{user_name} - make it like this.
 Route::get('/user/profile', 'UserCtrl@index');
 
 
 
 
-/*** Admin Routes ***/
+/*
+ Admin Routes
+ */
 Route::match(['get', 'post'], '/admin/login', 'AdminCtrl@login');
-Route::match(['get', 'post'], '/admin/profile', 'AdminCtrl@profile')->middleware('adminAuth');
+
+// CMS CONTROL
+Route::match(['get', 'post'], '/admin/frontpage', 'AdminCtrl@frontpage')->middleware('adminAuth');
+
+// OTHERS
+Route::match(['get', 'post'], '/admin/newsletter', 'AdminCtrl@newsletter')->middleware('adminAuth');
 	
 // Route::group(['middleware' => ['adminAuth']], function () {
 // });

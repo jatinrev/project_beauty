@@ -1,13 +1,12 @@
-<!-- Start : Main admin dashboard page -->
 @extends('layout_admin.admin_menu_outer')
 
 @section('content')
 
-    <div class="row wrapper border-bottom white-bg page-heading">
+{{--     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
-            <h2>Users Data</h2>
+            <h2>Newsletter</h2>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Start : Table -->
     <div class="wrapper wrapper-content animated fadeInRight">

@@ -50,7 +50,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         if( $user->user_type == 'isAdmin' ) {
-            $this->redirectTo = '/admin/profile';
+            $this->redirectTo = '/admin/frontpage';
         }
     }
 }
