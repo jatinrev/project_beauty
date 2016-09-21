@@ -21,8 +21,8 @@
            		</div>
                 
                 <!-- -->
-                <div class="header_right col-md-8 col-sm-11 col-xs-12">
-            		<nav class="navbar navbar-default col-md-10 padd_left_right_all_zero">
+                <div class="header_right col-md-9 col-sm-10 col-xs-12">
+            		<nav class="navbar navbar-default col-md-10 col-sm-12  padd_left_right_all_zero">
                     	<div class="container-fluid">
                         	<div class="col-md-12 col-sm-12 padd_left_right_all_zero">
                             	<div class="navbar-header">
@@ -46,7 +46,7 @@
                    			</div>
                         </div>
                     </nav>
-                    <div class="col-md-2 col-sm-12 login-btn-outr">
+                    <div class="col-md-2 col-sm-10 login-btn-outr">
                         @if (Auth::guest())
                             <button class="pink_btn login_btn" onclick='window.location.href="{{ url('/login') }}"'>login</button>
                         @else
@@ -74,18 +74,18 @@
         </div>
     </div>
 
-<div class="banner_text">
-    <h3 class="text_on_img"> Refer Your Favourate
+<div class="banner_text row">
+    <h3 class="text_on_img col-md-12 col-sm-12 col-xs-12"> Refer Your Favourate
         <div id="rotate"> 
-            <span>hairstylist</span> <span>make-up looks</span> 
+            <span>hairstylist</span> <span>makeup look</span> 
             <span>skincare</span> <span>nail-art</span> 
         </div> 
     </h3>
 </div>
 
-<div class="banner_scrolling_text_outr">
+<div class="banner_scrolling_text_outr row">
     <div class="banner_text_inr">
-        <div class="banner_text_cont">    
+        <div class="banner_text_cont col-md-12 col-sm-12 col-xs-12">    
             <div class="slide_link">
                 <a href="#">Lorem Ipsum 1&nbsp;</a>
                 <a href="#">Lorem Ipsum 2&nbsp;</a>
