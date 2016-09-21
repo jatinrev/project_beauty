@@ -1,5 +1,7 @@
 @include('layouts.header')
 
+
+
 <div id="inr_pages_header">
   <div id="header_inr" class="row padd_top_5px">
       <div id="header_cont padd_top_10 padd_botm_8" class="col-md-12 col-xs-12">
@@ -8,8 +10,8 @@
           </div>
             
             <!-- -->
-                <div class="header_right col-md-8 col-sm-12 col-xs-12">
-                    <nav class="navbar navbar-default col-md-10 padd_left_right_all_zero">
+                <div class="header_right col-md-9 col-sm-10 col-xs-12">
+                    <nav class="navbar navbar-default col-md-10 col-sm-12 padd_left_right_all_zero">
                           <div class="container-fluid">
                               <div class="col-md-12 padd_left_right_all_zero">
                                   <div class="navbar-header">
@@ -33,7 +35,7 @@
                               </div>
                           </div>
                     </nav>
-                          <div class="col-md-2 col-sm-12 login-btn-outr">
+                          <div class="col-md-2 col-sm-10 login-btn-outr">
                             <button class="pink_btn login_btn">login</button>               
                           </div>
                     

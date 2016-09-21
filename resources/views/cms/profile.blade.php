@@ -4,7 +4,7 @@
 	<!-- profile section-->
 	<div id="profile_outer">
 	    <div id="profile_inr" class="row">
-	        <div id="profile_cont" class="col-md-12 col-sm-12 col-xs-12 margin_botm_65px">
+	        <div id="profile_cont" class="col-md-12 col-sm-12 col-xs-12">
 	            <div class="profile_img margin_top_65px col-md-4 col-sm-5 col-xs-12 text-center">
 	                <h2>Nikki</h2>
 	                <a class="prf_img" href="#">
@@ -77,10 +77,191 @@
 	    </div>
 	</div>
 
-	        <!-- Professional Service Section -->
+		<!--Products Image Carousel -->
+	<div id="prd_carousel_outr">
+		<div id="prd_carousel_inr">
+			<div class="prd_heading padd_top_botm_40px text-center">
+				<h2>PRODUCTS</h2>
+				<img src="{{ asset('assets/images/red-heading-line.png') }}" alt 
+					height="2px" width="80px">
+	        </div>
+	        <div class="container">
+				<div class="row">
+					<div class="col-md-12">
+					    <div class="carousel carousel-showsixmoveone slide" id="carousel123">
+					    	<div class="prd_crsl_arrow">
+								    <a class="left carousel-control" href="#carousel123" 
+								    data-slide="prev">
+								    	<i class="glyphicon glyphicon-chevron-left"></i>
+								    </a>
+								    <a class="right carousel-control" href="#carousel123" 
+								    data-slide="next">
+								    	<i class="glyphicon glyphicon-chevron-right"></i>
+								    </a>
+							</div>		    
+					<!--Product Items -->
+					        <div class="carousel-inner">
+					          	<div class="item active">
+					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            		<a href="#">
+					            			<button type="button" class="light_red_btn cart_btn">
+					            				<span class="glyphicon glyphicon-shopping-cart">
+					            				</span> Add to Cart
+					            			</button>
+					            			<img src="{{ asset('assets/images/product1.jpg') }}" class="img-responsive">		
+					            		</a>
+					            		<div class="product_detail">
+                                    			<h4>Lorem Ipsum<b>$50</b></h4>
+                                		</div>
+					            	</div>
+					          	</div>
+					          	<div class="item">
+					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            		
+					            		<a href="#">
+					            			<button type="button" class="light_red_btn cart_btn">
+					            				<span class="glyphicon glyphicon-shopping-cart">
+					            				</span> Add to Cart
+					            			</button>
+					            			<img src="{{ asset('assets/images/product2.jpg') }}" class="img-responsive">
+					            		</a>
+					            		<div class="product_detail">
+                                    		<h4>Lorem Ipsum<b>$60</b></h4>
+                                		</div>
+					            		
+					            	</div>
+					          	</div>
+					          	<div class="item">
+					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            		<a href="#">
+					            			<button type="button" class="light_red_btn cart_btn">
+					            				<span class="glyphicon glyphicon-shopping-cart">
+					            				</span> Add to Cart
+					            			</button>
+					            			<img src="{{ asset('assets/images/product3.jpg') }}" class="img-responsive">
+					            		</a>
+					            		<div class="product_detail">
+                                    		<h4>Lorem Ipsum<b>$70</b></h4>
+                                		</div>
+
+					            	</div>
+					          	</div>          
+					          	<div class="item">
+					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            		<a href="#">
+					            			<button type="button" class="light_red_btn cart_btn">
+					            				<span class="glyphicon glyphicon-shopping-cart">
+					            				</span> Add to Cart
+					            			</button>
+					            			<img src="{{ asset('assets/images/product2.jpg') }}" class="img-responsive">
+					            		</a>
+					            		<div class="product_detail">
+                                    		<h4>Lorem Ipsum<b>$60</b></h4>
+                                		</div>
+
+					            	</div>
+					          	</div>
+					          	<div class="item">
+					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            		<a href="#">
+					            			<button type="button" class="light_red_btn cart_btn">
+					            				<span class="glyphicon glyphicon-shopping-cart">
+					            				</span> Add to Cart
+					            			</button>
+					            			<img src="{{ asset('assets/images/product1.jpg') }}" class="img-responsive">
+					            		</a>
+					            		<div class="product_detail">
+                                    		<h4>Lorem Ipsum<b>$50</b></h4>
+                                		</div>
+
+					            	</div>
+					          	</div>
+					          	<div class="item">
+					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            		<a href="#">
+					            			<button type="button" class="light_red_btn cart_btn">
+					            				<span class="glyphicon glyphicon-shopping-cart">
+					            				</span> Add to Cart
+					            			</button>
+					            			<img src="{{ asset('assets/images/product3.jpg') }}" class="img-responsive">
+						            	</a>
+					            		<div class="product_detail">
+                                    		<h4>Lorem Ipsum<b>$70</b></h4>
+                                		</div>
+
+					            	</div>
+					          	</div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	    <!--Image gallery starts -->
+	<div id="gallery_outr">
+	  <div id="gallery_inr">
+	    <div id="gallery_cont">
+	      <div class="gallery_head padd_top_botm_40px text-center">
+	        <h2>GALLERY</h2>
+	        <img src="{{ asset('assets/images/red-heading-line.png') }}" alt height="2px" 
+	        width="90px">
+	      </div>
+	      
+	      <div class="gallery_coll row">
+	        <!--Image album starts -->
+	        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" 
+	          data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/profile-service2.png') }}" alt="" />
+	          </a>
+
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" 
+	          data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
+	          </a>
+
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
+	          data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
+	          </a>
+
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/product1.jpg') }}" 
+	          data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/product1.jpg') }}" alt="" />
+	          </a>
+
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/product3.jpg') }}" 
+	          data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/product3.jpg') }}" alt="" />
+	          </a>
+
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
+	          data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
+	          </a>
+
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/profile-service2.png') }}" alt=""/>
+	          </a>
+
+	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" data-fancybox-group="gallery">
+	            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
+	          </a>
+	        </div>
+	      <!--Image album close -->
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	 <!-- Professional Service Section -->
 	<div id="prf_service_outr">
 	    <div id="prf_service_inr" class="row">
-	        <div id="prf_service_cont" class="col-md-12 col-sm-12 col-xs-12">
+	        <div id="prf_service_cont" class="col-md-12 col-sm-12 col-xs-12 margin_top_65px">
 	    
 	        <!-- Accordion Starts-->
 	          <div id="accordion" role="tablist" aria-multiselectable="true" class="col-md-6 col-sm-6 col-xs-12">
@@ -294,63 +475,6 @@
 	    </div>
 	</div>
 
-	    <!--Image gallery starts -->
-	<div id="gallery_outr">
-	  <div id="gallery_inr">
-	    <div id="gallery_cont">
-	      <div class="gallery_head padd_top_botm_40px text-center">
-	        <h2>GALLERY</h2>
-	        <img src="{{ asset('assets/images/red-heading-line.png') }}" alt height="2px" 
-	        width="90px">
-	      </div>
-	      
-	      <div class="gallery_coll row">
-	        <!--Image album starts -->
-	        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" 
-	          data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/profile-service2.png') }}" alt="" />
-	          </a>
-
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" 
-	          data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
-	          </a>
-
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
-	          data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
-	          </a>
-
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/product1.jpg') }}" 
-	          data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/product1.jpg') }}" alt="" />
-	          </a>
-
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/product3.jpg') }}" 
-	          data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/product3.jpg') }}" alt="" />
-	          </a>
-
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
-	          data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
-	          </a>
-
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/profile-service2.png') }}" alt=""/>
-	          </a>
-
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" data-fancybox-group="gallery">
-	            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
-	          </a>
-	        </div>
-	      <!--Image album close -->
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
 	    <!--Calender section starts -->
 	<div id="cal_outr">
 	  <div id="cal_inr" class="row">
@@ -370,4 +494,6 @@
 	  </div>
 	</div>
 
+
 @endsection
+

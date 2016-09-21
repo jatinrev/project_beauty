@@ -8,8 +8,12 @@
 			$('.fancybox').fancybox();
 		});
 	</script>
-    <script type="text/javascript" src="{{ asset('assets/bower_components/angular/angular.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/bower_components/angular/angular.js') }}"> </script>
     <script type="text/javascript" src="{{ asset('assets/bower_components/bootstrap/dist/js/bootstrap.js') }}"></script>
+
+
+    <script type="text/javascript" src="{{ asset('assets/js/index.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/product_index.js') }}"></script>
     
 	@yield('script')
 
