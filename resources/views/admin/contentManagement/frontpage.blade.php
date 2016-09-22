@@ -16,13 +16,15 @@
     <script>
         $(document).ready(function(){
             $('.summernote').summernote();
+            $('.summernote_professional').summernote();
         });
         var edit = function() {
             $('.click2edit').summernote({focus: true});
         };
-        var save = function() {
-            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
-            $('.click2edit').destroy();
+        var save = function(val) {
+            var aHTML = $( '.summernote_'+val).code(); //save HTML If you need(aHTML: array).
+            console.log(aHTML);
+            // $('.summernote_professional').destroy();
         };
 
         /*** File upload ***
@@ -51,7 +53,7 @@
                 <!--== Start : Professional Membership ==-->
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Join the clud(Professional Membership)</h5>
+                        <h5>Join the clud(Professional Membership)</h5>{{-- &nbsp&nbsp&nbsp --}}
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -71,7 +73,7 @@
                         </div>
                     </div> <!-- ibox-title -->
                     <div class="ibox-content no-padding">
-                        <div class="summernote">
+                        <div class="summernote_professional">
                             <h3>Lorem Ipsum is simply</h3>
                             dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
@@ -83,6 +85,13 @@
                                 <li>Make a type specimen book</li>
                                 <li>Unknown printer</li>
                             </ul>
+                        </div>
+                        <div style="padding-left: 20px;">
+                            <form method="POST" id="form_professional">
+                                {{ csrf_field() }}
+                                <textarea name="textarea_professional" id="textarea_professional"></textarea>
+                            </form>
+                            <button id="save" class="btn btn-primary  btn-xs" onclick="save('professional')" type="button">Save</button>
                         </div>
                     </div> <!-- ibox-content -->
                 </div> <!-- float-e-margins -->

@@ -26,7 +26,7 @@
 
 
 @section('content')
-    
+    {{-- {{ dd($site_settings_provider) }} --}}
     <div id="book_online_outr">
     	<div id="book_online_inr" class="row">
         	<div id="book_online_cont" class="col-md-12 col-sm-12 col-xs-12">
@@ -60,10 +60,10 @@
                                 <a href="{{ url('/register') }}" class="membership_btn margin_top_25px">Create A Free Account & Earn Money</a>
                             @endif
                     	</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div id="services_outr">
         <div id="services_inr" class="row">

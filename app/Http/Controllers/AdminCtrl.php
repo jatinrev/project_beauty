@@ -49,8 +49,7 @@ class AdminCtrl extends Controller
             redirect('admin/frontpage');
         }
 
-
-        // -------------getting old Data-------------
+        // -------------getting old Data------------- 'twitter_link', 'facebook_link', 'instagram_link', 'copyright'
         $site_settings = SiteSettings::get_site_settings(['frontpage_slider_text', 'twitter_link', 'facebook_link', 'instagram_link', 'copyright', 'text_right']);
 
         // -------------View-------------
