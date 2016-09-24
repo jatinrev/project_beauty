@@ -78,121 +78,130 @@
 	</div>
 
 		<!--Products Image Carousel -->
-	<div id="prd_carousel_outr">
-		<div id="prd_carousel_inr">
-			<div class="prd_heading padd_top_botm_40px text-center">
-				<h2>PRODUCTS</h2>
-				<img src="{{ asset('assets/images/red-heading-line.png') }}" alt 
-					height="2px" width="80px">
-	        </div>
-	        <div class="container">
-				<div class="row">
-					<div class="col-md-12">
-					    <div class="carousel carousel-showsixmoveone slide" id="carousel123">
-					    	<div class="prd_crsl_arrow">
-								    <a class="left carousel-control" href="#carousel123" 
-								    data-slide="prev">
-								    	<i class="glyphicon glyphicon-chevron-left"></i>
-								    </a>
-								    <a class="right carousel-control" href="#carousel123" 
-								    data-slide="next">
-								    	<i class="glyphicon glyphicon-chevron-right"></i>
-								    </a>
-							</div>		    
+	<div class="container">
+		<div class="prd_heading padd_top_botm_40px text-center">
+			<h2>PRODUCTS</h2>
+			<img src="{{ asset('assets/images/red-heading-line.png') }}" alt height="2px" width="80px">
+	    </div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="carousel carousel-showsixmoveone slide" id="carousel123">
+					<div class="prd_crsl_arrow">
+						<a class="left carousel-control" href="#carousel123" data-slide="prev">
+							<i class="glyphicon glyphicon-chevron-left"></i>
+						</a>
+						<a class="right carousel-control" href="#carousel123" data-slide="next">
+							<i class="glyphicon glyphicon-chevron-right"></i>
+						</a>
+					</div>		    
 					<!--Product Items -->
-					        <div class="carousel-inner">
-					          	<div class="item active">
-					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
-					            		<a href="#">
-					            			<button type="button" class="light_red_btn cart_btn">
-					            				<span class="glyphicon glyphicon-shopping-cart">
-					            				</span> Add to Cart
-					            			</button>
-					            			<img src="{{ asset('assets/images/product1.jpg') }}" class="img-responsive">		
-					            		</a>
-					            		<div class="product_detail">
-                                    			<h4>Lorem Ipsum<b>$50</b></h4>
-                                		</div>
-					            	</div>
-					          	</div>
-					          	<div class="item">
-					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
-					            		
-					            		<a href="#">
-					            			<button type="button" class="light_red_btn cart_btn">
-					            				<span class="glyphicon glyphicon-shopping-cart">
-					            				</span> Add to Cart
-					            			</button>
-					            			<img src="{{ asset('assets/images/product2.jpg') }}" class="img-responsive">
-					            		</a>
-					            		<div class="product_detail">
-                                    		<h4>Lorem Ipsum<b>$60</b></h4>
-                                		</div>
-					            		
-					            	</div>
-					          	</div>
-					          	<div class="item">
-					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
-					            		<a href="#">
-					            			<button type="button" class="light_red_btn cart_btn">
-					            				<span class="glyphicon glyphicon-shopping-cart">
-					            				</span> Add to Cart
-					            			</button>
-					            			<img src="{{ asset('assets/images/product3.jpg') }}" class="img-responsive">
-					            		</a>
-					            		<div class="product_detail">
-                                    		<h4>Lorem Ipsum<b>$70</b></h4>
-                                		</div>
-
-					            	</div>
-					          	</div>          
-					          	<div class="item">
-					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
-					            		<a href="#">
-					            			<button type="button" class="light_red_btn cart_btn">
-					            				<span class="glyphicon glyphicon-shopping-cart">
-					            				</span> Add to Cart
-					            			</button>
-					            			<img src="{{ asset('assets/images/product2.jpg') }}" class="img-responsive">
-					            		</a>
-					            		<div class="product_detail">
-                                    		<h4>Lorem Ipsum<b>$60</b></h4>
-                                		</div>
-
-					            	</div>
-					          	</div>
-					          	<div class="item">
-					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
-					            		<a href="#">
-					            			<button type="button" class="light_red_btn cart_btn">
-					            				<span class="glyphicon glyphicon-shopping-cart">
-					            				</span> Add to Cart
-					            			</button>
-					            			<img src="{{ asset('assets/images/product1.jpg') }}" class="img-responsive">
-					            		</a>
-					            		<div class="product_detail">
-                                    		<h4>Lorem Ipsum<b>$50</b></h4>
-                                		</div>
-
-					            	</div>
-					          	</div>
-					          	<div class="item">
-					            	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
-					            		<a href="#">
-					            			<button type="button" class="light_red_btn cart_btn">
-					            				<span class="glyphicon glyphicon-shopping-cart">
-					            				</span> Add to Cart
-					            			</button>
-					            			<img src="{{ asset('assets/images/product3.jpg') }}" class="img-responsive">
-						            	</a>
-					            		<div class="product_detail">
-                                    		<h4>Lorem Ipsum<b>$70</b></h4>
-                                		</div>
-
-					            	</div>
-					          	</div>
+					<div class="carousel-inner">
+						<div class="item active">
+					    	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					        	<a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					           	<img src="{{ asset('assets/images/product1.jpg') }}" class="img-responsive">
+					        	</a>
+					        	<div class="product_detail">
+                            		<a href="#" class="prd_det">Lorem Ipsum<b>$50</b>
+                            		</a>
+                        		</div>
+					    	</div>
+						</div>
+						<div class="item">
+					        <div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            <a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					            	<img src="{{ asset('assets/images/product2.jpg') }}" class="img-responsive">
+					            </a>
+					            <div class="product_detail">
+                                    <a href="#" class="prd_det">Lorem Ipsum<b>$60</b></a>
+                                </div>
 					        </div>
-					    </div>
+						</div>
+						<div class="item">
+					        <div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            <a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					            	<img src="{{ asset('assets/images/product3.jpg') }}" class="img-responsive">
+					            </a>
+					            <div class="product_detail">
+                                    <a href="#" class="prd_det">Lorem Ipsum<b>$70</b></a>
+                                </div>
+							</div>
+						</div>          
+						<div class="item">
+					        <div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            <a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					            	<img src="{{ asset('assets/images/product2.jpg') }}" class="img-responsive">
+					            </a>
+					            <div class="product_detail">
+                                    <a href="#" class="prd_det">Lorem Ipsum<b>$60</b></a>
+                                </div>
+							</div>
+						</div>
+						<div class="item">
+					        <div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            <a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					            	<img src="{{ asset('assets/images/product1.jpg') }}" class="img-responsive">
+					            </a>
+					            <div class="product_detail">
+                                    <a href="#" class="prd_det">Lorem Ipsum<b>$50</b></a>
+                                </div>
+							</div>
+						</div>
+						<div class="item">
+					        <div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            <a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					            	<img src="{{ asset('assets/images/product3.jpg') }}" class="img-responsive">
+						        </a>
+					            <div class="product_detail">
+                                    <a href="#" class="prd_det">Lorem Ipsum<b>$70</b></a>
+                                </div>
+							</div>
+						</div>
+						<div class="item">
+					        <div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					            <a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					            	<img src="{{ asset('assets/images/product2.jpg') }}" class="img-responsive">
+					            </a>
+					        	<div class="product_detail">
+                                    <a href="#" class="prd_det">Lorem Ipsum<b>$60</b></a>
+                                </div>
+					        </div>
+						</div>
+						<div class="item">
+					    	<div class="col-xs-12 col-sm-4 col-md-3 item_outr">
+					        	<a href="#">
+					            	<button type="button" class="light_red_btn cart_btn">
+					            		<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					            	</button>
+					           	<img src="{{ asset('assets/images/product1.jpg') }}" class="img-responsive">
+					        	</a>
+					        	<div class="product_detail">
+                            		<a href="#" class="prd_det">Lorem Ipsum<b>$50</b>
+                            		</a>
+                        		</div>
+					    	</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -213,41 +222,41 @@
 	      <div class="gallery_coll row">
 	        <!--Image album starts -->
 	        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" 
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" 
 	          data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/profile-service2.png') }}" alt="" />
 	          </a>
 
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" 
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" 
 	          data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
 	          </a>
 
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
 	          data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
 	          </a>
 
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/product1.jpg') }}" 
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/product1.jpg') }}" 
 	          data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/product1.jpg') }}" alt="" />
 	          </a>
 
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/product3.jpg') }}" 
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/product3.jpg') }}" 
 	          data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/product3.jpg') }}" alt="" />
 	          </a>
 
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/profile-service1.png') }}" 
 	          data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/profile-service1.png') }}" alt="" />
 	          </a>
 
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" data-fancybox-group="gallery">
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/profile-service2.png') }}" data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/profile-service2.png') }}" alt=""/>
 	          </a>
 
-	          <a class="fancybox col-md-3 col-sm-4 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" data-fancybox-group="gallery">
+	          <a class="fancybox col-md-3 col-sm-6 col-xs-12" href="{{ asset('assets/images/profile-img.jpg') }}" data-fancybox-group="gallery">
 	            <img src="{{ asset('assets/images/profile-img.jpg') }}" alt="" />
 	          </a>
 	        </div>
