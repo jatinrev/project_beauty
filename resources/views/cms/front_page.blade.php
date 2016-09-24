@@ -1,14 +1,6 @@
 @extends('layouts.basic_master')
 
 @section('script')
-    <script type="text/javascript" src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
-    <script>
-        $(window).load(function() {
-            $('.flexslider').flexslider({
-                animation: "slide"
-            });
-        });
-    </script>
 
     <script type="text/javascript">
         $(document).ready(function() {

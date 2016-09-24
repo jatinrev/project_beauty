@@ -1,12 +1,33 @@
 @extends('layouts.cms_master')
 
+@section('script')
+<script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+     $("#pro_mem_reg").click(function(event) {
+            $("#reg_form_horizontal").css("display" , "block"); 
+            $(".prof_membership_text").css("display" , "none"); 
+            $("#cust_form_horizontal").hide();
+            $(".cust_membership_text").css("display" , "inline-block");
+     });
+
+      $("#cust_mem_reg").click(function(event) {
+            $("#cust_form_horizontal").css("display" , "block"); 
+            $(".cust_membership_text").css("display" , "none");
+            $("#reg_form_horizontal").hide();
+            $(".prof_membership_text").css("display" , "inline-block");
+     });
+});
+</script>
+@endsection
 
 @section('content')
 
 <div id="join_form_outr">
     <div id="join_form_inr">
         <div id="join_form_cont" class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12 text-center margin_top_100px 
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center padd_top_30px padd_botm_60px
             join_form_top">
                <h3>Let's get started!</h3>
             <div class="col-md-5 col-sm-5 col-xs-12 text-center left_join">
@@ -158,22 +179,3 @@
 <!--Register form -->
 
 @endsection
-<script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-
-     $("#pro_mem_reg").click(function(event) {
-            $("#reg_form_horizontal").css("display" , "block"); 
-            $(".prof_membership_text").css("display" , "none"); 
-            $("#cust_form_horizontal").hide();
-            $(".cust_membership_text").css("display" , "inline-block");
-     });
-
-      $("#cust_mem_reg").click(function(event) {
-            $("#cust_form_horizontal").css("display" , "block"); 
-            $(".cust_membership_text").css("display" , "none");
-            $("#reg_form_horizontal").hide();
-            $(".prof_membership_text").css("display" , "inline-block");
-     });
-});
-</script>

@@ -47,7 +47,7 @@
                         </div>
                     </nav>
                     <div  class="col-md-3 col-sm-7 col-xs-9">
-                        <div class="reg-btn-outr">
+                        <div class="reg-btn-outr" onclick='window.location.href="{{ url('/register') }}"'>
                             <button class="pink_btn reg_btn">Register</button>
                         </div>
                         <div class="login-btn-outr">
