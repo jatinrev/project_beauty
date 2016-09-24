@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.cms_master')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
@@ -6,7 +6,6 @@
 
 @section('content')
 <div class="container">
-    <!-- {{ asset('assets') }} -->
     <div class="row">
         <div class="col-md-5 col-sm-6 col-xs-6 col-md-offset-3 col-sm-offset-3 col-xs-offset-3">
             <div class="panel panel-default">
