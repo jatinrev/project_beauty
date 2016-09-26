@@ -158,22 +158,22 @@
 <!--Register form -->
 
 @endsection
+
 <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
 <script type="text/javascript">
 $(document).ready(function() {
+    $("#pro_mem_reg").click(function(event) {
+        $("#reg_form_horizontal").css("display" , "block"); 
+        $(".prof_membership_text").css("display" , "none"); 
+        $("#cust_form_horizontal").hide();
+        $(".cust_membership_text").css("display" , "inline-block");
+    });
 
-     $("#pro_mem_reg").click(function(event) {
-            $("#reg_form_horizontal").css("display" , "block"); 
-            $(".prof_membership_text").css("display" , "none"); 
-            $("#cust_form_horizontal").hide();
-            $(".cust_membership_text").css("display" , "inline-block");
-     });
-
-      $("#cust_mem_reg").click(function(event) {
-            $("#cust_form_horizontal").css("display" , "block"); 
-            $(".cust_membership_text").css("display" , "none");
-            $("#reg_form_horizontal").hide();
-            $(".prof_membership_text").css("display" , "inline-block");
-     });
+    $("#cust_mem_reg").click(function(event) {
+        $("#cust_form_horizontal").css("display" , "block"); 
+        $(".cust_membership_text").css("display" , "none");
+        $("#reg_form_horizontal").hide();
+        $(".prof_membership_text").css("display" , "inline-block");
+    });
 });
 </script>

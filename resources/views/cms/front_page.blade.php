@@ -20,6 +20,7 @@
     </script>
 @endsection
 
+
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/flexslider.css') }}">
 @endsection

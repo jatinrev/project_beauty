@@ -1,8 +1,8 @@
 @include('layouts.header')
-<style type="text/css">
-    .form_alert_msg{ display: none; position: absolute; text-align: center; top: 0}
-    .alert_click{color: #ffffff; background: transparent; font-size: 16px; display: none;} 
-</style>
+    <style type="text/css">
+        .form_alert_msg{ display: none; position: absolute; text-align: center; top: 0}
+        .alert_click{color: #ffffff; background: transparent; font-size: 16px; display: none;} 
+    </style>
 
 
     <div id="header_outr">
@@ -48,7 +48,7 @@
                     </nav>
                     <div  class="col-md-3 col-sm-7 col-xs-9">
                         <div class="reg-btn-outr">
-                            <button class="pink_btn reg_btn">Register</button>
+                            <button class="pink_btn reg_btn" onclick='window.location.href="{{ url('/register') }}"'>Register</button>
                         </div>
                         <div class="login-btn-outr">
                             @if (Auth::guest())
@@ -77,29 +77,29 @@
         </div>
     </div>
 
-<div class="banner_text row">
-    <h3 class="text_on_img col-md-12 col-sm-12 col-xs-12"> REFFER YOUR FAVORITE
-        <div id="rotate"> 
-            <span>hairstylist</span> <span>makeup look</span> 
-            <span>skincare</span> <span>nail-art</span> 
-        </div> 
-    </h3>
-</div>
-
-<div class="banner_scrolling_text_outr row">
-    <div class="banner_text_inr">
-        <div class="banner_text_cont col-md-12 col-sm-12 col-xs-12">    
-            <div class="slide_link">
-                <a href="#">Lorem Ipsum 1&nbsp;</a>
-                <a href="#">Lorem Ipsum 2&nbsp;</a>
-                <a href="#" class="last">Lorem Ipsum 3&nbsp;</a>    
-            </div>
-            <div class="slide_btn">
-                <button type="button" class="light_red_btn banner_btn">Get Started </button>
-            </div>
-        </div>    
+    <div class="banner_text row">
+        <h3 class="text_on_img col-md-12 col-sm-12 col-xs-12"> REFFER YOUR FAVORITE
+            <div id="rotate"> 
+                <span>hairstylist</span> <span>makeup look</span> 
+                <span>skincare</span> <span>nail-art</span> 
+            </div> 
+        </h3>
     </div>
-</div>
+
+    <div class="banner_scrolling_text_outr row">
+        <div class="banner_text_inr">
+            <div class="banner_text_cont col-md-12 col-sm-12 col-xs-12">    
+                <div class="slide_link">
+                    <a href="#">Lorem Ipsum 1&nbsp;</a>
+                    <a href="#">Lorem Ipsum 2&nbsp;</a>
+                    <a href="#" class="last">Lorem Ipsum 3&nbsp;</a>    
+                </div>
+                <div class="slide_btn">
+                    <button type="button" class="light_red_btn banner_btn">Get Started </button>
+                </div>
+            </div>    
+        </div>
+    </div>
 
     @yield('content')
 
@@ -120,15 +120,14 @@
     </div>
 
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".alert_click").click(function(){
+                $(".form_alert_msg").show();
+
+            });
+                setTimeout(function() { $(".form_alert_msg").hide(); }, 5000);
+        });
+    </script>
 
 @include('layouts.footer')
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".alert_click").click(function(){
-            $(".form_alert_msg").show();
-
-        });
-            setTimeout(function() { $(".form_alert_msg").hide(); }, 5000);
-    });
-</script>
