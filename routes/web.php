@@ -25,13 +25,11 @@ Route::get('images/{filename}', function ($filename)
         ->header("Content-Type", $type);
 });
 
-
 Route::match(['get', 'post'], '/', 'withoutLogin@index');
 Route::match(['get'], '/how-it-works', 'withoutLogin@how_it_works');
 Route::match(['get'], '/faq', 'withoutLogin@faq');
 Route::match(['get'], '/about-us', 'withoutLogin@about_us');
 Route::match(['get', 'post'], '/contact-us', 'withoutLogin@contact_us');
-
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 
