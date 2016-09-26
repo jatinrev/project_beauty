@@ -47,16 +47,18 @@
                         </div>
                     </nav>
                     <div  class="col-md-3 col-sm-7 col-xs-9">
-                        <div class="reg-btn-outr">
-                            <button class="pink_btn reg_btn" onclick='window.location.href="{{ url('/register') }}"'>Register</button>
-                        </div>
+                        @if (Auth::guest())
+                            <div class="reg-btn-outr">
+                                <button class="pink_btn reg_btn" onclick='window.location.href="{{ url('/register') }}"'>Register</button>
+                            </div>
+                        @endif
                         <div class="login-btn-outr">
                             @if (Auth::guest())
                                 <button class="pink_btn login_btn" onclick='window.location.href="{{ url('/login') }}"'>login</button>
                             @else
                                 <button class="pink_btn login_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
                                 <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
+                                    {{ csrf_field() }}
                                 </form>
                             @endif
                         
@@ -79,9 +81,10 @@
 
     <div class="banner_text row">
         <h3 class="text_on_img col-md-12 col-sm-12 col-xs-12"> REFFER YOUR FAVORITE
-            <div id="rotate"> 
-                <span>hairstylist</span> <span>makeup look</span> 
-                <span>skincare</span> <span>nail-art</span> 
+            <div id="rotate">
+                @foreach ($site_settings['frontpage_slider_text'] as $slider_text)
+                    <span>{{ $slider_text }}</span>
+                @endforeach
             </div> 
         </h3>
     </div>
@@ -109,14 +112,14 @@
             <div id="footer_social_inr" class="row">
                 <div id="footer_social_cont" class="col-md-12 col-sm-12 col-xs-12">
                     <div class="social_links col-md-12 col-sm-12 col-xs-12 text-center">
-                        <a href="#" class="col-md-4 col-sm-4 col-xs-4"><img src="{{ asset('assets/images/fb-icon.png') }}" /></a>
-                        <a href="#" class="col-md-4 col-sm-4 col-xs-4"><img src="{{ asset('assets/images/tw-icon.png') }}" /></a>               
-                        <a href="#" class="col-md-4 col-sm-4 col-xs-4"><img src="{{ asset('assets/images/insta-icon.png') }}" /></a>
+                        <a href="{{ $site_settings_provider['facebook_link'] }}" class="col-md-4 col-sm-4 col-xs-4"><img src="{{ asset('assets/images/fb-icon.png') }}" /></a>
+                        <a href="{{ $site_settings_provider['twitter_link'] }}" class="col-md-4 col-sm-4 col-xs-4"><img src="{{ asset('assets/images/tw-icon.png') }}" /></a>               
+                        <a href="{{ $site_settings_provider['instagram_link'] }}" class="col-md-4 col-sm-4 col-xs-4"><img src="{{ asset('assets/images/insta-icon.png') }}" /></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copy_right text-center color_white">Copyright &copy; 2016 BRC.</div>
+        <div class="copy_right text-center color_white">{{ $site_settings_provider['copyright'] }}</div>
     </div>
 
 

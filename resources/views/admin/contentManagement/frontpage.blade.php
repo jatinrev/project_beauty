@@ -15,33 +15,15 @@
 
     <script>
         $(document).ready(function(){
-            $('.summernote').summernote();
+            $('.summernote_customer').summernote();
             $('.summernote_professional').summernote();
         });
-        var edit = function() {
-            $('.click2edit').summernote({focus: true});
-        };
         var save = function(val) {
             var aHTML = $( '.summernote_'+val).code(); //save HTML If you need(aHTML: array).
-            console.log(aHTML);
+            $('#textarea_'+val).val(aHTML);
+            $('#form_'+val).submit();
             // $('.summernote_professional').destroy();
         };
-
-        /*** File upload ***
-        var form    = document.getElementById('upload');
-        var request = new XMLHttpRequest();
-
-        form.addEventListner('submit', function(e) {
-            e.preventDefault();
-            var formdata = new FormData(form);
-
-            request.open('post', '/admin/frontpage');
-            request.addEventListner('load', transferComplete);
-            request.send(formdata);
-        });
-        function transferComplete(data) {
-            console.log(data.currentTarget.response);
-        }*/
     </script>
 @endsection
 
@@ -74,22 +56,13 @@
                     </div> <!-- ibox-title -->
                     <div class="ibox-content no-padding">
                         <div class="summernote_professional">
-                            <h3>Lorem Ipsum is simply</h3>
-                            dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                            <br/>
-                            <br/>
-                            <ul>
-                                <li>Remaining essentially unchanged</li>
-                                <li>Make a type specimen book</li>
-                                <li>Unknown printer</li>
-                            </ul>
+                            {!! $site_settings['textarea_professional'] !!}
                         </div>
                         <div style="padding-left: 20px;">
                             <form method="POST" id="form_professional">
                                 {{ csrf_field() }}
-                                <textarea name="textarea_professional" id="textarea_professional"></textarea>
+                                <input type="hidden" name="action" value="form_professional_submit">
+                                <input name="textarea_professional" type="hidden" id="textarea_professional">
                             </form>
                             <button id="save" class="btn btn-primary  btn-xs" onclick="save('professional')" type="button">Save</button>
                         </div>
@@ -119,18 +92,16 @@
                         </div>
                     </div> <!-- ibox-title -->
                     <div class="ibox-content no-padding">
-                        <div class="summernote">
-                            <h3>Lorem Ipsum is simply</h3>
-                            dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                            <br/>
-                            <br/>
-                            <ul>
-                                <li>Remaining essentially unchanged</li>
-                                <li>Make a type specimen book</li>
-                                <li>Unknown printer</li>
-                            </ul>
+                        <div class="summernote_customer">
+                            {!! $site_settings['textarea_customer'] !!}
+                        </div>
+                        <div style="padding-left: 20px;">
+                            <form method="POST" id="form_customer">
+                                {{ csrf_field() }}
+                                <input type="hidden" name="action" value="form_customer_submit">
+                                <input name="textarea_customer" type="hidden" id="textarea_customer">
+                            </form>
+                            <button id="save" class="btn btn-primary  btn-xs" onclick="save('customer')" type="button">Save</button>
                         </div>
                     </div> <!-- ibox-content -->
                 </div> <!-- float-e-margins -->
@@ -165,6 +136,23 @@
                             <div class="form-group">
                                 <div class="col-lg-8">
                                     <input type="file" name="banner_image">
+                                </div>
+                                <div class="col-lg-4">
+                                    <button class="btn btn-sm btn-white" type="submit">Submit</button>
+                                </div>
+                            </div>
+                            {{-- <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-10">
+                                </div>
+                            </div> --}}
+                        </form>
+                        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="action" value="action_site_logo">
+                            {{ csrf_field() }}
+                            <p>Site Logo</p>
+                            <div class="form-group">
+                                <div class="col-lg-8">
+                                    <input type="file" name="site_logo">
                                 </div>
                                 <div class="col-lg-4">
                                     <button class="btn btn-sm btn-white" type="submit">Submit</button>
