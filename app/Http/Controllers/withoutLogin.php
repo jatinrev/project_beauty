@@ -34,4 +34,20 @@ class withoutLogin extends Controller
     	}
     }
 
+    public function how_it_works() {
+        return view('cms.how_it_works');
+    }
+
+    public function faq() {
+        return view('cms.faq');
+    }
+
+    public function about_us() {
+        return view('cms.about_us');
+    }
+
+    public function contact_us() {
+        return view('cms.contact_us');
+    }
+
 }

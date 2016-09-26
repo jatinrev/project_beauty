@@ -10,8 +10,28 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+// ROUTE TO GET DATA FROM STORAGE
+Route::get('images/{filename}', function ($filename)
+{
+    if (is_array($filename)) {
+        $filename = implode('/', $filename);
+    }
+    // storage_path('app') - path to /storage/app folder
+    $path = storage_path('app') . '/uploaded_images/' . $filename;
+    $file = \File::get($path);
+    $type = \File::mimeType($path);
+
+    return \Response::make($file,200)
+        ->header("Content-Type", $type);
+});
+
 
 Route::match(['get', 'post'], '/', 'withoutLogin@index');
+Route::match(['get'], '/how-it-works', 'withoutLogin@how_it_works');
+Route::match(['get'], '/faq', 'withoutLogin@faq');
+Route::match(['get'], '/about-us', 'withoutLogin@about_us');
+Route::match(['get', 'post'], '/contact-us', 'withoutLogin@contact_us');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 
