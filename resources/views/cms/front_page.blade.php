@@ -48,14 +48,76 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="prof_memerbship col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero text-center">
                             <h3 class="color_red">JOIN. GROW. EARN</h3>
-                            <img src="{{ asset('assets/images/prof-membership.png') }}" class="margin_top_25px">
+
+<!-- Join_club text starts-->
+                        <!--    <div class="club_membership_left">
+                              <h4>Beauty <br> Professional Membership</h4> 
+                              <p>Sign up and receive a Beauty Professional Id<br>and Create your own profile that will help you...</p>
+                              <ul>
+                                  <li>
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                      List your services, products and pricing so your clients can book and purchase online.
+                                  </li>
+                                  <li>
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                      Track and confirm new appointments with ease and NO MONTHLY FEES
+                                  </li>
+                                  <li>
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                      Order your customer Beauty Professional id membership cards online to distribute to your clients.
+                                  </li>
+                                  <li>
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                      Motivates your existing clients to promote your services by offering commision for every new referals that books online
+                                  </li>
+                                  <li>
+                                    <span class="glyphicon glyphicon-picture"></span>
+                                      Sit back and watch how easily your clientele and sales will grow
+                                  </li>
+                              </ul>
+                            </div> -->
+<!-- Join club text close-->
+
+                            <img src="{{asset('assets/images/prof-membership.png') }}" alt 
+                            class="margin_top_25px">
                             @if (Auth::guest())
-                                <a href="{{ url('/login') }}"  class="membership_btn margin_top_25px">Register Now & Create Your Account</a>
+                                <a href="{{ url('/login') }}"  class="membership_btn margin_top_25px">Join Now & Create Your Account</a>
                             @endif
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero cust_membership text-center">
                             <h3 class="color_red text-center">JOIN. SHARE. EARN</h3>
-                            <img src="{{ asset('assets/images/customer-membersip.png') }}" class="margin_top_25px">
+
+<!-- Join_club text starts-->
+                            <!--<div class="club_membership_right">
+                                <h4>Beauty <br> Customer Membership</h4>
+                                <p>Sign up and create your own profile which will <br> track how many of your referred friends <br>and family book using your link. You can...</p>
+                                <ul>
+                                    <li>
+                                        <span class="glyphicon glyphicon-picture"></span>
+                                        Share your profile with your friends and family so they can join the beauty referral Club using your custom link
+                                    </li>
+                                    <li>
+                                        <span class="glyphicon glyphicon-picture"></span>
+                                        Earn money based on how many of your friends and family book appointments using your id number
+                                    </li>
+                                    <li>
+                                        <span class="glyphicon glyphicon-picture"></span>
+                                        Whoever clicks your link will be able to book online and you will recieve commission for fulfilled appointments
+                                    </li>
+                                    <li>
+                                        <span class="glyphicon glyphicon-picture"></span>
+                                        You will earn commission from Every repeated appointment from your referrals
+                                    </li>
+                                    <li>
+                                        <span class="glyphicon glyphicon-picture"></span>
+                                        You can monitor or withdraw your commission to your bank or paypal account on your profile page
+                                    </li>
+                                </ul>
+                            </div>-->
+
+<!--Join_club text close -->
+                                <img src="{{asset('assets/images/customer-membersip.png') }}" alt 
+                                class="margin_top_25px">
                             @if (Auth::guest())
                                 <a href="{{ url('/register') }}" class="membership_btn margin_top_25px">Create A Free Account & Earn Money</a>
                             @endif
@@ -70,7 +132,7 @@
             <div id="services_cont" class="col-md-12 col-sm-12 col-xs-12">
                 <div class="services_text col-md-5 col-sm-12 col-xs-12 color_white text-center">
                     <h2>WE WORK WITH THOUSAND OF PROFESSIONALS</h2>
-                    <p class="margin_top_50px">At our website you can find all kind of beauty professionals in your arae.</p>
+                    <p class="margin_top_50px">If you are dedicated to your career join the club and start earning money!</p>
                 </div>
                 <div class="services_list col-md-7 col-sm-12 col-xs-12">
                     <div class="row">
@@ -136,10 +198,11 @@
         	<div id="call_to_action_cont" class="col-md-12 col-sm-12 col-xs-12">
             	<div class="col-md-8 col-sm-12 col-xs-12">
                 	<h2 class="text-uppercase color_white">grow your customers and increase your sales</h2>
-                    <p class="color_white">Each of your customers have 100+ friends. Do you want them to be your customer as well?</p>
+                    <p class="color_white">It's fast, easy and no strings attached...</p>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12 text-right padd_top_25px text-center call_action_btn">
-                	<a href="#" class="trans_Wborder_btn inline_block"> register</a>
+                	<a href="#" class="trans_Wborder_btn inline_block join_the_club_btn"> JOIN THE CLUB</a>
+                    <div class="call_action_txt"><em>It's FREE!</em></div>
                 </div>
             </div>
         </div>
@@ -151,9 +214,9 @@
         	<div id="test_cont" class="col-md-12 col-sm-12 col-xs-12 text-center">
                 <img src="{{ asset('assets/images/quote.png') }}" class="inline_block"/>
 
-                    <div class="container">
+                    <div class="testimonial container">
                       <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12 padd_left_8px">
                           <div class="carousel slide" data-ride="carousel" id="quote-carousel">
                           
                     <!-- Bottom Carousel Indicators -->
@@ -211,9 +274,10 @@
             	<div class="col-md-6 col-sm-12 col-xs-12 news_ltr">
                 	<h4 class="text-uppercase color_white">subscribe to our newsletter for latest news</h4>
                     <p class="color_white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <form class="margin_top_20px" method="POST">
+                    <form class="margin_top_20px news_form" method="POST">
                         {{ csrf_field() }}
-                    	<input type="text" name="email" class="white_input_field col-xs-12 col-md-8 col-sm-8" placeholder="EMAIL ID..." />
+                    	<input type="email" name="email" placeholder="EMAIL ID..."
+                         class="white_input_field col-xs-12 col-md-8 col-sm-8" />
                         <input type="submit" value="Send" name="newsletter_submit" class="light_red_btn text-uppercase col-xs-12 col-md-3 col-sm-3" />
                     </form>
                 </div>

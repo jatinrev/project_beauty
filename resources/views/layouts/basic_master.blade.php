@@ -21,8 +21,8 @@
            		</div>
                 
                 <!-- -->
-                <div class="header_right col-md-9 col-sm-10 col-xs-12">
-            		<nav class="navbar navbar-default col-md-10 col-sm-12  padd_left_right_all_zero">
+                <div class="header_right col-md-8 col-sm-10 col-xs-12">
+            		<nav class="navbar navbar-default col-md-9 col-sm-12  padd_left_right_all_zero">
                     	<div class="container-fluid">
                         	<div class="col-md-12 col-sm-12 padd_left_right_all_zero">
                             	<div class="navbar-header">
@@ -46,18 +46,21 @@
                    			</div>
                         </div>
                     </nav>
-                    <div class="col-md-2 col-sm-10 login-btn-outr">
-                        @if (Auth::guest())
-                            <button class="pink_btn login_btn" onclick='window.location.href="{{ url('/login') }}"'>login</button>
-                        @else
-                            <button class="pink_btn login_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
-                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                    <div  class="col-md-3 col-sm-7 col-xs-9">
+                        <div class="reg-btn-outr">
+                            <button class="pink_btn reg_btn">Register</button>
+                        </div>
+                        <div class="login-btn-outr">
+                            @if (Auth::guest())
+                                <button class="pink_btn login_btn" onclick='window.location.href="{{ url('/login') }}"'>login</button>
+                            @else
+                                <button class="pink_btn login_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}
-                            </form>
-                        @endif
+                                </form>
+                            @endif
                         
-
-
+                        </div>
                     </div>
                                             <a href="#" class="alert_click">Click</a>
                    
@@ -75,7 +78,7 @@
     </div>
 
 <div class="banner_text row">
-    <h3 class="text_on_img col-md-12 col-sm-12 col-xs-12"> Refer Your Favourate
+    <h3 class="text_on_img col-md-12 col-sm-12 col-xs-12"> REFFER YOUR FAVORITE
         <div id="rotate"> 
             <span>hairstylist</span> <span>makeup look</span> 
             <span>skincare</span> <span>nail-art</span> 

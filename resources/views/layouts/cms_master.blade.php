@@ -10,8 +10,8 @@
           </div>
             
             <!-- -->
-                <div class="header_right col-md-9 col-sm-10 col-xs-12">
-                    <nav class="navbar navbar-default col-md-10 col-sm-12 padd_left_right_all_zero">
+                <div class="header_right col-md-8 col-sm-10 col-xs-12">
+                    <nav class="navbar navbar-default col-md-9 col-sm-12 padd_left_right_all_zero">
                           <div class="container-fluid">
                               <div class="col-md-12 padd_left_right_all_zero">
                                   <div class="navbar-header">
@@ -35,8 +35,13 @@
                               </div>
                           </div>
                     </nav>
-                          <div class="col-md-2 col-sm-10 login-btn-outr">
-                            <button class="pink_btn login_btn">login</button>               
+                          <div class="col-md-3 col-sm-7 col-xs-9">
+                            <div class="reg-btn-outr">
+                            <button class="pink_btn reg_btn">Register</button>
+                          </div>
+                            <div class="login-btn-outr">
+                            <button class="pink_btn login_btn">login</button>  
+                            </div>             
                           </div>
                     
                 
