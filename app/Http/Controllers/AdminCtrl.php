@@ -31,6 +31,18 @@ class AdminCtrl extends Controller
             'frontpage_slider_text' => []
         ];
 
+        // -------------Join the club section PROFESSIONAL text-------------
+        if( !empty($request_data['action']) && trim($request_data['action']) == 'form_professional_submit' ) {
+            $textarea_professional = SiteSettings::where('key', '=', 'textarea_professional')->update(['value' => $request->textarea_professional]);
+            redirect('admin/frontpage');
+        }
+
+        // -------------Join the club section CUSTOMER text-------------
+        if( !empty($request_data['action']) && trim($request_data['action']) == 'form_customer_submit' ) {
+            $textarea_customer = SiteSettings::where('key', '=', 'textarea_customer')->update(['value' => $request->textarea_customer]);
+            redirect('admin/frontpage');
+        }
+
         // -------------Frontpage Image Text-------------
         if( !empty($request_data['action']) && trim($request_data['action']) == 'frontpage_slider_text' ) {
             $site_settings_frontpage_text = SiteSettings::where('key', '=', 'frontpage_slider_text')->update(['value' => $request_data['frontpage_slider_text']]);
@@ -49,8 +61,16 @@ class AdminCtrl extends Controller
             redirect('admin/frontpage');
         }
 
+        // -------------Upload site logo-------------
+        if ( !empty($request_data['action']) && trim($request['action']) == 'action_site_logo' && $request->hasFile('site_logo') ) {
+            
+            $file = $request->site_logo->storeAs('uploaded_images', 'site_logo.png');
+            redirect('admin/frontpage');
+        }
+
+
         // -------------getting old Data------------- 'twitter_link', 'facebook_link', 'instagram_link', 'copyright'
-        $site_settings = SiteSettings::get_site_settings(['frontpage_slider_text', 'twitter_link', 'facebook_link', 'instagram_link', 'copyright', 'text_right']);
+        $site_settings = SiteSettings::get_site_settings(['frontpage_slider_text', 'twitter_link', 'facebook_link', 'instagram_link', 'copyright', 'text_right', 'textarea_professional', 'textarea_customer']);
 
         // -------------View-------------
         return view('admin.contentManagement.frontpage')->with([

@@ -283,7 +283,7 @@
                     </form>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 sign_up_now text-center">
-                	<h3 class="text-uppercase color_white">you will earn up to 20% commission from every repeated appointment from your referrals</h3>
+                	<h3 class="text-uppercase color_white">{{ $site_settings['text_right'] }}</h3>
                     <button class="text-uppercase pink_btn inline_block"> sign up now</button>
                 </div>
             </div>

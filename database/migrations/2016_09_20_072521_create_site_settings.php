@@ -48,6 +48,38 @@ class CreateSiteSettings extends Migration
             'key'   => 'banner_image',
             'value' => 'banner_image.jpg'
         ]);
+        SiteSettings::create([
+            'key'   => 'site_logo',
+            'value' => 'site_logo.png'
+        ]);
+        SiteSettings::create([
+            'key'   => 'textarea_professional',
+            'value' => "<h3>Lorem Ipsum is simply</h3>\r\n
+                    dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,\r\n
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic\r\n
+                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\r\n
+                    <br>\r\n
+                    <br>\r\n
+                    <ul>\r\n
+                        <li>Remaining essentially unchanged</li>\r\n
+                        <li>Make a type specimen book</li>\r\n
+                        <li>Unknown printer</li>\r\n
+                    </ul>\r\n"
+        ]);
+        SiteSettings::create([
+            'key'   => 'textarea_customer',
+            'value' => "<h3>Lorem Ipsum is simply</h3>\r\n
+                    dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,\r\n
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic\r\n
+                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with\r\n
+                    <br>\r\n
+                    <br>\r\n
+                    <ul>\r\n
+                        <li>Remaining essentially unchanged</li>\r\n
+                        <li>Make a type specimen book</li>\r\n
+                        <li>Unknown printer</li>\r\n
+                    </ul>\r\n"
+        ]);
     }
 
     /**

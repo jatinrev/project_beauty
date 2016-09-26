@@ -17,8 +17,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // JATIN-SHARING DATA IN ALL VIEWS
         // INCLUDE ONLY THOSE KEYS WHICH WILL BE USED IN ALL THE VIEWS
-        $site_settings = SiteSettings::get_site_settings(['twitter_link', 'facebook_link', 'instagram_link', 'copyright']);
-        View::share('site_settings_provider', $site_settings);
+        /*$site_settings = SiteSettings::get_site_settings(['twitter_link', 'facebook_link', 'instagram_link', 'copyright']);
+        View::share('site_settings_provider', $site_settings);*/
     }
 
     /**
