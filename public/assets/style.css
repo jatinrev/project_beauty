@@ -2,6 +2,7 @@
 /* CSS Document */
 
 body{ margin:0; padding:0; font-family: Ubuntu}
+
 img{ border:0; outline:0;}
 img:hover{ border:0; outline:0;}
 a{ text-decoration:none}
@@ -189,7 +190,6 @@ h2, h3{ line-height:40px;}
 .cust_membership{position: absolute; left: 41%; }
 .membership_area img{ width:100%}
 
-
 .membership_btn{ border: 1px solid #6c243e; padding:6px 12px; font-size: 13px; color: #6c243e; display: inline-block;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;-webkit-transition: background-color 500ms linear;-moz-transition: background-color 500ms linear;-o-transition: background-color 500ms linear;-ms-transition: background-color 500ms linear;transition: background-color 500ms linear; }
 .membership_btn:hover{ text-decoration: none; color:#fff; background: #6c243e;}
 
@@ -228,6 +228,7 @@ h2, h3{ line-height:40px;}
 @media (min-width: 992px){
   .testimonial{width: 963px;}
 }
+
 
 
 /* carousel */
@@ -597,7 +598,6 @@ background-repeat: no-repeat;} */
 #cust_form_horizontal{ display: none;}
 
 
-
 /*Login Page Css*/
 .signin_outr{width: 100%; float: left; background-color: #f9f9f9;}
 .signin-form{margin-bottom: 6%;}
@@ -634,7 +634,7 @@ background-repeat: no-repeat;} */
 }
 
 @media screen and (max-width: 1140px){
-    .text_on_img{font-size: 28px;}
+  .text_on_img{font-size: 28px;}
   #rotate{font-size: 28px;}
   .banner_text{top: 18%; padding: 10% 0 10% 24%;}
   .banner_scrolling_text_outr{top: 44%}

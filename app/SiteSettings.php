@@ -39,4 +39,11 @@ class SiteSettings extends Model
         }
         return $output;
     }
+
+    public static function get_general_site_setting() {
+        $output = static::get_site_settings(['frontpage_slider_text', 'text_right', 'textarea_professional', 'textarea_customer']);
+        $output['frontpage_slider_text'] = explode(',', $output['frontpage_slider_text']);
+        return $output;
+    }
+
 }

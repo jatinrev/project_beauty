@@ -6,7 +6,7 @@
   <div id="header_inr" class="row padd_top_5px">
       <div id="header_cont padd_top_10 padd_botm_8" class="col-md-12 col-xs-12">
           <div class="header_left col-md-1 col-sm-12 col-xs-12 text-center">
-              <a href="#"><img src="{{ asset('assets/images/logo.png') }}" title="BRC"/></a>
+              <a href="#"><img src="images/site_logo.png" title="BRC"/></a>
           </div>
             
             <!-- -->
@@ -24,25 +24,25 @@
                                   </div>
                                   <div class="collapse navbar-collapse padd_left_right_all_zero" id="bs-example-navbar-collapse-1">
                                       <ul class="nav navbar-nav header_menu">
-                                        <li><a href="#">how it works</a></li>
+                                        <li><a href="{{ url('/how-it-works') }}">how it works</a></li>
                                         <li><a href="#">shop</a></li>
-                                        <li><a href="#">faq</a></li>
-                                        <li><a href="#">about us</a></li>
-                                        <li><a href="#">contact us</a></li>
+                                        <li><a href="{{ url('/faq') }}">faq</a></li>
+                                        <li><a href="{{ url('/about-us') }}">about us</a></li>
+                                        <li><a href="{{ url('/contact-us') }}">contact us</a></li>
                                       </ul>
                                 
                                   </div>
                               </div>
                           </div>
                     </nav>
-                          <div class="col-md-3 col-sm-7 col-xs-9">
-                            <div class="reg-btn-outr">
-                            <button class="pink_btn reg_btn">Register</button>
-                          </div>
-                            <div class="login-btn-outr">
-                            <button class="pink_btn login_btn">login</button>  
-                            </div>             
-                          </div>
+                    <div class="col-md-3 col-sm-7 col-xs-9">
+                      <div class="reg-btn-outr">
+                        <button class="pink_btn reg_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
+                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                        </form>
+                      </div>
+                    </div>
                     
                 
                     <!-- Collect the nav links, forms, and other content for toggling -->

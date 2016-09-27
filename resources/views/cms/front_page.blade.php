@@ -12,13 +12,14 @@
     </script>
 @endsection
 
+
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/flexslider.css') }}">
 @endsection
 
 
 @section('content')
-    
+    {{-- {{ dd($site_settings_provider) }} --}}
     <div id="book_online_outr">
     	<div id="book_online_inr" class="row">
         	<div id="book_online_cont" class="col-md-12 col-sm-12 col-xs-12">
@@ -50,17 +51,16 @@
                         <div class="col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero cust_membership text-center">
                             <h3 class="color_red text-center">JOIN. SHARE. EARN</h3>
 
-
                                 <img src="{{asset('assets/images/customer-membersip.png') }}" alt 
                                 class="margin_top_25px">
                             @if (Auth::guest())
                                 <a href="{{ url('/register') }}" class="membership_btn margin_top_25px">Create A Free Account & Earn Money</a>
                             @endif
                     	</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <div id="services_outr">
         <div id="services_inr" class="row">
@@ -217,7 +217,7 @@
                     </form>
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 sign_up_now text-center">
-                	<h3 class="text-uppercase color_white">you will earn up to 20% commission from every repeated appointment from your referrals</h3>
+                	<h3 class="text-uppercase color_white">{{ $site_settings['text_right'] }}</h3>
                     <button class="text-uppercase pink_btn inline_block"> sign up now</button>
                 </div>
             </div>
