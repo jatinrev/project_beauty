@@ -618,8 +618,11 @@ background-repeat: no-repeat;} */
 
 /* profile dashboard step1 css*/
 #prf_dashboard_outr{width: 100%; float: left;}
-#prf_dashboard_inr{max-width: 1300px; width: 100%;}
-
+#prf_dashboard_inr{max-width: 1300px; width: 100%; float: none;}
+#prf_dashboard_cont{float: left;}
+.dash_heading{text-align: center;}
+.dash_heading h3{color: #333; background-image:  url("images/red-heading-line.png"); background-repeat: no-repeat; background-position: center bottom;}
+.prf_log_items{background-color: #f9f9f9;}
 
 
 
