@@ -21,9 +21,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/user/profile', 'UserCtrl@index');
 
 
-Route::match(['get', 'post'], '/user/dashboard', function (){
-	view('auth.dashboard');
-});
+Route::match(['get', 'post'], '/user/dashboard', 'RegistrationCtrl@dashboard');
 
 
 
