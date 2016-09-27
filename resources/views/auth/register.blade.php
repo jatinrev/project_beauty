@@ -47,7 +47,7 @@ $(document).ready(function() {
                                            <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                                                 {{ csrf_field() }}
 
-                                                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} margin_top_20px">
 
                                                     <div class="col-md-12">
                                                         <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus placeholder="Name">
@@ -60,7 +60,7 @@ $(document).ready(function() {
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }} margin_top_20px">
 
                                                     <div class="col-md-12">
                                                         <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="E-Mail Address">
@@ -73,7 +73,7 @@ $(document).ready(function() {
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }} margin_top_20px">
 
                                                     <div class="col-md-12">
                                                         <input id="password" type="password" class="form-control" name="password" required placeholder="Password">
@@ -86,7 +86,7 @@ $(document).ready(function() {
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                                                <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }} margin_top_20px">
 
                                                     <div class="col-md-12">
                                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required placeholder="Confirm Password">
@@ -99,7 +99,7 @@ $(document).ready(function() {
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group margin_top_20px">
                                                     <div class="col-md-6 col-md-offset-3">
                                                         <button type="submit" class="btn btn-primary light_red_btn start_reg_btn">
                                                             Get Started
@@ -132,33 +132,33 @@ $(document).ready(function() {
                                     <div class="panel panel-default">
                                         <div class="panel-body">
                                            <form class="form-horizontal" role="form" method="POST">
-                                               <div class="form-group">
+                                               <div class="form-group margin_top_20px">
                                                     <div class="col-md-12">
                                                         <input id="name" type="text" class="form-control" name="name" required autofocus placeholder="Name">
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group margin_top_20px">
 
                                                 <div class="col-md-12">
                                                     <input id="email" type="email" class="form-control" placeholder="Email-Id" required>
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group margin_top_20px">
 
                                                     <div class="col-md-12">
                                                     <input id="password" type="password" class="form-control" placeholder="Password" required>
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group margin_top_20px">
                                                     <div class="col-md-12">
                                                         <input id="password" type="password" class="form-control" placeholder="Confirm Password" required>
                                                     </div>
                                                 </div>
 
-                                                <div class="form-group">
+                                                <div class="form-group margin_top_20px">
                                                     <div class="col-md-6 col-md-offset-3">
                                                         <button type="submit" class="btn btn-primary light_red_btn start_reg_btn">
                                                             Get Started

@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{ margin:0; padding:0;}
+body{ margin:0; padding:0; font-family: Ubuntu}
 img{ border:0; outline:0;}
 img:hover{ border:0; outline:0;}
 a{ text-decoration:none}
@@ -13,6 +13,16 @@ a{ text-decoration:none}
     font-weight: normal;
     font-style: normal;
 
+}
+
+@font-face {
+ font-family: 'Ubuntu';
+ src: url('fonts/Ubuntu-Light.eot');
+ src: url('fonts/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Ubuntu-Light.woff') format('woff'),
+  url('fonts/Ubuntu-Light.ttf') format('truetype');
+ font-weight: 300;
+ font-style: normal;
 }
 
 /* common classes*/
@@ -91,8 +101,8 @@ h2, h3{ line-height:40px;}
  -o-transition:border-bottom .2s;
 	transition:border-bottom .2s; background-color:transparent}
 .header_menu li a:focus{ background-color:transparent}
-.login_btn{ float:right;}
-.reg_btn{float: right; margin-left: 5%; padding: 8px 10px;}
+.login_btn{ float: left;}
+.reg_btn{float: right; padding: 8px 10px;}
 .navbar{min-height: 10px;}
 
 
@@ -299,6 +309,13 @@ h2, h3{ line-height:40px;}
 #call_to_action_outr{ float:left; width:100%; background: #6d243f}
 #call_to_action_inr{ float:none; margin:0 auto; max-width:1300px; width:100%;}
 #call_to_action_cont{ float:left; padding-top:2%; padding-bottom:2%}
+@media screen and (max-width: 1299px) and (min-width: 1025px){
+  #call_to_action_cont h2{font-size: 23px;}
+}
+@media screen and (max-width: 990px) and (min-width: 440px){
+  .call_action_txt em{padding-left: 14% !important;}
+}
+
 #call_to_action_cont p{font-size: 18px;}
 .join_the_club_btn{border: 3px solid #fff; font-weight: bold; border-radius: 0; padding: 9px 18px; 
   font-size: 20px;}
@@ -350,11 +367,12 @@ h2, h3{ line-height:40px;}
 
 /* newsletter section */
 #news_outr{ float:left; width:100%; background-color:#6d243f}
-#news_inr{ float:none; margin:0 auto; max-width:1300px; width:100%;}
+#news_inr{ float:none; margin:0 auto; width:100%;}
 #news_cont{ float:left;}
 .news_ltr {padding-bottom: 7%;padding-top: 10%;}
 .sign_up_now{ background-color:#952650;padding-bottom: 6%;padding-top: 6%;}
-.sign_up_now button{ padding:13px 50px }
+.sign_up_now h3{padding: 0 8%;}
+.sign_up_now button{ padding:13px 50px; margin-top: 2%; font-size: 18px; }
 .news_form ::-webkit-input-placeholder {color:  #808080;}
 .news_form :-moz-placeholder { /* Firefox 18- */color: #808080 ;  }
 .news_form ::-moz-placeholder {  /* Firefox 19+ */color: #808080 ;  }
@@ -664,13 +682,13 @@ background-repeat: no-repeat;} */
 #join_form_outr{float: left; width: 100%; background-color: #f9f9f9;}
 #join_form_inr{float: none; margin: 0 auto; max-width: 1300px; width: 100%;}
 #join_form_cont{width: 100%;}
-.join_form_top h3{font-weight: 400; color: #333; background-image: url("images/red-heading-line.png"); background-repeat: no-repeat; background-position: center bottom; padding-bottom: 2px;}
-.left_join h4{line-height: 3; padding-top: 2%; color: #9a9a9a; font-weight: bold}
+.join_form_top h3{font-weight: 400; color: #333; background-image: url("images/red-heading-line.png"); background-repeat: no-repeat; background-position: center bottom; margin-bottom: 5%;}
+.left_join h4{line-height: 3; padding-top: 2%; color: #9a9a9a;}
 .left_join p{color: #9a9a9a; font-weight: normal; font-size: 18px; padding-bottom: 4%;}
 .right_join h4{line-height: 3; padding-top: 2%; color: #9a9a9a; font-weight: bold}
 .right_join p{color: #9a9a9a; font-weight: normal; font-size: 18px; padding-bottom: 4%;}
 .join_btn{padding: 10px 14px; height: 42px; font-size: 15px}
-.join_btn:hover{color: #333;}
+.join_btn:hover{color: #94264e;}
 .div_join h4{color: #94264e; font-weight: bold; padding: 70px 0; display: none;}
 @media screen and (max-width: 767px){
   .div_join h4{display: inline-block;}
@@ -682,14 +700,17 @@ background-repeat: no-repeat;} */
 .start_reg_btn:hover{color: #94264e}
 #cust_form_horizontal{ display: none;}
 
+
+
 /*Login Page Css*/
 .signin_outr{width: 100%; float: left; background-color: #f9f9f9;}
 .signin-form{margin-bottom: 6%;}
-.signin_btn{height: 40px; padding: 1% 10%;}
+.signin_btn{height: 40px; padding: 1% 10%; font-size: 16px;}
 .signin_btn:hover{color: #94264e;}
-.signin-heading{text-align: center;}
-.signin-heading h3{padding: 7% 0 0 0; color: #94264e; background-image: url("images/red-heading-line.png"); background-repeat: no-repeat; background-position: center bottom; padding-bottom: 2px;}
+.signin-heading{text-align: center; padding-bottom: 10px;}
+.signin-heading h3{padding: 7% 0 0 0; color: #94264e; background-image: url("images/red-heading-line.png"); background-repeat: no-repeat; background-position: center bottom;}
 .forget_pwd_link{float: right; padding: 0 12px;}
+.rem_chkbox{padding-top: 1px;}
 
 @media screen and (max-width: 1055px) and (min-width: 610px){
   .forget_pwd_link{float: right;}
