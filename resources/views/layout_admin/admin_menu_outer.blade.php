@@ -60,6 +60,9 @@
                     <li class="{{ $current_route == 'AdminCtrl@newsletter' ?  'active' : '' }}"> <!-- active -->
                         <a href="{{ url('admin/newsletter') }}"><i class="fa fa-diamond"></i> <span class="nav-label">Newsletter</span></a>
                     </li>
+                    <li class="{{ $current_route == 'AdminCtrl@listUsers' ?  'active' : '' }}"> <!-- active -->
+                        <a href="{{ url('admin/list-users') }}"><i class="fa fa-diamond"></i> <span class="nav-label">List Users</span></a>
+                    </li>
                 </ul>
 
             </div>

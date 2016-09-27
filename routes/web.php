@@ -53,6 +53,8 @@ Route::match(['get', 'post'], '/admin/frontpage', 'AdminCtrl@frontpage')->middle
 
 // OTHERS
 Route::match(['get', 'post'], '/admin/newsletter', 'AdminCtrl@newsletter')->middleware('adminAuth');
+Route::match(['get', 'post'], '/admin/list-users', 'AdminCtrl@listUsers')->middleware('adminAuth');
+
 	
 // Route::group(['middleware' => ['adminAuth']], function () {
 // });
