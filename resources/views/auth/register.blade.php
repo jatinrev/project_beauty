@@ -102,7 +102,7 @@ $(document).ready(function() {
                                                 <div class="form-group margin_top_20px">
                                                     <div class="col-md-6 col-md-offset-3">
                                                         <button type="submit" class="btn btn-primary light_red_btn start_reg_btn">
-                                                            Get Started
+                                                            GET STARTED
                                                         </button>
                                                     </div>
                                                 </div>
@@ -161,7 +161,7 @@ $(document).ready(function() {
                                                 <div class="form-group margin_top_20px">
                                                     <div class="col-md-6 col-md-offset-3">
                                                         <button type="submit" class="btn btn-primary light_red_btn start_reg_btn">
-                                                            Get Started
+                                                            GET STARTED
                                                         </button>
                                                     </div>
                                                 </div>

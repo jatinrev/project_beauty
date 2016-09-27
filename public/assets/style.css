@@ -189,108 +189,6 @@ h2, h3{ line-height:40px;}
 .cust_membership{position: absolute; left: 41%; }
 .membership_area img{ width:100%}
 
-/*Membership text image css*/
-
-
-/*.club_membership_left{
-  background-color: #faf8f9; 
-  border-radius: 50%;
-  width: 100%;
-  float: left;
-  border-bottom: 6px solid #e7e6e6;
-  height: 400px;
-}
-.club_membership_left h4{
-  color: #6c243e; 
-  font-weight: bold;
-  line-height: 1.4;
-}
-.club_membership_left p, .club_membership_right p{
-  font-weight: bold; 
-  font-size: 11px;
-}
-.club_membership_left ul, .club_membership_right ul{
-  list-style: none;
-  padding: 2px 36px;
-}
-.club_membership_left ul li, .club_membership_right ul li{
-  font-size: 12px; 
-  text-align: center; 
-  line-height: 1.6;
-}
-.club_membership_right{
-  background-color: #6c243e;  
-  color: #ffffff; 
-  width: 100%;
-  float: left;
-  border-bottom: 6px solid #e7e6e6;
-  border-radius: 50%;
-  height: 400px;
-}
-.club_membership_right h4{
-  font-weight: bold; 
-  line-height: 1.4;
-  padding-top: 1%;
-}
-
-@media screen and (max-width: 1200px){
-  .club_membership_left, .club_membership_right{height: 380px;}
-  .club_membership_left h4, .club_membership_right h4{font-size: 16px;}
-  .club_membership_left p, .club_membership_right p{font-size: 10px;}
-  .club_membership_left ul, .club_membership_right ul{padding: 2px 20px;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 11px;}
-}
-
-
-@media screen and (max-width: 1024px){
-  .club_membership_left, .club_membership_right{height: 380px;}
-}
-@media screen and (max-width: 990px){
-  .club_membership_left h4, .club_membership_right h4{font-size: 18px;}
-  .club_membership_left p, .club_membership_right p{font-size: 12px;}
-  .club_membership_left ul, .club_membership_right ul{padding: 2px 22px;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 12px; line-height: 1.5;}
-}
-@media screen and (max-width: 767px){
-  .club_membership_left, .club_membership_right{height: 400px}
-  .club_membership_left p, .club_membership_right p{font-size: 14px;}
-  .club_membership_left ul, .club_membership_right ul{padding: 2px 30px;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 13px; line-height: 1.6;}
-}
-
-@media screen and (max-width: 520px){
-  .club_membership_left h4, .club_membership_right h4{padding-top: 7%;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 12px; line-height: 1.5;}
-  .club_membership_left p, .club_membership_right p{font-size: 12px;}
-}
-@media screen and (max-width: 440px){
-  .club_membership_left h4, .club_membership_right h4{font-size: 16px;} 
-  .club_membership_left p, .club_membership_right p{font-size: 11px;} 
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 11px;}
-}
-@media screen and (max-width: 411px){
-  .club_membership_left h4, .club_membership_right h4{font-size: 14px;} 
-  .club_membership_left p, .club_membership_right p{font-size: 10px;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 10px; line-height: 1.6}   
-}
-@media screen and (max-width: 390px){
-  .club_membership_left h4, .club_membership_right h4{font-size: 14px; padding-top: 10%;} 
-  .club_membership_left p, .club_membership_right p{font-size: 9px;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 9px; line-height: 1.5}   
-}
-@media screen and (max-width: 340px){
-  .club_membership_left h4, .club_membership_right h4{font-size: 11px;} 
-  .club_membership_left p, .club_membership_right p{font-size: 7px;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 8px; line-height: 1.7}
-}
-@media screen and (max-width: 290px){
-  .club_membership_left h4, .club_membership_right h4{font-size: 9px; padding-top: 14%;} 
-  .club_membership_left p, .club_membership_right p{font-size: 6px;}
-  .club_membership_left ul li, .club_membership_right ul li{font-size: 7px;}
-  .membership_btn{font-size: 9px;}
-} */
-
-/*Membership Text Image close*/
 
 .membership_btn{ border: 1px solid #6c243e; padding:6px 12px; font-size: 13px; color: #6c243e; display: inline-block;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;-webkit-transition: background-color 500ms linear;-moz-transition: background-color 500ms linear;-o-transition: background-color 500ms linear;-ms-transition: background-color 500ms linear;transition: background-color 500ms linear; }
 .membership_btn:hover{ text-decoration: none; color:#fff; background: #6c243e;}
@@ -330,8 +228,6 @@ h2, h3{ line-height:40px;}
 @media (min-width: 992px){
   .testimonial{width: 963px;}
 }
-
-
 
 
 /* carousel */
@@ -682,7 +578,7 @@ background-repeat: no-repeat;} */
 #join_form_outr{float: left; width: 100%; background-color: #f9f9f9;}
 #join_form_inr{float: none; margin: 0 auto; max-width: 1300px; width: 100%;}
 #join_form_cont{width: 100%;}
-.join_form_top h3{font-weight: 400; color: #333; background-image: url("images/red-heading-line.png"); background-repeat: no-repeat; background-position: center bottom; margin-bottom: 5%;}
+.join_form_top h3{font-weight: 400; color: #333; margin-bottom: 4%;}
 .left_join h4{line-height: 3; padding-top: 2%; color: #9a9a9a;}
 .left_join p{color: #9a9a9a; font-weight: normal; font-size: 18px; padding-bottom: 4%;}
 .right_join h4{line-height: 3; padding-top: 2%; color: #9a9a9a; font-weight: bold}
@@ -696,7 +592,7 @@ background-repeat: no-repeat;} */
 }
 .alert{padding: 8px}
 #reg_form_horizontal{width: 100%; display: none;}
-.start_reg_btn{height: 45px; padding: 8px 20px;}
+.start_reg_btn{height: 45px; padding: 8px 20px; font-size: 16px;}
 .start_reg_btn:hover{color: #94264e}
 #cust_form_horizontal{ display: none;}
 
@@ -719,6 +615,13 @@ background-repeat: no-repeat;} */
 @media screen and (max-width: 609px){
   .forget_pwd_link{float: left;}
 }
+
+/* profile dashboard step1 css*/
+#prf_dashboard_outr{width: 100%; float: left;}
+#prf_dashboard_inr{max-width: 1300px; width: 100%;}
+
+
+
 
 
 /* responsive css start */

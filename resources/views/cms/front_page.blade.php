@@ -41,35 +41,6 @@
                         <div class="prof_memerbship col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero text-center">
                             <h3 class="color_red">JOIN. GROW. EARN</h3>
 
-<!-- Join_club text starts-->
-                        <!--    <div class="club_membership_left">
-                              <h4>Beauty <br> Professional Membership</h4> 
-                              <p>Sign up and receive a Beauty Professional Id<br>and Create your own profile that will help you...</p>
-                              <ul>
-                                  <li>
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                      List your services, products and pricing so your clients can book and purchase online.
-                                  </li>
-                                  <li>
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                      Track and confirm new appointments with ease and NO MONTHLY FEES
-                                  </li>
-                                  <li>
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                      Order your customer Beauty Professional id membership cards online to distribute to your clients.
-                                  </li>
-                                  <li>
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                      Motivates your existing clients to promote your services by offering commision for every new referals that books online
-                                  </li>
-                                  <li>
-                                    <span class="glyphicon glyphicon-picture"></span>
-                                      Sit back and watch how easily your clientele and sales will grow
-                                  </li>
-                              </ul>
-                            </div> -->
-<!-- Join club text close-->
-
                             <img src="{{asset('assets/images/prof-membership.png') }}" alt 
                             class="margin_top_25px">
                             @if (Auth::guest())
@@ -79,35 +50,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero cust_membership text-center">
                             <h3 class="color_red text-center">JOIN. SHARE. EARN</h3>
 
-<!-- Join_club text starts-->
-                            <!--<div class="club_membership_right">
-                                <h4>Beauty <br> Customer Membership</h4>
-                                <p>Sign up and create your own profile which will <br> track how many of your referred friends <br>and family book using your link. You can...</p>
-                                <ul>
-                                    <li>
-                                        <span class="glyphicon glyphicon-picture"></span>
-                                        Share your profile with your friends and family so they can join the beauty referral Club using your custom link
-                                    </li>
-                                    <li>
-                                        <span class="glyphicon glyphicon-picture"></span>
-                                        Earn money based on how many of your friends and family book appointments using your id number
-                                    </li>
-                                    <li>
-                                        <span class="glyphicon glyphicon-picture"></span>
-                                        Whoever clicks your link will be able to book online and you will recieve commission for fulfilled appointments
-                                    </li>
-                                    <li>
-                                        <span class="glyphicon glyphicon-picture"></span>
-                                        You will earn commission from Every repeated appointment from your referrals
-                                    </li>
-                                    <li>
-                                        <span class="glyphicon glyphicon-picture"></span>
-                                        You can monitor or withdraw your commission to your bank or paypal account on your profile page
-                                    </li>
-                                </ul>
-                            </div>-->
 
-<!--Join_club text close -->
                                 <img src="{{asset('assets/images/customer-membersip.png') }}" alt 
                                 class="margin_top_25px">
                             @if (Auth::guest())
@@ -281,8 +224,6 @@
         </div>
     </div>
 @endsection
-
-
 
 
 
