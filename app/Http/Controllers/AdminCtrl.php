@@ -88,8 +88,15 @@ class AdminCtrl extends Controller
      */
     public function listUsers(Request $request)
     {
-        $business_users = App\User::where('user_type', '=', 'business');
-        return view('admin.listUsers');
+        // dd($request->all());
+        $business_users = User::where('user_type', '=', 'business')->paginate(2)->setPageName('businesspage');/**/
+        $customer_users = User::where('user_type', '=', 'customer')->paginate(2)->setPageName('customerpage');/**/
+
+        // dd($business_users);
+        return view('admin.listUsers')->with([
+            'businesses' => $business_users,
+            'customers'  => $customer_users
+        ]);
     }
 
     /**
@@ -100,9 +107,9 @@ class AdminCtrl extends Controller
      */
     public function newsletter()
     {
-        $newsletters = NewsletterSubscriber::paginate();
+        $newsletters = NewsletterSubscriber::paginate(2)->setPageName('newsletters');
         return view('admin.newsletter')->with([
-            'newsletters' => $newsletters->toArray()
+            'newsletters' => $newsletters
         ]);
     }
 

@@ -206,6 +206,10 @@
                         Frontpage
                         @elseif ($current_route == 'AdminCtrl@newsletter')
                         Newsletter
+                        @elseif ($current_route == 'AdminCtrl@listUsers')
+                        List Users
+                        @else
+                        Set this in admin_menu_outer.blade.php
                         @endif
                     </h2>
                 </div>
