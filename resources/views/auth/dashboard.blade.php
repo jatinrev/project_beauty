@@ -10,6 +10,7 @@
 			<div class="prf_log_items col-md-12 col-sm-12 col-xs-12">
 				<div class="first_log_item">
 					<a href="#">
+						<i class="glyphicon glyphicon-file" aria-hidden="true"></i>
 						<p>Basic detail</p>
 					</a>
 				</div>

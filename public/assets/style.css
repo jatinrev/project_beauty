@@ -622,7 +622,7 @@ background-repeat: no-repeat;} */
 #prf_dashboard_cont{float: left;}
 .dash_heading{text-align: center;}
 .dash_heading h3{color: #333; background-image:  url("images/red-heading-line.png"); background-repeat: no-repeat; background-position: center bottom;}
-.prf_log_items{background-color: #f9f9f9;}
+.prf_log_items{background-color: #ebebeb; }
 
 
 
