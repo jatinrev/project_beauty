@@ -55,6 +55,16 @@ class AdminCtrl extends Controller
             redirect('admin/frontpage');
         }
 
+     // ----------------upload professional image and text ----------
+        if(!empty($request_data['action']) && trim($request['action']) == 'Professional_text'){
+             dd($request_data);
+            for ($i=0; $i < 8; $i++) {
+
+                $Professional_text = SiteSettings::where('key', '=', 'Professional_text'.$i)->update(['value' =>$request_data['Professional_text'.$i]]);
+            }
+            redirect('admin/frontpage');
+        }
+
         // -------------Upload banner image-------------
         if ( !empty($request_data['action']) && trim($request['action']) == 'frontpage_image_uploading_banner' && $request->hasFile('banner_image') ) {
             $file = $request->banner_image->storeAs('uploaded_images', 'banner_image.jpg');

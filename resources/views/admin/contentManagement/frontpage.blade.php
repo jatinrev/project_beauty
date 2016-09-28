@@ -275,6 +275,77 @@
                             </div>
                         </form>
                     </div>
+                    <!-- admin 8 images uploading -->
+                   <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Frontpage Professional Image & Text</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#">Config option 1</a>
+                                </li>
+                                <li><a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal" method="POST">
+                            <input type="hidden" name="action" value="Professional_text">
+                            {{ csrf_field() }}
+                            <p> Professional detail </p>
+                            <div class="form-group">
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text0" >
+                                </div>
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text1" >
+                                </div>
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text2" >
+                                </div>
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text3" >
+                                </div>
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text4" >
+                                </div>
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text5" >
+                                </div>
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text6" >
+                                </div>
+                                <div class="col-lg-8">
+                                    <label class="col-lg-2 control-label">Text</label>
+                                    <input type="text" name="Professional_text7" >
+                                </div>
+                                <div class="col-lg-4">
+                                    <button class="btn btn-sm btn-white" type="submit">Submit</button>
+                                </div>
+                            </div>
+                            
+                           {{--  <div class="col-lg-4">
+                                    <button class="btn btn-sm btn-white" type="submit">Submit</button>
+                            </div> --}}
+                       </form>
+                     </div>
+                    <!--end -->
                 </div> <!-- float-e-margins -->
                 <!--=== End : Footer form ===-->
 
