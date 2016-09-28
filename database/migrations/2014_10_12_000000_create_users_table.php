@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->enum('user_type', array('isAdmin', 'customer', 'business')); // DONT CHANGE THIS BECAUSE FOR REGISTRATION VALIDATION HAVE BEEN APPLIED, WHICH CAN CONFLICT.
+            $table->boolean('confirmed')->default(0);
+            $table->string('confirmation_code')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
@@ -26,6 +28,7 @@ class CreateUsersTable extends Migration
         User::create([
             'name'      => 'Admin',
             'email'     => 'admin@admin.com',
+            'confirmed' => 1,
             'password'  => bcrypt('admin'),
             'user_type' => 'isAdmin'
         ]);
