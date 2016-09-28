@@ -19,6 +19,7 @@
 
 
 @section('content')
+    ----{{ testing() }}----
     {{-- {{ dd($site_settings_provider) }} --}}
     <div id="book_online_outr">
     	<div id="book_online_inr" class="row">
