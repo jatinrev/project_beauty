@@ -67,6 +67,7 @@ class RegisterController extends Controller
     {
         $this->validator($request->all())->validate();
         $user_data = $this->create($request->all());
+        send_mail($user_data->email, $user_data->confirmation_code, 'confermation code.')
         return redirect('/');
     }
 
