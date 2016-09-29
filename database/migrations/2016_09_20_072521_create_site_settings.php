@@ -87,7 +87,14 @@ class CreateSiteSettings extends Migration
                 'value' => $value
             ]);    
         }
+        $array1 =array('professional_image0','professional_image1','professional_image2','professional_image3','professional_image4','professional_image5','professional_image6','professional_image7');
+        foreach ($array1 as $key => $value) {
+            SiteSettings::create([
+            'key' => 'Professional_image'.$key,
+            'value' => $value
+            ]);
         
+        }
 
     }
 

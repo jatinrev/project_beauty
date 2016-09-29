@@ -41,7 +41,7 @@ class SiteSettings extends Model
     }
 
     public static function get_general_site_setting() {
-        $output = static::get_site_settings(['frontpage_slider_text', 'text_right', 'textarea_professional', 'textarea_customer','Professional_text']);
+        $output = static::get_site_settings(['frontpage_slider_text', 'text_right', 'textarea_professional', 'textarea_customer','Professional_text0','Professional_text1','Professional_text2','Professional_text3','Professional_text4','Professional_text5','Professional_text6','Professional_text7']);
         $output['frontpage_slider_text'] = explode(',', $output['frontpage_slider_text']);
 
         /*$output['Professional_text1'] = explode(',', $output['Professional_text1']);*/
