@@ -12,6 +12,8 @@ use App\Http\Requests;
 use App\NewsletterSubscriber;
 use App\SiteSettings;
 use App\User;
+use DB;
+// use App\AdminModel;
 
 class AdminCtrl extends Controller
 {
@@ -80,7 +82,25 @@ class AdminCtrl extends Controller
     }
 
     public function addFaqs(Request $request) {
-        return view('admin.contentManagement.add-faqs')->with([]);
+        if( !empty($request->action) && $request->action == 'form_add_faqs' ) {
+            // dd($request->all());
+            // VALIDATION
+            DB::table('faq')->insert([
+                'question'   => $request->question,
+                'answer'     => $request->textarea_data,
+                'created_at' => \Carbon\Carbon::now()
+            ]);
+            $faqs = \App\AdminModel::get_all_faqs();
+            return view('admin.contentManagement.add-faqs')->with([
+                'faqs' => $faqs
+            ]);
+        } else {
+            $faqs = \App\AdminModel::get_all_faqs();
+            // dd($faqs);
+            return view('admin.contentManagement.add-faqs')->with([
+                'faqs' => $faqs
+            ]);
+        }
     }
 
     /**
