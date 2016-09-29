@@ -55,7 +55,7 @@
             output += '        </div>';
             output += '        <div class="ibox-content no-padding">';
             output += '            <div class="summernote'+form_id+'">';
-            output += '                summernote';
+            output += '                '+ques;
             output += '            </div>';
             output += '            <div style="padding-left: 20px;">';
             output += '                <button class="btn btn-primary  btn-xs" onclick="save('+form_id+')" type="button">Save</button>';
