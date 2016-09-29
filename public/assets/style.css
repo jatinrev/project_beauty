@@ -51,6 +51,8 @@ h2, h3{ line-height:40px;}
 .padd_left_right_all_zero{ padding-left: 0; padding-right: 0;}
 .pad_left_right_20px{padding-left: 20px; padding-right: 20px;}
 .padd_left_8px{padding-left: 8px;}
+.padd_left_zero{padding-left:0;}
+.padd_right_zero{padding-right:0;}
 .padd_top_30px{ padding-top:30px;}
 .padd_top_25px{ padding-top:25px;}
 .padd_top_5px{padding-top: 5px;}
@@ -710,14 +712,18 @@ background-repeat: no-repeat;} */
 
 .socio_values img{
   padding-right: 10px;
+  float:left;
+  width: 40px;
 }
 .form-group label{
   font-size: 18px;
 }
 .socio_values{
-  margin: 8% 0;
+  margin-bottom:20px;
+  float: left;
+  width: 100%
 }
-
+.socio_values input{ width: auto; float: right;}
 .add_btn_align{
   padding: 0;
   float: right;
@@ -746,8 +752,16 @@ background-repeat: no-repeat;} */
   color: #94264e;
 }
 
+/* progress bar design */
+.prog_bar_outr{ width: 100%; float: left; background-color: #EBEBEB}
+.prog_bar_inr{ float: none; margin: 0 auto; width: 100%; max-width: 1400px;}
+.prog_bar{ float: left; width: 100%; text-align: center;}
 
-
+.ibp_dashboard_outr{ width: 100%; float: left;}
+.ibp_dashboard_inr{ float: none; margin: 0 auto; width: 100%; max-width: 1400px;}
+.ibp_dashboard{ float: left; width: 100%}
+.form-horizontal label{ font-weight: normal;}
+.basic_info_form .form-group { margin-right: 0; margin-left: 0}
 
 /* responsive css start */
 
