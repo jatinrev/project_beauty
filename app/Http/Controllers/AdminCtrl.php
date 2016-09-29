@@ -58,6 +58,26 @@ class AdminCtrl extends Controller
             redirect('admin/frontpage');
         }
 
+     // ----------------upload professional text ----------
+        if(!empty($request_data['action']) && trim($request['action']) == 'Professional_text'){
+             /*dd($request_data);*/
+            for ($i=0; $i < 8; $i++) {
+
+                $Professional_text = SiteSettings::where('key', '=', 'Professional_text'.$i)->update(['value' =>$request_data['Professional_text'.$i]]);
+            }
+            redirect('admin/frontpage');
+        }
+
+        // --------------upload professsional image ---------------------
+        if (!empty($request_data['action']) && trim($request['action']) == 'Professional_text') {
+            for($i=0; $i<8; $i++) {
+                if($request->hasFile('Professional_image'.$i) == true){
+                    $Professional_image = $request_data['Professional_image'.$i]->storeAs('uploaded_images','professional_image'.$i.'.jpg');
+                }
+            }
+            redirect('admin/frontpage');
+        }  
+
         // -------------Upload banner image-------------
         if ( !empty($request_data['action']) && trim($request['action']) == 'frontpage_image_uploading_banner' && $request->hasFile('banner_image') ) {
             $file = $request->banner_image->storeAs('uploaded_images', 'banner_image.jpg');
@@ -73,7 +93,7 @@ class AdminCtrl extends Controller
 
 
         // -------------getting old Data------------- 'twitter_link', 'facebook_link', 'instagram_link', 'copyright'
-        $site_settings = SiteSettings::get_site_settings(['frontpage_slider_text', 'twitter_link', 'facebook_link', 'instagram_link', 'copyright', 'text_right', 'textarea_professional', 'textarea_customer']);
+        $site_settings = SiteSettings::get_site_settings(['frontpage_slider_text', 'twitter_link', 'facebook_link', 'instagram_link', 'copyright', 'text_right', 'textarea_professional', 'textarea_customer','Professional_text0','Professional_text1','Professional_text2','Professional_text3','Professional_text4','Professional_text5','Professional_text6','Professional_text7']);
 
         // -------------View-------------
         return view('admin.contentManagement.frontpage')->with([

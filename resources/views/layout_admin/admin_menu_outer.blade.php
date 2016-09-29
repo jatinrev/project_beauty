@@ -17,8 +17,9 @@
     <link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
 
     <link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
-    @yield('css')
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     @php
