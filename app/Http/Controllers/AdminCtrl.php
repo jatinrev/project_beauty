@@ -79,6 +79,9 @@ class AdminCtrl extends Controller
         ]);
     }
 
+    public function addFaqs(Request $request) {
+        return view('admin.contentManagement.add-faqs')->with([]);
+    }
 
     /**
      * LISTING OF USERS

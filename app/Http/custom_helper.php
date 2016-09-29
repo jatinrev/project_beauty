@@ -1,5 +1,5 @@
 <?php
-
+// ON ADDING FUNCTION TO THIS FILE RUN "composer dump-autoload"
 function testing() {
 	return 'helllooo';
 }

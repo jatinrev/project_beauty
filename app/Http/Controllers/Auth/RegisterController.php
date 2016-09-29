@@ -68,7 +68,7 @@ class RegisterController extends Controller
         $this->validator($request->all())->validate();
         $user_data = $this->create($request->all());
         send_mail($user_data->email, url('register/verify/'.$user_data->confirmation_code), 'confermation code.');
-        return redirect('/');
+        return redirect('/')->with(['custom_success' => ['Email has been sent to you, please check your email account.']]);
     }
 
     /**

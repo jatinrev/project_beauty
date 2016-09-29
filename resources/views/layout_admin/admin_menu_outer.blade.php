@@ -47,14 +47,18 @@
                             IN+
                         </div>
                     </li>
-                    <li class="{{ $current_route == 'AdminCtrl@frontpage' ?  'active' : '' }}">
+                    <li class="{{
+                                    $current_route == 'AdminCtrl@frontpage' ||
+                                    $current_route == 'AdminCtrl@addFaqs' 
+                                    ?  'active' : '' 
+                        }}">
                         <a href="{{ url('admin/frontpage') }}"><i class="fa fa-th-large"></i> <span class="nav-label">Content Management</span> <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li class="{{ $current_route == 'AdminCtrl@frontpage' ?  'active' : '' }}"><a href="{{ url('admin/frontpage') }}">Frontpage</a></li>
-                            <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                            <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                            <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
-                            <li><a href="dashboard_5.html">Dashboard v.5 <span class="label label-primary pull-right">NEW</span></a></li>
+                            <li class="{{ $current_route == 'AdminCtrl@addFaqs' ?  'active' : '' }}"><a href="{{ url('admin/add-faqs') }}">Add Faqs</a></li>
+                            <li><a>Dashboard v.3</a></li>
+                            <li><a>Dashboard v.4</a></li>
+                            <li><a>Dashboard v.5 <span class="label label-primary pull-right">NEW</span></a></li>
                         </ul>
                     </li>
                     <li class="{{ $current_route == 'AdminCtrl@newsletter' ?  'active' : '' }}"> <!-- active -->
@@ -208,6 +212,7 @@
                         Newsletter
                         @elseif ($current_route == 'AdminCtrl@listUsers')
                         List Users
+                        @elseif ($current_route == 'AdminCtrl@addFaqs')
                         @else
                         Set this in admin_menu_outer.blade.php
                         @endif

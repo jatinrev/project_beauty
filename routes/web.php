@@ -53,6 +53,8 @@ Route::match(['get', 'post'], '/admin/login', 'AdminCtrl@login');
 
 // CMS CONTROL
 Route::match(['get', 'post'], '/admin/frontpage', 'AdminCtrl@frontpage')->middleware('adminAuth');
+Route::match(['get', 'post'], '/admin/add-faqs', 'AdminCtrl@addFaqs')->middleware('adminAuth');
+
 
 // OTHERS
 Route::match(['get', 'post'], '/admin/newsletter', 'AdminCtrl@newsletter')->middleware('adminAuth');

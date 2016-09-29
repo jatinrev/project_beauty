@@ -38,7 +38,7 @@
                     <img src="{{ asset('assets/images/girl-with-tolls-in-hand.png') }}">
                 </div>
                 <div class="col-md-8 col-sm-12 col-xs-12 membership_area">
-                    <h2 class="main_all_sections_heading text-center">Join the club</h2>
+                    <h2 class="main_all_sections_heading text-center" onclick='window.location.href="{{ url('/register') }}"'>Join the club</h2>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="prof_memerbship col-md-6 col-sm-6 col-xs-12 padd_left_right_all_zero text-center">
                             <h3 class="color_red">JOIN. GROW. EARN</h3>
@@ -219,7 +219,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12 col-xs-12 sign_up_now text-center">
                 	<h3 class="text-uppercase color_white">{{ $site_settings['text_right'] }}</h3>
-                    <button class="text-uppercase pink_btn inline_block"> sign up now</button>
+                    <button class="text-uppercase pink_btn inline_block" onclick='window.location.href="{{ url('/register') }}"'> sign up now</button>
                 </div>
             </div>
         </div>
