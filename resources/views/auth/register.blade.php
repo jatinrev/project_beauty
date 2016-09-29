@@ -46,7 +46,7 @@ $(document).ready(function() {
                                         <div class="panel-body">
                                            <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                                                 {{ csrf_field() }}
-
+                                                <input type="hidden" value="business" name="user_type">
                                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }} margin_top_20px">
 
                                                     <div class="col-md-12">
@@ -162,6 +162,7 @@ $(document).ready(function() {
                                                     <div class="col-md-6 col-md-offset-3">
                                                         <button type="submit" class="btn btn-primary light_red_btn start_reg_btn">
                                                             GET STARTED
+
                                                         </button>
                                                     </div>
                                                 </div>
@@ -179,3 +180,22 @@ $(document).ready(function() {
 <!--Register form -->
 
 @endsection
+
+<script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#pro_mem_reg").click(function(event) {
+        $("#reg_form_horizontal").css("display" , "block"); 
+        $(".prof_membership_text").css("display" , "none"); 
+        $("#cust_form_horizontal").hide();
+        $(".cust_membership_text").css("display" , "inline-block");
+    });
+
+    $("#cust_mem_reg").click(function(event) {
+        $("#cust_form_horizontal").css("display" , "block"); 
+        $(".cust_membership_text").css("display" , "none");
+        $("#reg_form_horizontal").hide();
+        $(".prof_membership_text").css("display" , "inline-block");
+    });
+});
+</script>
