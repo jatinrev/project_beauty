@@ -17,15 +17,20 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('username')->unique();
             $table->string('email')->unique();
             $table->enum('user_type', array('isAdmin', 'customer', 'business')); // DONT CHANGE THIS BECAUSE FOR REGISTRATION VALIDATION HAVE BEEN APPLIED, WHICH CAN CONFLICT.
+            $table->boolean('confirmed')->default(0);
+            $table->string('confirmation_code')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
         User::create([
             'name'      => 'Admin',
+            'username'  => 'admin',
             'email'     => 'admin@admin.com',
+            'confirmed' => 1,
             'password'  => bcrypt('admin'),
             'user_type' => 'isAdmin'
         ]);

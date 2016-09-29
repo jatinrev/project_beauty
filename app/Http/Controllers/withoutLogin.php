@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\NewsletterSubscriber;
 use App\SiteSettings;
+use DB;
 
 class withoutLogin extends Controller
 {
@@ -28,7 +29,7 @@ class withoutLogin extends Controller
     		$newsletter_subscriber_obj->save_newsletter($request);
 
     		return view('cms.front_page')->with([
-                'success_msg'   => 'You have subscribed to our Newsletter.',
+                'success_msg'   => ['You have subscribed to our Newsletter.'],
                 'site_settings' => $site_settings
     		]);
     	}
@@ -46,8 +47,22 @@ class withoutLogin extends Controller
         return view('cms.about_us');
     }
 
-    public function contact_us() {
-        return view('cms.contact_us');
+    public function contact_us(Request $request) {
+        if( empty($request->all()) ) {
+            return view('cms.contact_us');
+        } else {
+            $this->validate($request, [
+                'email' => 'required|email',
+                'query' => 'required'
+            ]);
+            $request_array = $request->all();
+            DB::table('contact_us')->insert([
+                'email'      => $request_array['email'],
+                'query'      => $request_array['query'],
+                'created_at' => \Carbon\Carbon::now()
+            ]);
+            return view('cms.contact_us')->with(['success_msg' => ['Your request have been recieved by us, we will contact to you soon.']]);
+        }
     }
 
 }

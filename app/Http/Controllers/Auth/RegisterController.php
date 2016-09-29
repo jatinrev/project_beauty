@@ -6,6 +6,7 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -56,6 +57,43 @@ class RegisterController extends Controller
     }
 
     /**
+     * Handle a registration request for the application.
+     * JATIN - WHEN REGISTRATION IS DONE THIS IS THE FUNCTION WHERE THE $request COMES INITIALLY
+     * DEFAULT OF THIS IS THERE IN THE triat RegistersUsers 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $user_data = $this->create($request->all());
+        send_mail($user_data->email, url('register/verify/'.$user_data->confirmation_code), 'confermation code.');
+        return redirect('/')->with(['custom_success' => ['Email has been sent to you, please check your email account.']]);
+    }
+
+    /**
+     * JATIN - THIS FUNCTION IS CALLED WHEN USER IS TRYING TO CONFIRM HIS/HER ACCOUNT, ROUTE OF THIS IS THERE IN THE web.php
+     * @param  [type] $confirmationCode [description]
+     * @return [type]                   [description]
+     */
+    public function confirmRegistration($confirmationCode) {
+        $current_user = User::where('confirmation_code', $confirmationCode)->first();
+        if( !empty($current_user) ) {
+            $current_user_array = $current_user->toArray();
+            if($current_user_array['confirmed'] == 0) {
+                $current_user->confirmed = 1;
+                $current_user->save();
+                $this->guard()->login($current_user);
+                return redirect($this->redirectPath());
+            } else {
+                return redirect('/')->with(['custom_errors' => ['This id has already been confirmed']]);
+            }
+        } else {
+            return redirect('/')->with(['custom_errors' => ['Confermation code not found.']]);
+        }
+    }
+
+    /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
@@ -64,10 +102,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name'      => $data['name'],
-            'email'     => $data['email'],
-            'password'  => bcrypt($data['password']),
-            'user_type' => $data['user_type']
+            'name'              => $data['name'],
+            'email'             => $data['email'],
+            'confirmation_code' => str_random(30),
+            'password'          => bcrypt($data['password']),
+            'user_type'         => $data['user_type']
         ]);
     }
 }

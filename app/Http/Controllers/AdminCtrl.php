@@ -12,6 +12,8 @@ use App\Http\Requests;
 use App\NewsletterSubscriber;
 use App\SiteSettings;
 use App\User;
+use DB;
+// use App\AdminModel;
 
 class AdminCtrl extends Controller
 {
@@ -79,6 +81,27 @@ class AdminCtrl extends Controller
         ]);
     }
 
+    public function addFaqs(Request $request) {
+        if( !empty($request->action) && $request->action == 'form_add_faqs' ) {
+            // dd($request->all());
+            // VALIDATION
+            DB::table('faq')->insert([
+                'question'   => $request->question,
+                'answer'     => $request->textarea_data,
+                'created_at' => \Carbon\Carbon::now()
+            ]);
+            $faqs = \App\AdminModel::get_all_faqs();
+            return view('admin.contentManagement.add-faqs')->with([
+                'faqs' => $faqs
+            ]);
+        } else {
+            $faqs = \App\AdminModel::get_all_faqs();
+            // dd($faqs);
+            return view('admin.contentManagement.add-faqs')->with([
+                'faqs' => $faqs
+            ]);
+        }
+    }
 
     /**
      * LISTING OF USERS
@@ -88,8 +111,15 @@ class AdminCtrl extends Controller
      */
     public function listUsers(Request $request)
     {
-        $business_users = App\User::where('user_type', '=', 'business');
-        return view('admin.listUsers');
+        // dd($request->all());
+        $business_users = User::where('user_type', '=', 'business')->paginate(2)->setPageName('businesspage');/**/
+        $customer_users = User::where('user_type', '=', 'customer')->paginate(2)->setPageName('customerpage');/**/
+
+        // dd($business_users);
+        return view('admin.listUsers')->with([
+            'businesses' => $business_users,
+            'customers'  => $customer_users
+        ]);
     }
 
     /**
@@ -100,9 +130,9 @@ class AdminCtrl extends Controller
      */
     public function newsletter()
     {
-        $newsletters = NewsletterSubscriber::paginate();
+        $newsletters = NewsletterSubscriber::paginate(2)->setPageName('newsletters');
         return view('admin.newsletter')->with([
-            'newsletters' => $newsletters->toArray()
+            'newsletters' => $newsletters
         ]);
     }
 

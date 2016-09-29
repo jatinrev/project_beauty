@@ -44,23 +44,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($newsletters['data'] as $key => $value) { ?>
+                                @foreach ($newsletters as $newsletter)
                                 <tr class="footable-even">
-                                    <td class="footable-visible footable-first-column"><?php echo $value['email']; ?></td>
-                                    <td class="footable-visible"><?php echo $value['created_at']; ?></td>
+                                    <td class="footable-visible footable-first-column">{{ $newsletter->email }}</td>
+                                    <td class="footable-visible">False</td>
                                     <td class="footable-visible footable-last-column"><a href="#"><i class="fa fa-check text-navy"></i></a></td>
                                 </tr>
-                                <?php } ?>
+                                @endforeach
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="5" class="footable-visible">
-                                        <ul class="pagination pull-right"><li class="footable-page-arrow"><a data-page="first" href="#first">«</a></li><li class="footable-page-arrow"><a data-page="prev" href="#prev">‹</a></li><li class="footable-page"><a data-page="0" href="#">1</a></li><li class="footable-page active"><a data-page="1" href="#">2</a></li><li class="footable-page-arrow disabled"><a data-page="next" href="#next">›</a></li><li class="footable-page-arrow disabled"><a data-page="last" href="#last">»</a></li></ul>
-                                    </td>
-                                </tr>
-                            </tfoot>
                         </table>
-
+                        {{ $newsletters->links() }}
                     </div>
                 </div>
             </div>
