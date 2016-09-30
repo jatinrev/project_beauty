@@ -80,6 +80,22 @@ class CreateSiteSettings extends Migration
                         <li>Unknown printer</li>\r\n
                     </ul>\r\n"
         ]);
+        $array = array('fill it1', 'fill it2', 'fill it3','fill it4','fill it5','fill it6','fill it7','fill it8');
+        foreach ($array as $key => $value) {
+            SiteSettings::create([
+                'key'   => 'Professional_text'.$key,
+                'value' => $value
+            ]);    
+        }
+        $array1 =array('professional_image0','professional_image1','professional_image2','professional_image3','professional_image4','professional_image5','professional_image6','professional_image7');
+        foreach ($array1 as $key => $value) {
+            SiteSettings::create([
+            'key' => 'Professional_image'.$key,
+            'value' => $value
+            ]);
+        
+        }
+
     }
 
     /**

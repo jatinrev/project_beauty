@@ -17,8 +17,9 @@
     <link href="{{ asset('admin/js/plugins/gritter/jquery.gritter.css') }}" rel="stylesheet">
 
     <link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
-    @yield('css')
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     @php
@@ -66,6 +67,9 @@
                     </li>
                     <li class="{{ $current_route == 'AdminCtrl@listUsers' ?  'active' : '' }}"> <!-- active -->
                         <a href="{{ url('admin/list-users') }}"><i class="fa fa-diamond"></i> <span class="nav-label">List Users</span></a>
+                    </li>
+                    <li class="{{ $current_route == 'AdminCtrl@contactus' ? 'active' : ''}}"> <!--- active  by pushker-->
+                        <a href="{{ url('admin/contactus') }}"><i class="fa fa-diamond"></i><span class="nav-label">Contact us</span></a>
                     </li>
                 </ul>
 
@@ -210,6 +214,8 @@
                         Frontpage
                         @elseif ($current_route == 'AdminCtrl@newsletter')
                         Newsletter
+                        @elseif($current_route == 'AdminCtrl@contactus')
+                        Contact us
                         @elseif ($current_route == 'AdminCtrl@listUsers')
                         List Users
                         @elseif ($current_route == 'AdminCtrl@addFaqs')

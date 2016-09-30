@@ -61,6 +61,11 @@ Route::match(['get', 'post'], '/admin/add-faqs', 'AdminCtrl@addFaqs')->middlewar
 Route::match(['get', 'post'], '/admin/newsletter', 'AdminCtrl@newsletter')->middleware('adminAuth');
 Route::match(['get', 'post'], '/admin/list-users', 'AdminCtrl@listUsers')->middleware('adminAuth');
 
+// OTHERS BY PUSHKER
+/*Route::match(['get','post'],'/admin/contactus','AdminCtrl@contactus')->middleware('adminAuth');*/
+Route::match(['get','post'],'/admin/contactus','AdminCtrl@contactus')->middleware('adminAuth');
+
+
 	
 // Route::group(['middleware' => ['adminAuth']], function () {
 // });

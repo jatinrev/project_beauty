@@ -1,0 +1,30 @@
+.btnn {
+    top: -15px;
+    left: 51px;
+}
+/*.text{
+    width: 60% ! important;
+    padding-right: 57px;
+}*/
+.left {
+    width: 60%;
+    padding-bottom: 8px;
+}
+.right {
+    width: 39%;
+    padding-left: 106px;
+}
+img.professional_image {
+    width: 100%;
+    height: 45px;
+}
+img.banner_image {
+    width: 46%;
+}
+img.site_logo {
+    width: 40%;
+    background: antiquewhite;
+}
+.col-lg-4.right {
+    top: 18px;
+}
