@@ -158,7 +158,7 @@ class AdminCtrl extends Controller
 
     public function contactus()
     {
-          $contactus = DB::table('contact_us')->select('email', 'query')->paginate(2);
+        $contactus = DB::table('contact_us')->select('email', 'query')->paginate(2);
         // $contactus = contactus::paginate(2)->setPageName('contactus');
         return view('admin.contactus')->with(['contact_us' => $contactus
         ]);
