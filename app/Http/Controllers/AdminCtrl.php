@@ -120,8 +120,8 @@ class AdminCtrl extends Controller
                 'faqs' => $faqs
             ]);
         } elseif (!empty($request->action) && $request->action =='delete_content') {
-           // dd($request->faq);
-            DB::table('faq')->where('id',$request->faq)->delete();
+            //dd($request->faq_id);
+            DB::table('faq')->where('id',$request->faq_id)->delete();
             $faqs = \App\AdminModel::get_all_faqs();
             return view('admin.contentManagement.add-faqs')->with([
                 'faqs' => $faqs

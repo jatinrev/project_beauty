@@ -85,6 +85,7 @@
             console.log(faq_id);
             $('.faq_class').val(faq_id);
             $('#delete_value').submit();
+                return 0;
         }
         $(document).ready(function () {
             @foreach ($faqs as $faq)
@@ -111,7 +112,7 @@
         <form action="" method="post" id="delete_value">
             {{ csrf_field() }}
             <input type="hidden" name="action" value="delete_content">
-            <input type="hidden" name="faq" class="faq_class">
+            <input type="hidden" name="faq_id" class="faq_class">
         </form>
    
 @endsection
