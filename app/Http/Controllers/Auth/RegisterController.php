@@ -109,4 +109,11 @@ class RegisterController extends Controller
             'user_type'         => $data['user_type']
         ]);
     }
+
+    /**
+     * REGISTRATION STEP 2
+     */
+    public function registration_add_services() {
+        return view('auth.add_services_step');
+    }
 }
