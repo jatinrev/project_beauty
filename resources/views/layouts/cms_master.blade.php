@@ -35,21 +35,22 @@
                               </div>
                           </div>
                     </nav>
-                          <div class="col-md-3 col-sm-7 col-xs-9">
-                              <div class="reg-btn-outr">
-                                  <button class="pink_btn reg_btn">Register</button>
-                              </div>
-                              <div class="login-btn-outr">
-                                  <button class="pink_btn login_btn">login</button>  
-                              </div>             
-                          </div>
                     <div class="col-md-3 col-sm-7 col-xs-9">
-                      <div class="reg-btn-outr">
-                        <button class="pink_btn reg_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                          {{ csrf_field() }}
-                        </form>
-                      </div>
+                      @if (Auth::guest())
+                        <div class="reg-btn-outr">
+                            <button class="pink_btn reg_btn" onclick='window.location.href="{{ url('/register') }}"'>Register</button>
+                        </div>
+                        <div class="login-btn-outr">
+                            <button class="pink_btn login_btn" onclick='window.location.href="{{ url('/login') }}"'>login</button>  
+                        </div>
+                      @else
+                        <div class="reg-btn-outr">
+                          <button class="pink_btn reg_btn" onclick="document.getElementById('logout-form').submit();">logout</button>
+                          <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                          </form>
+                        </div>
+                      @endif
                     </div>
 
                     

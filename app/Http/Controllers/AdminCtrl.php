@@ -101,6 +101,10 @@ class AdminCtrl extends Controller
         ]);
     }
 
+    /**
+     * CONTENTMANAGEMENT/ADDFAQS
+     * @param Request $request [description]
+     */
     public function addFaqs(Request $request) {
         if( !empty($request->action) && $request->action == 'form_add_faqs' ) {
             // dd($request->all());

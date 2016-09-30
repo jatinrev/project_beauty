@@ -74,7 +74,7 @@
             var aHTML = $( '.summernote'+val).code(); //save HTML If you need(aHTML: array).
             $('.textarea_data'+val).val(aHTML);
             $('#form'+val).submit();
-        };
+        }
         function saved_faqs(summernote_id, ques, ans) {
             $('.appendhere').append(get_summer_note_html(summernote_id, ques, ans));
             $('.summernote'+summernote_id).summernote();
