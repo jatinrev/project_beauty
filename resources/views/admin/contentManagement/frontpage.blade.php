@@ -277,7 +277,7 @@
                             </div>
                         </form>
                     </div>
-                    <!-- admin 8 images uploading -->
+                    <!-- admin 8 images uploading and text by pushker -->
                    <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5>Frontpage Professional Image & Text</h5>
@@ -307,102 +307,119 @@
                             <div class="form-group">
                                 <div class="col-lg-8">
                                     <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text0" class="form-control text"  value="{{ $site_settings['Professional_text0'] }}">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text0" class="form-control text"  value="{{ $site_settings['Professional_text0'] }}">
                                     </div>
                                     <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image0">
-                                    <img class ="professional_image" src="/images/professional_image0.jpg">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image0">
+                                        <img class ="professional_image" src="/images/professional_image0.jpg">
                                     </div>
                                 </div>
+                            </div> 
+                            <div class="form-group">
                                 <div class="col-lg-8">
                                     <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text1" class="form-control text" value="{{ $site_settings['Professional_text1'] }}">
-                                </div>
-                                 <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image1">
-                                    <img  class ="professional_image" src="/images/professional_image1.jpg">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text1" class="form-control text" value="{{ $site_settings['Professional_text1'] }}">
+                                    </div>
+                                    <div class="col-lg-4 right">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image1">
+                                        <img  class ="professional_image" src="/images/professional_image1.jpg">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
                                 <div class="col-lg-8">
                                     <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text2" class="form-control text" value="{{ $site_settings['Professional_text2'] }}">
-                                </div>
-                                <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image2">
-                                    <img  class ="professional_image" src="/images/professional_image2.jpg">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text2" class="form-control text" value="{{ $site_settings['Professional_text2'] }}">
+                                    </div>
+                                    <div class="col-lg-4 right">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image2">
+                                        <img  class ="professional_image" src="/images/professional_image2.jpg">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
                                 <div class="col-lg-8">
                                     <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text3" class="form-control text" value="{{ $site_settings['Professional_text3'] }}">
-                                </div>
-                                 <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image3">
-                                    <img  class ="professional_image" src="/images/professional_image3.jpg">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text3" class="form-control text" value="{{ $site_settings['Professional_text3'] }}">
+                                    </div>
+                                    <div class="col-lg-4 right">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image3">
+                                        <img  class ="professional_image" src="/images/professional_image3.jpg">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
                                 <div class="col-lg-8">
                                     <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text4" class="form-control text" value="{{ $site_settings['Professional_text4'] }}">
-                                </div>
-                                <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image4">
-                                    <img  class ="professional_image" src="/images/professional_image4.jpg">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text4" class="form-control text" value="{{ $site_settings['Professional_text4'] }}">
+                                    </div>
+                                    <div class="col-lg-4 right">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image4">
+                                        <img  class ="professional_image" src="/images/professional_image4.jpg">
                                     </div>
                                 </div>
-                                <div class="col-lg-8">
-                                <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text5" class="form-control text"  value="{{ $site_settings['Professional_text5'] }}" required>
-                                </div>
-                                <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image5">
-                                    <img  class ="professional_image" src="/images/professional_image5.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text6" class="form-control text" value="{{ $site_settings['Professional_text6'] }}">
-                                </div>
-                                <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image6">
-                                    <img class ="professional_image" src="/images/professional_image6.jpg">
-                                    </div>
-                                </div>
+                           </div>
+                           <div class="form-group">
                                 <div class="col-lg-8">
                                     <div class="col-lg-4 left">
-                                    <label class="col-lg-4 control-label">Text</label>
-                                    <input type="text" name="Professional_text7" class="form-control text" value="{{ $site_settings['Professional_text7'] }}">
-                                </div>
-                                <div class="col-lg-4 right">
-                                    <label class="col-lg-4 control-label"></label>
-                                    <input type="file" name="Professional_image7">
-                                    <img  class ="professional_image" src="/images/professional_image7.jpg">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text5" class="form-control text"  value="{{ $site_settings['Professional_text5'] }}">
+                                    </div>
+                                    <div class="col-lg-4 right">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image5">
+                                        <img  class ="professional_image" src="/images/professional_image5.jpg">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-8">
+                                    <div class="col-lg-4 left">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text6" class="form-control text" value="{{ $site_settings['Professional_text6'] }}">
+                                    </div>
+                                    <div class="col-lg-4 right">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image6">
+                                        <img class ="professional_image" src="/images/professional_image6.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-8">
+                                    <div class="col-lg-4 left">
+                                        <label class="col-lg-4 control-label">Text</label>
+                                        <input type="text" name="Professional_text7" class="form-control text" value="{{ $site_settings['Professional_text7'] }}">
+                                    </div>
+                                    <div class="col-lg-4 right">
+                                        <label class="col-lg-4 control-label"></label>
+                                        <input type="file" name="Professional_image7">
+                                        <img  class ="professional_image" src="/images/professional_image7.jpg">
+                                    </div>
+                                </div>
+                            </div>
                                 {{-- <div class="col-lg-4">
                                     <button class="btn btn-sm btn-white" type="submit">Submit</button>
                                 </div> --}}
                             
-                            </div>
-                                <div class="col-lg-4 btnn">
-                                    <button class="btn btn-sm btn-white" type="submit">Submit</button>
+                            <div class="form-group">
+                                <div class="col-lg-8">
+                                    <div class="col-lg-4 btnn">
+                                        <button class="btn btn-sm btn-white" type="submit">Submit</button>
+                                    </div>
                                 </div>
                             </div>
-                       </form>
+                        </form>
                      </div>
                     <!--end -->
                 </div> <!-- float-e-margins -->
