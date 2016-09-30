@@ -219,6 +219,7 @@
                         @elseif ($current_route == 'AdminCtrl@listUsers')
                         List Users
                         @elseif ($current_route == 'AdminCtrl@addFaqs')
+                        Faqs
                         @else
                         Set this in admin_menu_outer.blade.php
                         @endif

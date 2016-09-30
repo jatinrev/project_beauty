@@ -14,7 +14,7 @@
     <script src="{{ asset('admin/js/plugins/summernote/summernote.min.js') }}"></script>
 
     <script>
-        var i = 1;
+        var i = +'{{ ( $faqs->last() == null ? 0 : $faqs->last()->id ) }}';
         function get_summer_note_html(form_id, ques, ans) {
             var output = '';
             output += '<div class="col-lg-6">';
@@ -42,9 +42,13 @@
             output += '        <div class="ibox-content">';
             output += '            <form action="" method="POST" id="form'+form_id+'" class="form-horizontal">';
             output += '                {{ csrf_field() }}';
-            output += '                <input type="hidden" name="action" value="form_add_faqs">';
+            if (ques) {
+                output += '                <input type="hidden" name="action" value="edit_faqs">';
+            } else {
+                output += '                <input type="hidden" name="action" value="form_add_faqs">';
+            }
             output += '                <input type="hidden" name="record_id" value="'+form_id+'">';
-            output += '                <input type="hidden" class="textarea_data'+form_id+'" value="'+ans+'" name="textarea_data">';
+            output += '                <input type="hidden" class="textarea_data'+form_id+'" value="" name="textarea_data">';
             output += '                <div class="form-group">';
             output += '                    <label class="col-lg-2 control-label">Question</label>';
             output += '                    <div class="col-lg-10">';
@@ -55,10 +59,14 @@
             output += '        </div>';
             output += '        <div class="ibox-content no-padding">';
             output += '            <div class="summernote'+form_id+'">';
-            output += '                '+ques;
+            output += '                '+ans;
             output += '            </div>';
             output += '            <div style="padding-left: 20px;">';
-            output += '                <button class="btn btn-primary  btn-xs" onclick="save('+form_id+')" type="button">Save</button>';
+            if ( ques ){
+                output += '                <button class="btn btn-primary  btn-xs" onclick="edit('+form_id+')" type="button">edit</button>';
+            } else {
+                output += '                <button class="btn btn-primary  btn-xs" onclick="save('+form_id+')" type="button">Save</button>';
+            }
             output += '            </div>';
             output += '        </div>';
             output += '    </div>';
@@ -81,6 +89,12 @@
             $('.summernote'+summernote_id).summernote();
             i++;
         }
+        function edit(faq_id){
+            console.log(faq_id);
+            var aHTML = $( '.summernote'+faq_id).code(); //save HTML If you need(aHTML: array).
+            $('.textarea_data'+faq_id).val(aHTML);
+            $('#form'+faq_id).submit();
+        }
         function delete_faq(faq_id){
             console.log(faq_id);
             $('.faq_class').val(faq_id);
@@ -88,6 +102,7 @@
         }
         $(document).ready(function () {
             @foreach ($faqs as $faq)
+                // console.log('{{ $faq->answer }}');
                 saved_faqs({{ $faq->id }}, '{{ $faq->question }}', '{{ $faq->answer }}');
             @endforeach
         });

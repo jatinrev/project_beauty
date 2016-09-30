@@ -107,40 +107,28 @@ class AdminCtrl extends Controller
      */
     public function addFaqs(Request $request) {
         if( !empty($request->action) && $request->action == 'form_add_faqs' ) {
-             //dd($request->action);
-            //dd($request->all());
-            // VALIDATION
+            // add
             DB::table('faq')->insert([
                 'question'   => $request->question,
                 'answer'     => $request->textarea_data,
                 'created_at' => \Carbon\Carbon::now()
             ]);
-            $faqs = \App\AdminModel::get_all_faqs();
-            return view('admin.contentManagement.add-faqs')->with([
-                'faqs' => $faqs
-            ]);
-        } elseif (!empty($request->action) && $request->action =='delete_content') {
-            //dd($request->faq_id);
+        } elseif (!empty($request->action) && $request->action =='delete_content' ) {
+            // delete
             DB::table('faq')->where('id',$request->faq_id)->delete();
-            $faqs = \App\AdminModel::get_all_faqs();
-            return view('admin.contentManagement.add-faqs')->with([
-                'faqs' => $faqs
-                ]);
-        } else {
-            $faqs = \App\AdminModel::get_all_faqs();
-            // dd($faqs);
-            return view('admin.contentManagement.add-faqs')->with([
-                'faqs' => $faqs
+        } elseif (!empty($request->action) && $request->action =='edit_faqs') {
+            // edit
+            DB::table('faq')->where('id',$request->record_id )->update([
+                'question' => $request->question,
+                'answer'   => $request->textarea_data
             ]);
         }
-    }
-    // delete data of faq by pushker 
-    /*public function destroy(){
-        DB::table('faq')->delete();
+        $faqs = \App\AdminModel::get_all_faqs();
         return view('admin.contentManagement.add-faqs')->with([
-                'faqs' => $faqs
-            ]);
-    }*/
+            'faqs' => $faqs
+        ]);
+    }
+
 
     /**
      * LISTING OF USERS
