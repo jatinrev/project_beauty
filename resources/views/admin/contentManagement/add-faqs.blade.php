@@ -85,7 +85,6 @@
             console.log(faq_id);
             $('.faq_class').val(faq_id);
             $('#delete_value').submit();
-                return 0;
         }
         $(document).ready(function () {
             @foreach ($faqs as $faq)
