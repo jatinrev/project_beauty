@@ -43,6 +43,7 @@ Route::get('/user/profile', 'UserCtrl@index');
 
 // Registration process controller.
 Route::match(['get', 'post'], '/user/dashboard', 'RegistrationCtrl@dashboard');
+Route::match(['get', 'post'], '/user/add-services', 'Auth\RegisterController@registration_add_services');
 
 
 

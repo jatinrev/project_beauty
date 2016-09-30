@@ -48,6 +48,9 @@ h2, h3{ line-height:40px;}
 .color_grey{color: #bebebe;}
 .color_pink{color: #94264e;}
 
+.font_size_12{ font-size: 12px;}
+.font_size_13{ font-size: 13px;}
+
 .padd_left_right_all_zero{ padding-left: 0; padding-right: 0;}
 .pad_left_right_20px{padding-left: 20px; padding-right: 20px;}
 .padd_left_8px{padding-left: 8px;}
@@ -762,6 +765,14 @@ background-repeat: no-repeat;} */
 .ibp_dashboard{ float: left; width: 100%}
 .form-horizontal label{ font-weight: normal;}
 .basic_info_form .form-group { margin-right: 0; margin-left: 0}
+.ibp_dashboard_cont_outr{ float: left; width: 100%}
+.ibp_dashboard_cont_inr{ float: none; width: 100%; max-width: 1040px; margin: 0 auto; }
+.ibp_dashboard_cont{ float: left; width: 100%;margin-top: 6%; margin-bottom: 6%}
+.das_add_serv_form .form-group{ margin-bottom:35px;}
+.das_add_serv_form .form-group .form-check-label{ font-weight: normal;}
+ .custom-control-input:checked ~ .custom-control-indicator{background-color:#952650}
+ .custom-control-input:focus ~ .custom-control-indicator{box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #fff;}
+.services_list_cont{ border-left: 4px solid #952650; float: left; width: 94%; padding: 3%; margin-bottom: 5%}
 
 /* responsive css start */
 
