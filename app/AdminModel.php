@@ -13,4 +13,6 @@ class AdminModel extends Model
     public static function insert_faq() {
 
     }
+   
+    	
 }

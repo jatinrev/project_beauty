@@ -35,7 +35,7 @@
             output += '                    </li>';
             output += '                </ul>';
             output += '                <a class="close-link">';
-            output += '                    <i class="fa fa-times"></i>';
+            output += '                    <i class="fa fa-times" onclick="delete_faq(\''+form_id+'\')"></i>';
             output += '                </a>';
             output += '            </div>';
             output += '        </div>';
@@ -71,6 +71,7 @@
             i++;
         }
         function save(val) {
+            console.log(val);
             var aHTML = $( '.summernote'+val).code(); //save HTML If you need(aHTML: array).
             $('.textarea_data'+val).val(aHTML);
             $('#form'+val).submit();
@@ -79,6 +80,11 @@
             $('.appendhere').append(get_summer_note_html(summernote_id, ques, ans));
             $('.summernote'+summernote_id).summernote();
             i++;
+        }
+        function delete_faq(faq_id){
+            console.log(faq_id);
+            $('.faq_class').val(faq_id);
+            $('#delete_value').submit();
         }
         $(document).ready(function () {
             @foreach ($faqs as $faq)
@@ -102,5 +108,11 @@
             
         </div> <!-- row -->
     </div> <!-- wrapper-content -->
+        <form action="" method="post" id="delete_value">
+            {{ csrf_field() }}
+            <input type="hidden" name="action" value="delete_content">
+            <input type="hidden" name="faq" class="faq_class">
+        </form>
+   
 @endsection
 

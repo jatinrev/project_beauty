@@ -13,7 +13,7 @@ use App\NewsletterSubscriber;
 use App\SiteSettings;
 use App\User;
 use DB;
-// use App\AdminModel;
+
 
 class AdminCtrl extends Controller
 {
@@ -107,7 +107,8 @@ class AdminCtrl extends Controller
      */
     public function addFaqs(Request $request) {
         if( !empty($request->action) && $request->action == 'form_add_faqs' ) {
-            // dd($request->all());
+             //dd($request->action);
+            //dd($request->all());
             // VALIDATION
             DB::table('faq')->insert([
                 'question'   => $request->question,
@@ -118,6 +119,13 @@ class AdminCtrl extends Controller
             return view('admin.contentManagement.add-faqs')->with([
                 'faqs' => $faqs
             ]);
+        } elseif (!empty($request->action) && $request->action =='delete_content') {
+           // dd($request->faq);
+            DB::table('faq')->where('id',$request->faq)->delete();
+            $faqs = \App\AdminModel::get_all_faqs();
+            return view('admin.contentManagement.add-faqs')->with([
+                'faqs' => $faqs
+                ]);
         } else {
             $faqs = \App\AdminModel::get_all_faqs();
             // dd($faqs);
@@ -126,6 +134,13 @@ class AdminCtrl extends Controller
             ]);
         }
     }
+    // delete data of faq by pushker 
+    /*public function destroy(){
+        DB::table('faq')->delete();
+        return view('admin.contentManagement.add-faqs')->with([
+                'faqs' => $faqs
+            ]);
+    }*/
 
     /**
      * LISTING OF USERS
