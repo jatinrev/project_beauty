@@ -27,11 +27,11 @@
 				<form class="das_add_serv_form">
 					  <div class="form-group">
 					    <label>Add Service</label>
-					    <input type="text" class="form-control" >					     
+					    <input type="text" class="form-control" >
 					  </div>
 
 					  <div class="form-group col-md-12 padd_left_zero">
-					    <label>Add <font class="color_red">Hair</font> Services you will provide</label>
+					    <label>Add <font class="color_pink">Hair</font> Services you will provide</label>
 					    <small class="form-text text-muted col-md-12 padd_left_zero margin_botm_20px">You can select multiple services.</small>	
 
 					    		<div class="custom-controls-stacked">
@@ -69,11 +69,11 @@
 					  <div class="form-group col-md-12 padd_left_zero">
 					  	<div class="col-md-5 padd_left_zero">
 					  		<label>Add Price</label>
-					    	<input type="text" class="form-control" >	
+					    	<input type="text" class="form-control" placeholder="$0" >	
 					  	</div>
-					  	<div class="col-md-7 padd_left_zero">
+					  	<div class="col-md-7 padd_left_55px">
 					  		<label>Add Time Duration</label>
-					    	<input type="text" class="form-control" >	
+					    	<input type="text" class="form-control" placeholder="-- --">	
 					  	</div>
 					  </div>
 
@@ -92,7 +92,8 @@
 					  
 					  <div class="form-group col-md-12 padd_left_zero">
 					  	  	<label>Add Description</label>
-					  	  	<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+					  	  	<textarea class="form-control" id="exampleTextarea" rows="3" >
+					  	  	</textarea>
 					  </div>  
 
 					  <div class="form-group col-md-12 padd_left_zero">
@@ -101,28 +102,89 @@
 				</form>
 			</div>
 			<div class="das_serv_right col-md-6 pull-right">	
-				<div class="form-group"><label class="margin_top_z margin_botm_z">Services List You Will Provide</label></div>
-				<div class="services_list_cont">
-					<h4 class="margin_top_z margin_botm_z color_red">Hair Services</h4>
-					<div class="sub_ser">
-						fgd
-					</div>
+				<div class="form-group">
+					<label class="margin_top_z margin_botm_z">Services List You Will Provide</label>
 				</div>
+				<div class="scrollbar" id="ex3">
+					<div class="services_list_inr">
+						<div class="services_list_cont">
+							<h4 class="margin_top_z margin_botm_z color_pink">Hair Services</h4>
+							<div class="sub_ser">
+								<h5>Lorem Ipsum
+									<span>
+										00 hrs 00 min | <font class="color_pink">$0</font>
+										<div>
+											<img src="{{ asset('assets/images/serv1.png')}}" alt>
+											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+										</div>
+									</span>		
+								</h5>
 
-				<div class="services_list_cont">
-					<h4 class="margin_top_z margin_botm_z color_red">Hair Services</h4>
-					<div class="sub_ser">
-						fgd
-					</div>
-				</div>
+								<p>
+									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
+								</p>
+							</div>
+						</div>
 
-				<div class="services_list_cont">
-					<h4 class="margin_top_z margin_botm_z color_red">Hair Services</h4>
-					<div class="sub_ser">
-						fgd
+						<div class="services_list_cont">
+							<h4 class="margin_top_z margin_botm_z color_pink">Skin Services</h4>
+							<div class="sub_ser">
+								<h5>Lorem Ipsum
+									<span>
+										00 hrs 00 min | <font class="color_pink">$0</font>
+										<div>
+											<img src="{{ asset('assets/images/serv1.png')}}" alt>
+											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+										</div>
+									</span>
+								</h5>
+								
+								<p>
+									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
+								</p>
+							</div>
+
+							<div class="sub_ser">
+								<h5>Lorem Ipsum
+									<span>
+										00 hrs 00 min | <font class="color_pink">$0</font>
+										<div>
+											<img src="{{ asset('assets/images/serv1.png')}}" alt>
+											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+										</div>
+									</span>
+								</h5>
+								
+								<p>
+									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
+								</p>
+							</div>
+						</div>
+
+						<div class="services_list_cont">
+							<h4 class="margin_top_z margin_botm_z color_pink">Nail Services</h4>
+							<div class="sub_ser">
+								<h5>Lorem Ipsum
+									<span>
+										00 hrs 00 min | <font class="color_pink">$0</font>
+										<div>
+											<img src="{{ asset('assets/images/serv1.png')}}" alt>
+											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+										</div>
+									</span>
+								</h5>
+								<p>
+									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+				<div class="das_serv_right_btn col-md-6 col-sm-6 col-xs-6 pull-right margin_top_40px">
+					<button type="submit" class="black_btn serv_back_btn">Back</button>
+					<button type="submit" class="light_red_btn serv_cont_btn">Continue</button>
+				</div>
+			</div>	
 		</div>
 	</div>
 </div>
