@@ -128,7 +128,7 @@ class RegisterController extends Controller
              $this->validate($request, [
                 'name'      => 'required|max:255',
                 'profession' => 'required',
-                'about' => 'required|max:200',
+                'about' => 'required|max:255',
                 'address' => 'required|max:255'
                 ]);
            
