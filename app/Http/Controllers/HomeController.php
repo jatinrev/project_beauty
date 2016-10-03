@@ -35,6 +35,7 @@ class HomeController extends Controller
      * registration step 1
      */
     public function basic_detail( Request $request) {
+        // dd($request);
         $user_data = Auth::user();
         if(!empty($request->all())){
             dd($request->all());
