@@ -42,8 +42,13 @@ Route::get('/home', 'HomeController@index');
 Route::get('/user/profile', 'UserCtrl@index');
 
 // Registration process controller.
-Route::match(['get', 'post'], '/user/dashboard', 'Auth\RegisterController@dashboard');
-Route::match(['get', 'post'], '/user/add-services', 'Auth\RegisterController@registration_add_services');
+Route::match(['get', 'post'], '/user/basic-detail', 'HomeController@basic_detail'); // step-1
+Route::match(['get', 'post'], '/user/add-services', 'HomeController@registration_add_services'); // step-2
+
+
+
+
+
 
 
 
@@ -63,8 +68,3 @@ Route::match(['get', 'post'], '/admin/list-users', 'AdminCtrl@listUsers')->middl
 
 // OTHERS BY PUSHKER
 Route::match(['get','post'],'/admin/contactus','AdminCtrl@contactus')->middleware('adminAuth');
-
-
-	
-// Route::group(['middleware' => ['adminAuth']], function () {
-// });

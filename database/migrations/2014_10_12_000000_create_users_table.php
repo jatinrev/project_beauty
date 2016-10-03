@@ -17,13 +17,14 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('username')->unique();
+            $table->string('username')->nullable()->unique();
             $table->string('email')->unique();
             $table->string('profession')->nullable();
             $table->string('address')->nullable();
             $table->string('about')->nullable();
             $table->enum('user_type', array('isAdmin', 'customer', 'business')); // DONT CHANGE THIS BECAUSE FOR REGISTRATION VALIDATION HAVE BEEN APPLIED, WHICH CAN CONFLICT.
             $table->boolean('confirmed')->default(0);
+            $table->boolean('registration_confirm')->default(0); // THIS COLUMN IS HERE TO CHECK IF USER HAS COMPLETED THE CONFERMATION PROCESS.
             $table->string('confirmation_code')->nullable();
             $table->string('password');
             $table->rememberToken();

@@ -30,6 +30,9 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/home';
 
+
+
+
     /**
      * Create a new controller instance.
      *
@@ -39,6 +42,9 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
+
+
 
     /**
      * Get a validator for an incoming registration request.
@@ -56,6 +62,9 @@ class RegisterController extends Controller
         ]);
     }
 
+
+
+
     /**
      * Handle a registration request for the application.
      * JATIN - WHEN REGISTRATION IS DONE THIS IS THE FUNCTION WHERE THE $request COMES INITIALLY
@@ -71,6 +80,9 @@ class RegisterController extends Controller
         return redirect('/')->with(['custom_success' => ['Email has been sent to you, please check your email account.']]);
     }
 
+
+
+
     /**
      * JATIN - THIS FUNCTION IS CALLED WHEN USER IS TRYING TO CONFIRM HIS/HER ACCOUNT, ROUTE OF THIS IS THERE IN THE web.php
      * @param  [type] $confirmationCode [description]
@@ -83,8 +95,9 @@ class RegisterController extends Controller
             if($current_user_array['confirmed'] == 0) {
                 $current_user->confirmed = 1;
                 $current_user->save();
-                $this->guard()->login($current_user);
-                return redirect($this->redirectPath());
+                return redirect('/login')->with(['custom_success' => ['Please login to continue with registration.']]);
+                // $this->guard()->login($current_user);
+                // return redirect($this->redirectPath());
             } else {
                 return redirect('/')->with(['custom_errors' => ['This id has already been confirmed']]);
             }
@@ -92,6 +105,9 @@ class RegisterController extends Controller
             return redirect('/')->with(['custom_errors' => ['Confermation code not found.']]);
         }
     }
+
+
+
 
     /**
      * Create a new user instance after a valid registration.
@@ -109,38 +125,4 @@ class RegisterController extends Controller
             'user_type'         => $data['user_type']
         ]);
     }
-
-    /**
-     * REGISTRATION STEP 2
-     */
-    public function registration_add_services() {
-        return view('auth.add_services_step');
-    }
-
-    /**
-     * registration step 1
-     */
-
-
-    public function dashboard( Request $request) {
-        if(!empty($request->all())){
-            dd($request->all());
-             $this->validate($request, [
-                'name'      => 'required|max:255',
-                'profession' => 'required',
-                'about' => 'required|max:200',
-                'address' => 'required|max:255'
-                ]);
-           
-
-            DB::table('users')->where('id',$request->id )->update([
-                'name' => $request->name,
-                'profession' => $request->profession,
-                'about'   => $request->about,
-                'address'   => $request->address,
-            ]);
-        }
-        return view('auth.dashboard');
-    }
-
 }

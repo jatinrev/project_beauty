@@ -51,6 +51,8 @@ class LoginController extends Controller
     {
         if( $user->user_type == 'isAdmin' ) {
             $this->redirectTo = '/admin/frontpage';
+        } else if( $user->registration_confirm == 0 ) {
+            $this->redirectTo = '/user/basic-detail';
         }
     }
 }

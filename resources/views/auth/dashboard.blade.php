@@ -23,7 +23,7 @@
 <div class="ibp_dashboard_outr">
 	<div class="ibp_dashboard_inr">
 		<div class="ibp_dashboard">
-					<div class="container col-md-12 col-sm-12 col-xs-12">
+			<div class="container col-md-12 col-sm-12 col-xs-12">
 
 		<!-- Left side detail starts-->
 				<div class="customer_detail col-md-3 col-sm-3 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 margin_top_85px margin_botm_40px">
