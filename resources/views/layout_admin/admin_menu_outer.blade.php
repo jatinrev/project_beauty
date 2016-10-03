@@ -91,9 +91,9 @@
                             <span class="m-r-sm text-muted welcome-message">Welcome Admin.</span>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                            {{-- <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                                 <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-                            </a>
+                            </a> --}}
                             <ul class="dropdown-menu dropdown-messages">
                                 <li>
                                     <div class="dropdown-messages-box">
@@ -144,9 +144,9 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                          {{--   <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                                 <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-                            </a>
+                            </a> --}}
                             <ul class="dropdown-menu dropdown-alerts">
                                 <li>
                                     <a href="mailbox.html">
@@ -197,11 +197,11 @@
                                 {{ csrf_field() }}
                             </form>
                         </li>
-                        <li>
+                      {{--   <li>
                             <a class="right-sidebar-toggle">
                                 <i class="fa fa-tasks"></i>
                             </a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </nav>
             </div>

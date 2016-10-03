@@ -151,14 +151,14 @@
 
     </div>
 
-    <div id="small-chat">
+ {{--    <div id="small-chat">
 
         <span class="badge badge-warning pull-right">5</span>
         <a class="open-small-chat">
             <i class="fa fa-comments"></i>
 
         </a>
-    </div>
+    </div> --}}
 
     <div id="right-sidebar" class="sidebar-top">
         <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;"><div class="sidebar-container" style="overflow: hidden; width: auto; height: 100%;">

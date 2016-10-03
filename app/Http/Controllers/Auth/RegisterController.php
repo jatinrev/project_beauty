@@ -120,15 +120,24 @@ class RegisterController extends Controller
     /**
      * registration step 1
      */
+
+
     public function dashboard( Request $request) {
         if(!empty($request->all())){
             dd($request->all());
+             $this->validate($request, [
+                'name'      => 'required|max:255',
+                'profession' => 'required',
+                'about' => 'required|max:200',
+                'address' => 'required|max:255'
+                ]);
+           
+
             DB::table('users')->where('id',$request->id )->update([
                 'name' => $request->name,
                 'profession' => $request->profession,
                 'about'   => $request->about,
                 'address'   => $request->address,
-                'name' =>$request->name
             ]);
         }
         return view('auth.dashboard');
