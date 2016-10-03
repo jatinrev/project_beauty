@@ -116,4 +116,22 @@ class RegisterController extends Controller
     public function registration_add_services() {
         return view('auth.add_services_step');
     }
+
+    /**
+     * registration step 1
+     */
+    public function dashboard( Request $request) {
+        if(!empty($request->all())){
+            dd($request->all());
+            DB::table('users')->where('id',$request->id )->update([
+                'name' => $request->name,
+                'profession' => $request->profession,
+                'about'   => $request->about,
+                'address'   => $request->address,
+                'name' =>$request->name
+            ]);
+        }
+        return view('auth.dashboard');
+    }
+
 }
