@@ -71,22 +71,23 @@
 					  		<label>Add Price</label>
 					    	<input type="text" class="form-control" placeholder="$0" >	
 					  	</div>
-					  	<div class="col-md-7 padd_left_55px">
+					  	<div class="col-md-7 padd_left_30px">
 					  		<label>Add Time Duration</label>
-					    	<input type="text" class="form-control" placeholder="-- --">	
+					    	<input type="text" class="form-control width_85" placeholder="-- --">	
 					  	</div>
 					  </div>
 
 					  <div class="form-group col-md-12 padd_left_zero">
 					  	  	<label>Add Services Photos</label>
 					    	<small class="form-text text-muted col-md-12 padd_left_zero margin_botm_20px">You can add two photos.</small>	
-					    	<div class="col-md-12 padd_left_zero">
-					    		<div class="col-md-6 padd_left_zero">
-					    			<input type="file" id="file" class="">
-					    		</div>
-					    		<div class="col-md-6 padd_left_zero">
-					    			<input type="file" id="file" class="">
-					    		</div>
+					    	<div class="col-md-12 padd_left_zero ">
+					    		    <label class="btn btn-default btn-file">
+        							Browse <input type="file">
+    						</label>
+					    		
+					    	</div>
+					    	<div class="col-md-12 padd_left_zero ">
+					    		<input type="file" class="filestyle" data-buttonBefore="true">
 					    	</div>
 					  </div>
 					  
@@ -105,8 +106,7 @@
 				<div class="form-group">
 					<label class="margin_top_z margin_botm_z">Services List You Will Provide</label>
 				</div>
-				<div class="scrollbar" id="ex3">
-					<div class="services_list_inr">
+				<div class="scrollbar_inr">
 						<div class="services_list_cont">
 							<h4 class="margin_top_z margin_botm_z color_pink">Hair Services</h4>
 							<div class="sub_ser">
@@ -178,9 +178,8 @@
 								</p>
 							</div>
 						</div>
-					</div>
 				</div>
-				<div class="das_serv_right_btn col-md-6 col-sm-6 col-xs-6 pull-right margin_top_40px">
+				<div class="das_serv_right_btn col-md-7 col-sm-6 col-xs-6 pull-right margin_top_40px">
 					<button type="submit" class="black_btn serv_back_btn">Back</button>
 					<button type="submit" class="light_red_btn serv_cont_btn">Continue</button>
 				</div>
@@ -188,4 +187,45 @@
 		</div>
 	</div>
 </div>
+
+@endsection
+
+@section('script')
+<script>
+$(document).ready(function() {
+	
+});
+$(function () {
+    var $container = $('.scrollbar_inr'),
+        i = 0;
+    
+    $container.on('reach.scrollbox', function () {
+            if (i < 0) {
+                window.setTimeout(function () {
+                    $container.append('<div class="test-div">' + i ++ + '</div>');
+                    $container.scrollbox('update'); 
+                },300);
+            }
+        })
+        .scrollbox({
+            buffer: 150 
+        });
+});
+        </script>
+
+        <script>
+        		    $(document).ready( function() {
+        $(':file').on('fileselect', function(event, numFiles, label) {
+            console.log(numFiles);
+            console.log(label);
+        });
+    				});
+    				$(document).on('change', ':file', function() {
+        var input = $(this),
+            numFiles = input.get(0).files ? input.get(0).files.length : 1,
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        input.trigger('fileselect', [numFiles, label]);
+    });
+
+        </script>
 @endsection

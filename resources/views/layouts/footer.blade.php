@@ -14,6 +14,7 @@
 
     <script type="text/javascript" src="{{ asset('assets/js/index.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/product_index.js') }}"></script>
+    <script src="{{asset('assets/js/jquery.scrollbox.js') }}" type="text/javascript"></script>
     
 	@yield('script')
 

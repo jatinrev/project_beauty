@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/font-awesome.css') }}" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
+    <link href="{{ asset('assets/css/jquery.scrollbox.css') }}" media="screen" rel="stylesheet" type="text/css" />
     
     @yield('css')
 </head>
