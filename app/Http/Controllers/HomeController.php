@@ -56,11 +56,13 @@ class HomeController extends Controller
             // delete previous language of this user.
             DB::table('user_language')->where('user_id', $user_data->id)->delete();
             foreach ($user_language_array as $value) {
-                DB::table('user_language')->insert([
-                    'user_id'       => $user_data->id,
-                    'language_name' => trim($value),
-                    'created_at'    => \Carbon\Carbon::now()
-                ]);
+                if( trim($value) != '' ) {
+                    DB::table('user_language')->insert([
+                        'user_id'       => $user_data->id,
+                        'language_name' => trim($value),
+                        'created_at'    => \Carbon\Carbon::now()
+                    ]);
+                }
             }
 
             $user_data->facebook_link  = $request->facebook_link;
@@ -72,18 +74,8 @@ class HomeController extends Controller
             $user_data->about          = $request->about;
             $user_data->save();
         }
-        $user_languages_db = DB::table('user_language')
-                                ->select('language_name')
-                                ->groupBy('language_name')
-                                ->get();
-        // dd($user_languages_db);
-        $user_language_autocomplete_array = array();
-        foreach ($user_languages_db as $key => $value) {
-            $user_language_autocomplete_array[] = $value->language_name;
-        }
         return view('auth.dashboard')->with([
-            'user_data'          => $user_data,
-            'auto_complete_data' => json_encode($user_language_autocomplete_array)
+            'user_data'          => $user_data
         ]);
     }
 
@@ -96,4 +88,30 @@ class HomeController extends Controller
         return view('auth.add_services_step');
     }
 
+    /**
+     * REGISTRATION STEP 3
+     */
+    public function registration_add_availability() {
+        return view('auth.add_products');
+    }    
+
+    /**
+     * REGISTRATION STEP 4
+     */
+    public function registration_add_products() {
+        return view('auth.add_products');
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+

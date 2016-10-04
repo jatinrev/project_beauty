@@ -9,6 +9,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/js/jquery-ui-1.12.1.custom/jquery-ui.css') }}" />
     
+	<script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+	<script src="{{ asset('js/common_js.js') }}"></script>
     @yield('css')
 </head>
 <body>

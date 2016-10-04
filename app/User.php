@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use DB;
 
 class User extends Authenticatable
 {
@@ -27,5 +28,27 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /*
+         - Used in registration step-1
+     */
+    public function get_current_user_languages() {
+        $output = array();
+        $get_language = DB::table('user_language')
+                            ->where('user_id', $this->id)
+                            ->select('language_name')
+                            ->get();
+        foreach ($get_language as $key => $value) {
+            $output[] = $value->language_name;
+        }
+        return $output;
+    }
 
 }
+
+
+
+
+
+
+
+
