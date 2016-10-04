@@ -81,10 +81,7 @@
 					  	  	<label>Add Services Photos</label>
 					    	<small class="form-text text-muted col-md-12 padd_left_zero margin_botm_20px">You can add two photos.</small>	
 					    	<div class="col-md-12 padd_left_zero ">
-					    		    <label class="btn btn-default btn-file">
-        							Browse <input type="file">
-    						</label>
-					    		
+					    		<input type="file" class="filestyle" data-buttonBefore="true">	
 					    	</div>
 					    	<div class="col-md-12 padd_left_zero ">
 					    		<input type="file" class="filestyle" data-buttonBefore="true">
@@ -213,19 +210,5 @@ $(function () {
 });
         </script>
 
-        <script>
-        		    $(document).ready( function() {
-        $(':file').on('fileselect', function(event, numFiles, label) {
-            console.log(numFiles);
-            console.log(label);
-        });
-    				});
-    				$(document).on('change', ':file', function() {
-        var input = $(this),
-            numFiles = input.get(0).files ? input.get(0).files.length : 1,
-            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-        input.trigger('fileselect', [numFiles, label]);
-    });
-
-        </script>
+     
 @endsection
