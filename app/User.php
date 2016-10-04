@@ -43,6 +43,16 @@ class User extends Authenticatable
         return $output;
     }
 
+    /*
+     *   - functions for REGISTRATION STEP-2
+     */
+    public function add_user_category() {
+        return '';
+    }
+    public function add_user_sub_category() {
+        return '';
+    }
+
 }
 
 

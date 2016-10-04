@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -86,7 +87,19 @@ class HomeController extends Controller
     /**
      * REGISTRATION STEP 2
      */
-    public function registration_add_services() {
+    public function registration_add_services( Request $request ) {
+        $user_model = new User();
+        if( !empty($request->all()) ) {
+            // this function is to add main category to the table
+            $user_model->add_user_category();
+            // this function is here to add sub category to the admin.
+            $user_model->add_user_sub_category();
+            dd($request);
+            $this->validate($request, [
+                
+            ]);
+            DB::table();
+        }
         return view('auth.add_services_step');
     }
 
