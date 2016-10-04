@@ -54,7 +54,9 @@ class HomeController extends Controller
             ]);
             $user_language_array = explode(',', $request->languages);
             // delete previous language of this user.
-            DB::table('user_language')->where('user_id', $user_data->id)->delete();
+            DB::table('user_language')
+                ->where('user_id', $user_data->id)
+                ->delete();
             foreach ($user_language_array as $value) {
                 if( trim($value) != '' ) {
                     DB::table('user_language')->insert([
