@@ -4,10 +4,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>BRC : Home</title>
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('assets/font-awesome.css') }}" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/js/jquery-ui-1.12.1.custom/jquery-ui.css') }}" />
+    <link href="{{ asset('assets/css/jquery.scrollbox.css') }}" media="screen" rel="stylesheet" type="text/css" />
     
 	<script>
         window.Laravel = <?php echo json_encode([
