@@ -28,6 +28,27 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    // working on
+    public function get_service_main_category_table() {
+        return DB::table('service_main_category');
+    }
+
+    // working on
+    public function get_service_sub_category_table() {
+        return DB::table('service_sub_category');
+    }
+
+    // working on
+    /**
+     *  get_service_list()          => 'current user all services'
+     *  get_service_list($user_id)  => '$user_id all services'
+     */
+    public function get_service_list($user_id = null) {
+        $user_id = ( $user_id == null ? $this->id : $user_id );
+        return DB::table('list_services')
+                    ->where('user_id', $user_id);
+    }
+
     /*
          - Used in registration step-1
      */
