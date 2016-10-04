@@ -702,8 +702,9 @@ background-repeat: no-repeat;} */
 }
 .add_pic_inr{
   border-radius: 50%; 
-  background-color: #ebebeb; 
-  margin: 10% 8%; 
+  background-image: url("images/add-img.png");
+  background-repeat: no-repeat;
+  margin: 10% 3%; 
   padding: 25% 0; 
   line-height: 3;
 }
