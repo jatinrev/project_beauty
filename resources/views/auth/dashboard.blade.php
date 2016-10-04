@@ -1,6 +1,7 @@
 @extends('layouts.cms_master')
 
 @section('content')
+{{-- {{ dd($user_data) }} --}}
 <div id="prf_dashboard_outr">
 	<div id="prf_dashboard_inr">
 		<div id="prf_dashboard_cont">
@@ -26,7 +27,6 @@
 			<div class="container col-md-12 col-sm-12 col-xs-12">
 				<form class="form-horizontal col-md-12 col-sm-12 col-xs-12 padd_left_right_all_zero basic_info_form" role="form" method="POST">
 					{{ csrf_field() }}
-			<!-- Left side detail starts-->
 					<div class="customer_detail col-md-3 col-sm-3 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 margin_top_85px margin_botm_40px">
 						<div class="add_pic_outr col-md-12 col-sm-12 col-xs-12 margin_botm_20px">
 							<div class="add_pic_inr text-center">
@@ -40,15 +40,15 @@
 								<h4 class="color_pink">Public Profile</h4>
 								<div class="socio_values">
 									<img src="{{ asset('assets/images/profile-on-fb.png') }}" alt="">
-									<input type="text" name="facebook_link" placeholder="On Facebook" class="form-control">
+									<input type="text" name="facebook_link" placeholder="On Facebook" value="{{ $user_data->facebook_link }}" class="form-control">
 								</div>
 								<div class="socio_values">
 									<img src="{{ asset('assets/images/profile-on-tw.png') }}" alt>
-									<input type="text" name="twitter_link" placeholder="On Twitter" class="form-control">	
+									<input type="text" name="twitter_link" placeholder="On Twitter" value="{{ $user_data->twitter_link }}" class="form-control">	
 								</div>
 								<div class="socio_values">
 									<img src="{{ asset('assets/images/profile-on-link.png') }}" alt>
-									<input type="text" name="linked_in_link" placeholder="On Linkedin" class="form-control">
+									<input type="text" name="linked_in_link" placeholder="On Linkedin" value="{{ $user_data->linked_in_link }}" class="form-control">
 								</div>
 							</div>
 						</div>
@@ -62,7 +62,7 @@
 										<label>Name :</label>
 									</div>
 	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <input type="text" class="form-control" name="name" required autofocus>
+	                                    <input type="text" class="form-control" name="name" value="{{ $user_data->name }}" required autofocus>
 	                                </div>
 	                            </div>
 
@@ -71,7 +71,7 @@
 										<label>Profession :</label>
 									</div>
 	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <input type="text" class="form-control" name="profession" required autofocus>
+	                                    <input type="text" class="form-control" name="profession" value="{{ $user_data->profession }}" required >
 	                                </div>
 	                            </div>
 
@@ -80,7 +80,7 @@
 										<label>Languages :</label>
 									</div>
 	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <input type="text" class="form-control" name="languages" required autofocus>
+	                                    <input type="text" id="tags" class="form-control" name="languages" value="" required >
 	                                </div>
 	                            </div>
 
@@ -89,29 +89,28 @@
 										<label>Address :</label>
 									</div>
 	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                	<input type="text" class="form-control" name="address" required autofocus>
+	                                	<input type="text" class="form-control" name="address" value="{{ $user_data->address }}" required >
 	                                </div>
 	                            </div>
 
-	                            <div class="form-group margin_top_30px">
+	                            {{-- <div class="form-group margin_top_30px">
 									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
 										<label>Expertise :</label>
 									</div>
 	                                <div class="col-md-8 col-sm-7 col-xs-7 expertise_align">
-	                                    <input type="text" class="form-control" name="expertise" required autofocus>
+	                                    <input type="text" class="form-control" name="expertise" value="" required >
 	                                </div>
 	                                <div class="col-md-1 col-sm-2 col-xs-1 add_btn_align">
 	                                	<button type="button" class="light_red_btn add_btn col-md-12">Add</button>
 	                                </div>
-	                            </div>
+	                            </div> --}}
 
 	                            <div class="form-group margin_top_30px">
 									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
 										<label>About :</label>
 									</div>
 	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <textarea rows="6" class="form-control" name="about" required autofocus>	
-	                                	</textarea>
+	                                    <textarea rows="6" class="form-control" name="about" required >{{ $user_data->about }}</textarea>
 	                                </div>
 	                            </div>
 	                             <div class="form-group margin_top_30px">
@@ -128,3 +127,50 @@
 	</div>
 </div>
 @endsection
+
+@section('script')
+<script type="text/javascript">
+  $( function() {
+    var availableTags = {!! $auto_complete_data !!};
+    function split( val ) {
+      return val.split( /,\s*/ );
+    }
+    function extractLast( term ) {
+      return split( term ).pop();
+    }
+ 
+    $( "#tags" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+        if ( event.keyCode === $.ui.keyCode.TAB &&
+            $( this ).autocomplete( "instance" ).menu.active ) {
+          event.preventDefault();
+        }
+      })
+      .autocomplete({
+        minLength: 0,
+        source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+            availableTags, extractLast( request.term ) ) );
+        },
+        focus: function() {
+          // prevent value inserted on focus
+          return false;
+        },
+        select: function( event, ui ) {
+          var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+        }
+      });
+  });
+</script>
+@endsection
+

@@ -86,20 +86,5 @@
 </div>
 
 
-
- <!--fancybox main JS and Css files -->
-  <script type="text/javascript" src="{{ asset('assets/js/jquery.fancybox.js?v=2.1.5') }}"></script>
-  <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
-  <script type="text/javascript">
-    $(document).ready(function() {
-      /* Simple image gallery. Uses default settings*/
-      $('.fancybox').fancybox();
-    });
-  </script>
-
-
-<!-- Accordion js-->
-
-
 @include('layouts.footer')
 

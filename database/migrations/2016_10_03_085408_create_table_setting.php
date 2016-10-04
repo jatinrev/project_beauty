@@ -14,9 +14,9 @@ class CreateTableSetting extends Migration
     public function up()
     {
         Schema::create('table_setting', function(Blueprint $table){
-            $table->increments('id');
-            $table->string('table_setting_key');
-            $table->text('table_setting_value');
+            $table->increments('id')->comment = 'master table of user table.';
+            $table->string('table_setting_key')->comment = 'like \'user_language\'';
+            $table->text('table_setting_value')->comment = 'like \'english\', only unique things will come.';
             $table->timestamps();
         });
     }
