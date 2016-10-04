@@ -19,7 +19,6 @@ Route::get('images/{filename}', function ($filename)
     // storage_path('app') - path to /storage/app folder
     $path = storage_path('app') . '/uploaded_images/' . $filename;
     $file = \File::get($path);
-    dd($file);
     $type = \File::mimeType($path);
 
     return \Response::make($file,200)
