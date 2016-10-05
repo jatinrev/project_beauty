@@ -108,7 +108,7 @@ class HomeController extends Controller
      */
     public function registration_add_availability() {
         return view('auth.add_products');
-    }    
+    }
 
     /**
      * REGISTRATION STEP 4
@@ -117,8 +117,15 @@ class HomeController extends Controller
         return view('auth.add_products');
     }
 
-}
+    /**
+     * REGISTRATION STEP 5
+     */
+    public function registration_add_gallery() {
+        return view('auth.add_gallery');
+    }
 
+
+}
 
 
 
