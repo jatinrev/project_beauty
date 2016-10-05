@@ -28,6 +28,6 @@ class CreateUserLanguageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_language_table');
+        Schema::dropIfExists('user_language');
     }
 }

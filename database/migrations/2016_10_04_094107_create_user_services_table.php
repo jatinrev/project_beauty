@@ -13,7 +13,7 @@ class CreateUserServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_services', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('main_category_id')->comment = 'Parent id i.e id from service_main_category';
@@ -33,6 +33,6 @@ class CreateUserServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_services');
+        Schema::dropIfExists('services');
     }
 }
