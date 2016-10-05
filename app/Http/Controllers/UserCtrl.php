@@ -15,4 +15,8 @@ class UserCtrl extends Controller
     public function index() {
     	return view('cms.profile');
     }
+
+    public function appointment_list() {
+    	return view('cms.appointment_list');
+    }
 }
