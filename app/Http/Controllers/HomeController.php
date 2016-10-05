@@ -122,7 +122,14 @@ class HomeController extends Controller
      */
     public function registration_add_products(Request $request) {
         if( !empty($request->all()) ) {
-            dd($request->all());
+            $this->validate($request, [
+                'title'         => 'required|max:255',
+                'price'         => 'required|digits_between:0,10',
+                'description'   => 'required',
+                'product_image' => 'required'
+            ]);
+            $product = new Products();
+            $product->add_products($request);
         }
         return view('auth.add_products');
     }

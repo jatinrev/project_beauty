@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+<pre>
+<?php print_r($errors); ?>
+</pre>
 <div id="prf_dashboard_outr">
 	<div id="prf_dashboard_inr">
 		<div id="prf_dashboard_cont">
