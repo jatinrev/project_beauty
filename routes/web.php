@@ -40,6 +40,7 @@ Route::get('/home', 'HomeController@index');
 /*** User Routes ***/
 //   			{user_name} - make it like this.
 Route::get('/user/profile', 'UserCtrl@index');
+Route::get('/appointment-list', 'UserCtrl@appointment_list');
 
 // Registration process controller.
 Route::match(['get', 'post'], '/user/basic-detail', 'HomeController@basic_detail'); 				// step-1

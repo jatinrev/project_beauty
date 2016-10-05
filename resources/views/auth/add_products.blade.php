@@ -1,30 +1,7 @@
 @extends('layouts.cms_master')
 
 @section('css')
-<style type="text/css">
-.add_prd{background: #fff none repeat scroll 0 0;border-top: 4px solid #952650;-webkit-box-shadow: 0 4px 3px 1px #D4D4D4;
-box-shadow: 0 4px 3px 1px #D4D4D4; float: left; width: 100%; padding: 4% 2%;}
-.ipb_single_prd img{ width: 100%}
-.prd_detail{ background-color: #F3F3F3;padding: 5px 0;margin-top: 5px;}
-.prd_detail p {color: #666;font-size: 14px;font-weight: bold;padding: 5px 0; margin: 0}
-.prd_detail span {font-size: 16px;font-weight: bold;}
-.ipb_single_prd {border-top: 4px solid #952650;-webkit-box-shadow: 0 4px 3px 1px #D4D4D4;box-shadow: 0 4px 3px 1px #D4D4D4; padding: 5px; position: relative; cursor: pointer;}
-.remove_prd {  left: 45%;position: absolute;top: 15px;z-index: 9999;}
-.remove_prd span {color: #fff;font-size: 21px;}
-.prd_desc{ position: absolute; top: 0; height: 96%; overflow: hidden; background-color: rgba(0,0,0,0.5); width: 96%; top: 5px; display: none;padding-top: 55px; padding-bottom: 20px;}
-.prd_desc p {font-size: 14px;   margin: 0 auto;width: 95%;color: #fff; text-align: center; height: 100%; overflow: hidden;}
-.ipb_single_prd:hover .prd_desc{ display: block;}
-
-@media screen and (max-width: 767px){
-	 
-	.prd_desc {
-      height:98%;
-    left: 0;
-      top: 5px;
-    width: 100%;}
- 
-}
-</style>
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages-css/add_products.css') }}">
 @endsection
 
 @section('content')
