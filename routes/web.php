@@ -19,7 +19,6 @@ Route::get('images/{filename}', function ($filename)
     // storage_path('app') - path to /storage/app folder
     $path = storage_path('app') . '/uploaded_images/' . $filename;
     $file = \File::get($path);
-    dd($file);
     $type = \File::mimeType($path);
 
     return \Response::make($file,200)
@@ -41,12 +40,15 @@ Route::get('/home', 'HomeController@index');
 /*** User Routes ***/
 //   			{user_name} - make it like this.
 Route::get('/user/profile', 'UserCtrl@index');
+Route::get('/appointment-list', 'UserCtrl@appointment_list');
 
 // Registration process controller.
 Route::match(['get', 'post'], '/user/basic-detail', 'HomeController@basic_detail'); 				// step-1
 Route::match(['get', 'post'], '/user/add-services', 'HomeController@registration_add_services'); 	// step-2
 Route::match(['get', 'post'], '/user/add-availability', 'HomeController@registration_add_availability'); // step-3
 Route::match(['get', 'post'], '/user/add-products', 'HomeController@registration_add_products');  	// step-4
+Route::match(['get', 'post'], '/user/add-gallery', 'HomeController@registration_add_gallery');  	// step-5
+
 
 
 
