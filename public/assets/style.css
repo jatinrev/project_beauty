@@ -1073,6 +1073,7 @@ button, input, select{
   .socio_values img{margin-left: 15%;}
   .socio_values input{width: 50%; margin-right: 15%;}
   .detail_form_outr .pad_left{ padding-left: 0}
+  .add_pic_inr{margin: 2% 10%; height: 300px;}
 }
 
 
@@ -1111,6 +1112,7 @@ button, input, select{
   .slide_link a{font-size: 8px;}
   .banner_btn{height: 24px; padding: 8px; font-size: 9px;}
   .banner_scrolling_text_outr{top: 38%; line-height: 4}
+  .add_pic_inr{margin: 2% 10%; height: 220px;}
 }
 @media screen and (max-width: 380px){
   .text_on_img{font-size: 10px;}

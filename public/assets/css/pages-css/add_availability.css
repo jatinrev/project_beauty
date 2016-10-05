@@ -1,1 +1,22 @@
-.ibp_add_aval_form .form-group{ margin-bottom: 35px;}
+.ibp_add_aval_form .form-group{ 
+	margin-bottom: 35px;
+}
+.trash_btn{
+	color: #000;
+}
+.trash_btn:hover{
+	color: #000
+}
+.ibp_add_aval_form{
+	padding-top: 5%;
+}
+.add_aval_left{
+	background-color: #f8f8f8;
+}
+.add_aval_right .table-responsive{
+	box-shadow: 1px 1px #f8f8f8;
+}
+.add_aval_right .table{
+	border-spacing: 2px; 
+	border-collapse: separate;
+}
