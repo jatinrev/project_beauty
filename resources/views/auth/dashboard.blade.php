@@ -1,5 +1,11 @@
 @extends('layouts.cms_master')
 
+@section('css')
+<style>
+	.file_input_class { display: none !important; }
+</style>
+@endsection
+
 @section('content')
 {{-- {{ dd($user_data) }} --}}
 <div id="prf_dashboard_outr">
@@ -25,7 +31,7 @@
 	<div class="ibp_dashboard_inr">
 		<div class="ibp_dashboard">
 			<div class="col-md-12 col-sm-12 col-xs-12">
-				<form class="form-horizontal col-md-12 col-sm-12 col-xs-12 padd_left_right_all_zero basic_info_form" role="form" method="POST">
+				<form class="form-horizontal col-md-12 col-sm-12 col-xs-12 padd_left_right_all_zero basic_info_form" role="form" method="POST" enctype="multipart/form-data">
 					{{ csrf_field() }}
 					<!--Left side detail starts -->
 					<div class="customer_detail col-md-3 col-sm-3 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 margin_top_85px margin_botm_40px">
@@ -33,11 +39,12 @@
 							<div class="add_pic_inr text-center">
 								<img src="{{ asset('assets/images/profile-service2.png')}}" alt>
 								<div class="btn_on_img">
-									<a href="#">
+									<a href="javascript:void(0)" onclick="select_image()">
 										<span class="glyphicon glyphicon-camera"></span>
 									</a>
-									<h4>Profile name</h4>
-								</div>	
+									<h4 class="file_input_name"></h4>
+								</div>
+								<input class="file_input_class" type="file" name="user_profile_image">
 							</div>
 							<div class="pic_desc">
 								<span>Lorem Ipsum</span>		
@@ -208,6 +215,19 @@
 	      	}
   		});
   	});
+
+	function select_image() {
+		$('.file_input_class').click()
+	}
+
+	$('.file_input_class').change(function(e){
+	  	$in = $(this).val();
+	  	$in = $in.replace("C:\\fakepath\\", "");
+	  	$('.file_input_name').html($in);
+		console.log($in);
+	});
+
+
 </script>
 
 @endsection

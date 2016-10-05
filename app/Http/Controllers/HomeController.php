@@ -43,6 +43,7 @@ class HomeController extends Controller
     public function basic_detail( Request $request) {
         $user_data = Auth::user(); // this is elloquent
         if(!empty($request->all())){
+            dd($request->all());
             $this->validate($request, [
                 'name'           => 'required|max:255',
                 'profession'     => 'required',
