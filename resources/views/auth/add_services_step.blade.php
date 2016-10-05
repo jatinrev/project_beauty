@@ -80,11 +80,13 @@
 					  <div class="form-group col-md-12 padd_left_zero">
 					  	  	<label>Add Services Photos</label>
 					    	<small class="form-text text-muted col-md-12 padd_left_zero margin_botm_20px">You can add two photos.</small>	
-					    	<div class="col-md-12 padd_left_zero ">
-					    		<input type="file" class="filestyle" data-buttonBefore="true">	
+					    	<div class="col-md-12 padd_left_zero margin_botm_20px">
+					    		<input type="file" class="filestyle" data-buttonBefore="true" 
+					    		data-icon="false">	
 					    	</div>
 					    	<div class="col-md-12 padd_left_zero ">
-					    		<input type="file" class="filestyle" data-buttonBefore="true">
+					    		<input type="file" class="filestyle" data-buttonBefore="true" 
+					    		data-icon="false">
 					    	</div>
 					  </div>
 					  
@@ -209,6 +211,10 @@ $(function () {
         });
 });
         </script>
-
+	<script type="text/javascript" src="{{ asset('assets/js/bootstrap-filestyle.min.js') }}"> </script>
+	<script type="text/javascript">
+		$(":file").filestyle({buttonBefore: true});
+		$(":file").filestyle('icon', false);
+	</script>
      
 @endsection

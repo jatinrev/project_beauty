@@ -24,14 +24,23 @@
 <div class="ibp_dashboard_outr">
 	<div class="ibp_dashboard_inr">
 		<div class="ibp_dashboard">
-			<div class="container col-md-12 col-sm-12 col-xs-12">
+			<div class="col-md-12 col-sm-12 col-xs-12">
 				<form class="form-horizontal col-md-12 col-sm-12 col-xs-12 padd_left_right_all_zero basic_info_form" role="form" method="POST">
 					{{ csrf_field() }}
+					<!--Left side detail starts -->
 					<div class="customer_detail col-md-3 col-sm-3 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 margin_top_85px margin_botm_40px">
 						<div class="add_pic_outr col-md-12 col-sm-12 col-xs-12 margin_botm_20px">
 							<div class="add_pic_inr text-center">
-								<span class="glyphicon glyphicon-camera"></span>
-								<p>Add a photo</p>
+								<img src="{{ asset('assets/images/profile-service2.png')}}" alt>
+								<div class="btn_on_img">
+									<a href="#">
+										<span class="glyphicon glyphicon-camera"></span>
+									</a>
+									<h4>Profile name</h4>
+								</div>	
+							</div>
+							<div class="pic_desc">
+								<span>Lorem Ipsum</span>		
 							</div>
 						</div>
 						
@@ -55,70 +64,72 @@
 					</div>
 
 					<!-- Right side detail starts-->
-					<div class="detail_form_outr col-md-6 col-sm-6 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 margin_top_85px margin_botm_40px">
-						<div class="panel-body row">
+					<div class="rgt_detail  col-md-6 col-sm-6 col-xs-10 margin_top_85px margin_botm_40px col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+						<div class="detail_form_outr">
+							<div class="panel-body">
 								<div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
+									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
 										<label>Name :</label>
 									</div>
-	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <input type="text" class="form-control" name="name" value="{{ $user_data->name }}" required autofocus>
-	                                </div>
-	                            </div>
+		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                                <input type="text" class="form-control" name="name" value="{{ $user_data->name }}" required autofocus>
+		                            </div>
+		                        </div>
 
-	                            <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
+		                        <div class="form-group margin_top_30px">
+									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
 										<label>Profession :</label>
 									</div>
-	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <input type="text" class="form-control" name="profession" value="{{ $user_data->profession }}" required >
-	                                </div>
-	                            </div>
+		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                                <input type="text" class="form-control" name="profession" value="{{ $user_data->profession }}" required >
+		                            </div>
+		                        </div>
 
-	                            <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
+		                        <div class="form-group margin_top_30px">
+									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
 										<label>Languages :</label>
 									</div>
-	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <input type="text" id="tags" class="form-control" name="languages" value="{{ implode(', ', $user_data->get_current_user_languages()) }}" required >
-	                                </div>
-	                            </div>
+		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                                <input type="text" id="tags" class="form-control" name="languages" value="{{ implode(', ', $user_data->get_current_user_languages()) }}" required >
+		                            </div>
+		                        </div>
 
-	                            <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
+		                        <div class="form-group margin_top_30px">
+									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero  detail_form_lbl">
 										<label>Address :</label>
 									</div>
-	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                	<input type="text" class="form-control" name="address" value="{{ $user_data->address }}" required >
-	                                </div>
-	                            </div>
+		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                                <input type="text" class="form-control" name="address" value="{{ $user_data->address }}" required >
+		                            </div>
+		                        </div>
 
-	                            {{-- <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
+		                  {{--  <div class="form-group margin_top_30px">
+									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero  detail_form_lbl">
 										<label>Expertise :</label>
 									</div>
-	                                <div class="col-md-8 col-sm-7 col-xs-7 expertise_align">
-	                                    <input type="text" class="form-control" name="expertise" value="" required >
-	                                </div>
-	                                <div class="col-md-1 col-sm-2 col-xs-1 add_btn_align">
-	                                	<button type="button" class="light_red_btn add_btn col-md-12">Add</button>
-	                                </div>
-	                            </div> --}}
+		                            <div class="col-md-8 col-sm-7 col-xs-6 expertise_align">
+		                                <input type="text" class="form-control" name="expertise" value="" required >
+		                            </div>
+		                            <div class="col-md-1 col-sm-1 col-xs-1 add_btn_align">
+		                                <button type="button" class="light_red_btn add_btn col-md-12">Add</button>
+		                            </div>
+		                        </div> --}}
 
-	                            <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-3 col-xs-4 padd_left_zero">
+		                        <div class="form-group margin_top_30px">
+									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
 										<label>About :</label>
 									</div>
-	                                <div class="col-md-9 col-sm-9 col-xs-8 padd_right_zero">
-	                                    <textarea rows="6" class="form-control" name="about" required >{{ $user_data->about }}</textarea>
-	                                </div>
-	                            </div>
-	                             <div class="form-group margin_top_30px">
-	                            	<button type="submit" class="light_red_btn continue_btn">Continue</button>
-	                            </div>
-							
+		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                                <textarea rows="6" class="form-control" name="about" required >{{ $user_data->about }}</textarea>
+		                            </div>
+		                        </div>						
+							</div>
 						</div>
-					</div>
+						<div class="form-group margin_top_30px ">
+		                    <button type="submit" class="light_red_btn continue_btn ">Continue</button>
+		               	</div>
+		            </div>
+
 				</form>
 				 
 			</div>
@@ -198,5 +209,6 @@
   		});
   	});
 </script>
+
 @endsection
 
