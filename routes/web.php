@@ -46,6 +46,8 @@ Route::match(['get', 'post'], '/user/basic-detail', 'HomeController@basic_detail
 Route::match(['get', 'post'], '/user/add-services', 'HomeController@registration_add_services'); 	// step-2
 Route::match(['get', 'post'], '/user/add-availability', 'HomeController@registration_add_availability'); // step-3
 Route::match(['get', 'post'], '/user/add-products', 'HomeController@registration_add_products');  	// step-4
+Route::match(['get', 'post'], '/user/add-gallery', 'HomeController@registration_add_gallery');  	// step-5
+
 
 
 
