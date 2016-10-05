@@ -43,7 +43,7 @@ class HomeController extends Controller
     public function basic_detail( Request $request) {
         $user_data = Auth::user(); // this is elloquent
         if(!empty($request->all())){
-            dd($request->all());
+            // dd($request->all());
             $this->validate($request, [
                 'name'           => 'required|max:255',
                 'profession'     => 'required',
@@ -59,6 +59,7 @@ class HomeController extends Controller
             DB::table('user_language')
                 ->where('user_id', $user_data->id)
                 ->delete();
+            // Insert new languages
             foreach ($user_language_array as $value) {
                 if( trim($value) != '' ) {
                     DB::table('user_language')->insert([
@@ -69,6 +70,10 @@ class HomeController extends Controller
                 }
             }
 
+            // INSERT USER IMAGE
+            $user_image_name = $user_data->insert_user_image($request, "user_profile_image");
+
+            $user_data->user_image     = $user_image_name;
             $user_data->facebook_link  = $request->facebook_link;
             $user_data->twitter_link   = $request->twitter_link;
             $user_data->linked_in_link = $request->linked_in_link;
