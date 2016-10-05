@@ -28,31 +28,32 @@
 		<div class="ibp_dashboard_cont">
 			<div class="ibp_add_prds">
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<form class="add_prd ">
+					<form class="add_prd" method="POST" role="form" method="POST" enctype="multipart/form-data">
+						{{ csrf_field() }}
 						<div class="form-group">							 
 							<div class="col-md-12 col-sm-9 col-xs-12">
 								<div class="col-md-6 col-sm-6 col-xs-12">
 									<div class="form-group">
 									    <label>Product Image :</label>
-									    <input type="file" class="filestyle" data-buttonBefore="true" data-icon="false">
+									    <input name="product_image" type="file" class="filestyle" data-buttonBefore="true" data-icon="false">
 									</div>
 									<div class="form-group">
 									    <label>Product Title :</label>
-									    <input class="form-control" type="text">
+									    <input name="title" class="form-control" type="text">
 									</div>
 									<div class="form-group">
 									    <label>Product Price :</label>
-									    <input class="form-control" type="text">
+									    <input name="price" class="form-control" type="text">
 									</div>  
 								</div>
 								<div class="col-md-6 col-sm-6 col-xs-12">
 									<div class="form-group">
 									    <label>Description :</label>
-									   <textarea class="form-control" rows="6"></textarea>
-									  </div>
+									   	<textarea name="description" class="form-control" rows="6"></textarea>
+									</div>
 								</div>
 								<div class="col-md-2 text-right pull-right col-sm-6 col-xs-12">
-									<button type="button" class="light_red_btn add_btn col-md-12 col-sm-12 col-xs-12">Add</button>
+									<button type="submit" class="light_red_btn add_btn col-md-12 col-sm-12 col-xs-12">Add</button>
 								</div>	
 							</div>	
 									
@@ -186,7 +187,7 @@
 	</div>
 </div>
 @section('script')
-<script type="text/javascript" src="{{ asset('assets/js/bootstrap-filestyle.min.js') }}"> </script>
+ <script type="text/javascript" src="{{ asset('assets/js/bootstrap-filestyle.min.js') }}"> </script>
  <script type="text/javascript">
   $(":file").filestyle({buttonBefore: true});
   $(":file").filestyle('icon', true);

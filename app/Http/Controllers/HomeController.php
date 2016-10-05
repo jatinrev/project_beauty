@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Auth;
 use DB;
 use App\User;
+use App\Products;
 
 class HomeController extends Controller
 {
@@ -119,7 +120,10 @@ class HomeController extends Controller
     /**
      * REGISTRATION STEP 4
      */
-    public function registration_add_products() {
+    public function registration_add_products(Request $request) {
+        if( !empty($request->all()) ) {
+            dd($request->all());
+        }
         return view('auth.add_products');
     }
 
