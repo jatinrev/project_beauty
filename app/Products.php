@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Auth;
+use App\User;
 
 class Products extends Model
 {
@@ -21,6 +22,13 @@ class Products extends Model
      * @var array
      */
     protected $fillable = ['product_name', 'product_description', 'product_image', 'product_price'];
+
+    /*
+        src : https://www.youtube.com/watch?v=xIBST5vVq84
+     */
+    public function user() {
+        return $this->belongsTo('App\User');
+    }
 
     function add_product_image($file) {
         $product_image_name  = time().$file->getClientOriginalName();
@@ -44,4 +52,21 @@ class Products extends Model
         return $this;
     }
 
+    function get_all_products_pagination($user_id = null) {
+        $user_id = ( $user_id == null ? Auth::user()->id : $user_id );
+        return $this->select(['product_image', 'product_name', 'product_price', 'product_description'])
+                ->where('user_id', $user_id)->paginate(2);
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+

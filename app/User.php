@@ -29,6 +29,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     * Get the Products record associated with the user.
+     * src = https://laravel.com/docs/5.3/eloquent-relationships
+     *
+    public function products()
+    {
+        return $this->hasMany('App\Products');
+    }*/
+
+
     // INCOMPLETE
     public function get_service_main_category_table() {
         return DB::table('service_main_category');

@@ -8,6 +8,7 @@
 <pre>
 <?php print_r($errors); ?>
 </pre>
+{{ dd($products) }}
 <div id="prf_dashboard_outr">
 	<div id="prf_dashboard_inr">
 		<div id="prf_dashboard_cont">
@@ -62,67 +63,30 @@
 									
 						</div>
 					</form>
-				</div>	
+				</div>
+				<?php
+					$counter =1;
+				?>
 				<div class="col-md-12 col-sm-12 col-xs-12 prds_listing margin_top_40px">
 					<div class="row padd_left_right_all_zero">
+						@foreach ($products as $product)
 								<div class="col-md-3 col-sm-3 col-xs-12">
 										<div class="col-md-12 col-sm-12 col-xs-12 ipb_single_prd text-center">
-				 							<img src="/assets/images/home-slider.jpg">
+				 							<img src="/images/all/{{ $product->product_image }}">
 				 							<div class="col-md-12 col-sm-12 col-xs-12  prd_detail text-center">
-				 								<p>Lorem Ipsum Text</p>
-				 								<span class="color_red">$15</span>
+				 								<p>{{ $product->product_name }}</p>
+				 								<span class="color_red">${{ $product->product_price }}</span>
 				 							</div>
 				 							
 				 							<div class="prd_desc col-md-12 col-sm-12 col-xs-12">
 				 								<a href="#" class="remove_prd"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
-				 								<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. </p>
-				 							</div>
-										</div>
-								</div>				
-								<div class="col-md-3 col-sm-3 col-xs-12">
-										<div class="col-md-12 col-sm-12 col-xs-12 ipb_single_prd">
-				 							<img src="/assets/images/ibp-prd-img.jpg">
-				 							<div class="col-md-12 col-sm-12 col-xs-12  prd_detail text-center">
-				 								<p>Lorem Ipsum Text</p>
-				 								<span class="color_red">$15</span>
-				 							</div>
-				 							
-				 							<div class="prd_desc">
-				 								<a href="#" class="remove_prd"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
-				 								<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. </p>
+				 								<p>{{ $product->product_description }}</p>
 				 							</div>
 										</div>
 								</div>
-								<div class="col-md-3 col-sm-3 col-xs-12">
-										<div class="col-md-12 col-sm-12 col-xs-12 ipb_single_prd">
-				 							<img src="/assets/images/ibp-prd-img.jpg">
-				 							<div class="col-md-12 col-sm-12 col-xs-12  prd_detail text-center">
-				 								<p>Lorem Ipsum Text</p>
-				 								<span class="color_red">$15</span>
-				 							</div>
-				 							
-				 							<div class="prd_desc">
-				 								<a href="#" class="remove_prd"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
-				 								<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. </p>
-				 							</div>
-									</div>
-								</div> 
-								<div class="col-md-3 col-sm-3 col-xs-12">
-										<div class="col-md-12 col-sm-12 col-xs-12 ipb_single_prd">
-				 							<img src="/assets/images/ibp-prd-img.jpg">
-				 							<div class="col-md-12  col-sm-12 col-xs-12  prd_detail text-center">
-				 								<p>Lorem Ipsum Text</p>
-				 								<span class="color_red">$15</span>
-				 							</div>
-				 							
-				 							<div class="prd_desc">
-				 								<a href="#" class="remove_prd"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
-				 								<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry. </p>
-				 							</div>
-									</div>
-								</div> 
+						@endforeach
 					</div>
-					 <div class="row padd_left_right_all_zero margin_top_40px">
+					{{-- <div class="row padd_left_right_all_zero margin_top_40px">
 								<div class="col-md-3 col-sm-3 col-xs-12">
 										<div class="col-md-12 col-sm-12 col-xs-12 ipb_single_prd">
 				 							<img src="/assets/images/ibp-prd-img.jpg">
@@ -179,7 +143,7 @@
 				 							</div>
 									</div>
 								</div> 
-					</div>
+					</div> --}}
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 text-right margin_top_40px">
 					<button type="submit" class="black_btn serv_back_btn">Back</button>

@@ -121,6 +121,9 @@ class HomeController extends Controller
      * REGISTRATION STEP 4
      */
     public function registration_add_products(Request $request) {
+        // $test = User::find(1)->product_name;
+        // dd($test);
+        $product = new Products();
         if( !empty($request->all()) ) {
             $this->validate($request, [
                 'title'         => 'required|max:255',
@@ -128,10 +131,12 @@ class HomeController extends Controller
                 'description'   => 'required',
                 'product_image' => 'required'
             ]);
-            $product = new Products();
             $product->add_products($request);
         }
-        return view('auth.add_products');
+        return view('auth.add_products')
+                    ->with([
+                        'products' => $product->get_all_products_pagination()
+                    ]);
     }
 
     /**
