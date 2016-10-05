@@ -54,7 +54,7 @@ class Products extends Model
 
     function get_all_products_pagination($user_id = null) {
         $user_id = ( $user_id == null ? Auth::user()->id : $user_id );
-        return $this->select(['product_image', 'product_name', 'product_price', 'product_description'])
+        return $this->select(['id', 'product_image', 'product_name', 'product_price', 'product_description'])
                 ->where('user_id', $user_id)->paginate(2);
     }
 

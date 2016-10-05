@@ -121,10 +121,13 @@ class HomeController extends Controller
      * REGISTRATION STEP 4
      */
     public function registration_add_products(Request $request) {
-        // $test = User::find(1)->product_name;
-        // dd($test);
+        $custom_success = [];
         $product = new Products();
-        if( !empty($request->all()) ) {
+        if( !empty($request->all()) && trim($request->action) == 'delete_product_action' ) {
+            Products::where('id', $request->product_id)
+                ->delete();
+            $custom_success[] = 'Product was successfully delete.';
+        } else if( !empty($request->all()) && trim($request->action) == 'add_products' ) {
             $this->validate($request, [
                 'title'         => 'required|max:255',
                 'price'         => 'required|digits_between:0,10',
@@ -135,7 +138,8 @@ class HomeController extends Controller
         }
         return view('auth.add_products')
                     ->with([
-                        'products' => $product->get_all_products_pagination()
+                        'products'       => $product->get_all_products_pagination(),
+                        'custom_success' => $custom_success
                     ]);
     }
 
