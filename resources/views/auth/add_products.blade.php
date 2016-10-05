@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-<pre>
+{{-- <pre>
 <?php print_r($errors); ?>
-</pre>
+</pre> --}}
 {{-- {{ dd($products) }} --}}
 <div id="prf_dashboard_outr">
 	<div id="prf_dashboard_inr">
