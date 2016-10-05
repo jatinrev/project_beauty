@@ -114,7 +114,7 @@ class HomeController extends Controller
      * REGISTRATION STEP 3
      */
     public function registration_add_availability() {
-        return view('auth.add_products');
+        return view('auth.add_availability');
     }
 
     /**

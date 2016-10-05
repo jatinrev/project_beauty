@@ -71,50 +71,50 @@
 					</div>
 
 					<!-- Right side detail starts-->
-					<div class="rgt_detail  col-md-6 col-sm-6 col-xs-10 margin_top_85px margin_botm_40px col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+					<div class="rgt_detail  col-md-6 col-sm-6 col-xs-10 margin_top_85px margin_botm_65px col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
 						<div class="detail_form_outr">
 							<div class="panel-body">
 								<div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
+									<div class="col-md-4 col-sm-5 col-xs-12 padd_left_zero detail_form_lbl">
 										<label>Name :</label>
 									</div>
-		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                            <div class="col-md-8 col-sm-7 col-xs-12 padd_right_zero pad_left">
 		                                <input type="text" class="form-control" name="name" value="{{ $user_data->name }}" required autofocus>
 		                            </div>
 		                        </div>
 
 		                        <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
+									<div class="col-md-4 col-sm-5 col-xs-12 padd_left_zero detail_form_lbl">
 										<label>Profession :</label>
 									</div>
-		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                            <div class="col-md-8 col-sm-7 col-xs-12 padd_right_zero pad_left">
 		                                <input type="text" class="form-control" name="profession" value="{{ $user_data->profession }}" required >
 		                            </div>
 		                        </div>
 
 		                        <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
+									<div class="col-md-4 col-sm-5 col-xs-12 padd_left_zero detail_form_lbl">
 										<label>Languages :</label>
 									</div>
-		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                            <div class="col-md-8 col-sm-7 col-xs-12 padd_right_zero pad_left">
 		                                <input type="text" id="tags" class="form-control" name="languages" value="{{ implode(', ', $user_data->get_current_user_languages()) }}" required >
 		                            </div>
 		                        </div>
 
 		                        <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero  detail_form_lbl">
+									<div class="col-md-4 col-sm-5 col-xs-12 padd_left_zero  detail_form_lbl">
 										<label>Address :</label>
 									</div>
-		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                            <div class="col-md-8 col-sm-7 col-xs-12 padd_right_zero pad_left">
 		                                <input type="text" class="form-control" name="address" value="{{ $user_data->address }}" required >
 		                            </div>
 		                        </div>
 
 		                  {{--  <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero  detail_form_lbl">
+									<div class="col-md-4 col-sm-5 col-xs-12 padd_left_zero  detail_form_lbl">
 										<label>Expertise :</label>
 									</div>
-		                            <div class="col-md-8 col-sm-7 col-xs-6 expertise_align">
+		                            <div class="col-md-7 col-sm-6 col-xs-11 expertise_align">
 		                                <input type="text" class="form-control" name="expertise" value="" required >
 		                            </div>
 		                            <div class="col-md-1 col-sm-1 col-xs-1 add_btn_align">
@@ -122,17 +122,18 @@
 		                            </div>
 		                        </div> --}}
 
-		                        <div class="form-group margin_top_30px">
-									<div class="col-md-3 col-sm-4 col-xs-5 padd_left_zero detail_form_lbl">
+		                        <div class="form-group margin_top_30px margin_botm_40px">
+									<div class="col-md-4 col-sm-5 col-xs-12 padd_left_zero 
+									detail_form_lbl">
 										<label>About :</label>
 									</div>
-		                            <div class="col-md-9 col-sm-8 col-xs-7 padd_right_zero">
+		                            <div class="col-md-8 col-sm-7 col-xs-12 padd_right_zero pad_left">
 		                                <textarea rows="6" class="form-control" name="about" required >{{ $user_data->about }}</textarea>
 		                            </div>
 		                        </div>						
 							</div>
 						</div>
-						<div class="form-group margin_top_30px ">
+						<div class="form-group margin_top_40px ">
 		                    <button type="submit" class="light_red_btn continue_btn ">Continue</button>
 		               	</div>
 		            </div>

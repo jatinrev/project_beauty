@@ -67,13 +67,13 @@
 					  </div>
 
 					  <div class="form-group col-md-12 padd_left_zero">
-					  	<div class="col-md-5 padd_left_zero">
+					  	<div class="col-md-6 padd_left_zero">
 					  		<label>Add Price</label>
 					    	<input type="text" class="form-control" placeholder="$0" >	
 					  	</div>
-					  	<div class="col-md-7 padd_left_30px">
+					  	<div class="col-md-6 padd_left_zero">
 					  		<label>Add Time Duration</label>
-					    	<input type="text" class="form-control width_85" placeholder="-- --">	
+					    	<input type="text" class="form-control" placeholder="-- --">	
 					  	</div>
 					  </div>
 
@@ -108,77 +108,70 @@
 				<div class="scrollbar_inr">
 						<div class="services_list_cont">
 							<h4 class="margin_top_z margin_botm_z color_pink">Hair Services</h4>
-							<div class="sub_ser">
-								<h5>Lorem Ipsum
-									<span>
-										00 hrs 00 min | <font class="color_pink">$0</font>
-										<div>
-											<img src="{{ asset('assets/images/serv1.png')}}" alt>
-											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
-										</div>
-									</span>		
-								</h5>
-
-								<p>
-									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
-								</p>
+							<div class="sub_ser col-md-12 col-sm-12 col-xs-12">
+								<div class="sub_ser_left col-md-4 col-sm-4">
+									<h5>Lorem Ipsum</h5>
+								</div>
+								<div class="sub_ser_right col-md-8 col-sm-8">
+									<span>00 hr 00 min | <font class="color_pink">$0</font></span>
+									<img src="{{ asset('assets/images/serv1.png')}}" alt>
+									<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+								</div>
+								<div class="sub_ser_parah col-md-12 col-sm-12 col-xs-12">
+									<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.</p>
+								</div>
 							</div>
 						</div>
 
 						<div class="services_list_cont">
 							<h4 class="margin_top_z margin_botm_z color_pink">Skin Services</h4>
-							<div class="sub_ser">
-								<h5>Lorem Ipsum
-									<span>
-										00 hrs 00 min | <font class="color_pink">$0</font>
-										<div>
-											<img src="{{ asset('assets/images/serv1.png')}}" alt>
-											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
-										</div>
-									</span>
-								</h5>
-								
-								<p>
-									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
-								</p>
+							<div class="sub_ser col-md-12 col-sm-12 col-xs-12">
+								<div class="sub_ser_left col-md-4 col-sm-4">
+									<h5>Lorem Ipsum</h5>
+								</div>
+								<div class="sub_ser_right col-md-8 col-sm-8">
+									<span>00 hr 00 min | <font class="color_pink">$0</font></span>
+									<img src="{{ asset('assets/images/serv1.png')}}" alt>
+									<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+								</div>
+								<div class="sub_ser_parah col-md-12 col-sm-12 col-xs-12">
+									<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.</p>
+								</div>
 							</div>
 
-							<div class="sub_ser">
-								<h5>Lorem Ipsum
-									<span>
-										00 hrs 00 min | <font class="color_pink">$0</font>
-										<div>
-											<img src="{{ asset('assets/images/serv1.png')}}" alt>
-											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
-										</div>
-									</span>
-								</h5>
-								
-								<p>
-									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
-								</p>
+							<div class="sub_ser col-md-12 col-sm-12 col-xs-12">
+								<div class="sub_ser_left col-md-4 col-sm-4">
+									<h5>Lorem Ipsum</h5>
+								</div>
+								<div class="sub_ser_right col-md-8 col-sm-8">
+									<span>00 hr 00 min | <font class="color_pink">$0</font></span>
+									<img src="{{ asset('assets/images/serv1.png')}}" alt>
+									<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+								</div>
+								<div class="sub_ser_parah col-md-12 col-sm-12 col-xs-12">
+									<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.</p>
+								</div>
 							</div>
 						</div>
 
 						<div class="services_list_cont">
 							<h4 class="margin_top_z margin_botm_z color_pink">Nail Services</h4>
-							<div class="sub_ser">
-								<h5>Lorem Ipsum
-									<span>
-										00 hrs 00 min | <font class="color_pink">$0</font>
-										<div>
-											<img src="{{ asset('assets/images/serv1.png')}}" alt>
-											<img src="{{ asset('assets/images/serv2.png')}}" alt>	
-										</div>
-									</span>
-								</h5>
-								<p>
-									Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.
-								</p>
+							<div class="sub_ser col-md-12 col-sm-12 col-xs-12">
+								<div class="sub_ser_left col-md-4 col-sm-4">
+									<h5>Lorem Ipsum</h5>
+								</div>
+								<div class="sub_ser_right col-md-8 col-sm-8">
+									<span>00 hr 00 min | <font class="color_pink">$0</font></span>
+									<img src="{{ asset('assets/images/serv1.png')}}" alt>
+									<img src="{{ asset('assets/images/serv2.png')}}" alt>	
+								</div>
+								<div class="sub_ser_parah col-md-12 col-sm-12 col-xs-12">
+									<p>Lorem Ipsum is simply text written on the service page and it is dummy text of the typesetting industry.</p>
+								</div>
 							</div>
 						</div>
 				</div>
-				<div class="das_serv_right_btn col-md-7 col-sm-6 col-xs-6 pull-right margin_top_40px">
+				<div class="das_serv_right_btn pull-right margin_top_40px">
 					<button type="submit" class="black_btn serv_back_btn">Back</button>
 					<button type="submit" class="light_red_btn serv_cont_btn">Continue</button>
 				</div>

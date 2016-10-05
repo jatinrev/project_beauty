@@ -695,11 +695,11 @@ background-repeat: no-repeat;} */
 .add_pic_inr{
   border-radius: 50%; 
   background-color: #ebebeb;
-  margin: 3% 3%;  
+  margin: 4% 10% 3%;  
   line-height: 3;
   position: relative;
   text-align: center;
-  height: 240px;
+  height: 200px;
 }
 .add_pic_inr > img{
   height: 100%;
@@ -820,6 +820,7 @@ background-repeat: no-repeat;} */
   font-weight: normal;
 }
 
+
  .custom-control-input:checked ~ .custom-control-indicator{
   background-color:#952650
 }
@@ -840,17 +841,22 @@ background-repeat: no-repeat;} */
 .sub_ser{
   background-color: #f1f1f1;
   margin: 12px 0;
-  padding: 22px 12px 2px;
+  padding: 22px 0 2px;
 }
 
-.sub_ser h5{font-weight: bold; font-size: 15px;}
+.sub_ser .sub_ser_right{text-align: right;}
+.sub_ser .sub_ser_left h5{font-weight: bold;}
+.sub_ser .sub_ser_right font{padding-right: 0px;}
+.sub_ser .sub_ser_right span{font-weight: bold;}
+.sub_ser .sub_ser_right img{padding-right: 0px;}
+.sub_ser .sub_ser_parah p{line-height: 1.7;}
+
+/*.sub_ser h5{font-weight: bold; font-size: 15px;}
 .sub_ser font{padding-right: 20px;}
 .sub_ser span{float: right; font-size: 13px;}
 .sub_ser h5 > span > div{float: right; margin-top: -14px;}
-.sub_ser h5 > span > div >img{padding-right: 5px;}
+.sub_ser h5 > span > div >img{padding-right: 5px;}*/
 
-.sub_ser p{padding-top: 10px; line-height: 1.7;}
-.das_serv_right_btn{right: -10%;}
 .serv_back_btn{padding: 0 20px; height: 45px; margin-right: 10px;}
 .serv_back_btn:hover{color: #000;}
 .serv_cont_btn{padding: 0 25px; height: 45px;}
@@ -889,6 +895,7 @@ button, input, select{
 }
 .custom-radio .custom-control-input:checked~.custom-control-indicator{
   background-image: url('images/radio_white_btn.svg');
+  background-size: 100%;
 }
 .custom-control-input:checked~.custom-control-indicator{
       color: #fff;
@@ -927,12 +934,9 @@ button, input, select{
 
 @media screen and (max-width: 920px) and (min-width: 768px){
   .add_btn_align{right: 1%;}
-  .add_pic_inr{margin: 35% 8%}
+  .add_pic_inr{margin: 2% 0}
 }
-@media screen and (max-width: 800px){
-  .socio_values img{margin-left: 10px;}
-  .socio_values input{margin-right: 10px;}
-}
+
 
 
 
@@ -980,11 +984,13 @@ button, input, select{
   .banner_scrolling_text_outr{top: 44%}
   .slide_link a{font-size: 16px;}
   .banner_btn{height: 40px; padding: 10px 15px; font-size: 14px;}
-  .socio_values img{margin-left: 15px;}
-  .socio_values input{margin-right: 15px; width: 60%;}
-  .add_pic_inr{margin: 26% 8%}
+  .socio_values img{margin-left: 12px;}
+  .socio_values input{margin-right: 12px; width: 60%;}
+  .add_pic_inr{margin: 2% 0; height: 200px;}
 
 }
+
+
 @media screen and (max-width: 1023px){
 	.girl_img{ display:none}
 	.products a img{ width:auto}
@@ -1000,6 +1006,7 @@ button, input, select{
 @media (min-width: 992px) and (max-width: 1190px){
   .header_right{width: 87%;}
 }
+
 @media (min-width: 768px) and (max-width: 940px){
   .header_right{width: 88%;}
 }
@@ -1023,6 +1030,12 @@ button, input, select{
   .slide_link a{font-size: 14px;}
   .banner_btn{height: 40px; padding: 10px 15px; font-size: 14px;}
 }
+
+@media screen and (max-width: 870px){
+  .socio_values img{margin-left: 4px;}
+  .socio_values input{margin-right: 4px; width: 72%;}
+}
+
 
 @media screen and (max-width: 1055px) and (min-width: 610px){
   .forget_pwd_link{float: right;}
@@ -1059,7 +1072,7 @@ button, input, select{
 	.navbar-default{ background-color:#6d243f; border-color:#6d243f}
   .socio_values img{margin-left: 15%;}
   .socio_values input{width: 50%; margin-right: 15%;}
- 
+  .detail_form_outr .pad_left{ padding-left: 0}
 }
 
 
