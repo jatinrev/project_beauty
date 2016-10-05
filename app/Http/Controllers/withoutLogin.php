@@ -65,4 +65,16 @@ class withoutLogin extends Controller
         }
     }
 
+    public function show_image($action, $filename) {
+        if (is_array($filename)) {
+            $filename = implode('/', $filename);
+        }
+        $path = storage_path('app') . '/'.$action.'/' . $filename;
+        $file = \File::get($path);
+        $type = \File::mimeType($path);
+
+        return \Response::make($file,200)
+            ->header("Content-Type", $type);
+    }
+
 }

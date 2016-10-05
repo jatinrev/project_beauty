@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('username')->nullable()->unique();
             $table->string('email')->unique();
+            $table->string('user_image')->nullable();
             $table->enum('user_type', array('isAdmin', 'customer', 'business')); // DONT CHANGE THIS BECAUSE FOR REGISTRATION VALIDATION HAVE BEEN APPLIED, WHICH CAN CONFLICT.
             $table->string('profession')->nullable();
             $table->string('address')->nullable();
