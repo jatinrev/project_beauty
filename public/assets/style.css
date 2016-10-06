@@ -48,6 +48,8 @@ h2, h3{ line-height:40px;}
 .color_white{ color: #fff}
 .font_bold{ font-weight:bold}
 .color_grey{color: #bebebe;}
+.bgcolor_grey{background-color: #f2f2f2;}
+.bgcolor_light_grey{background-color: #f8f8f8}
 .color_pink{color: #94264e;}
 
 .font_size_12{ font-size: 12px;}
@@ -230,12 +232,7 @@ h2, h3{ line-height:40px;}
 #call_to_action_outr{ float:left; width:100%; background: #6d243f}
 #call_to_action_inr{ float:none; margin:0 auto; max-width:1300px; width:100%;}
 #call_to_action_cont{ float:left; padding-top:2%; padding-bottom:2%}
-@media screen and (max-width: 1299px) and (min-width: 1025px){
-  #call_to_action_cont h2{font-size: 23px;}
-}
-@media screen and (max-width: 990px) and (min-width: 440px){
-  .call_action_txt em{padding-left: 14% !important;}
-}
+
 
 #call_to_action_cont p{font-size: 18px;}
 .join_the_club_btn{border: 3px solid #fff; font-weight: bold; border-radius: 0; padding: 9px 18px; 
@@ -835,7 +832,7 @@ background-repeat: no-repeat;} */
   margin-bottom: 5%;
   box-shadow: 0 1px 1px 1px #ebebeb;
 }
-.scrollbar_inr{max-height: 645px; overflow: hidden;}
+.scrollbar_inr{height: 645px; overflow: hidden;}
 
 
 .sub_ser{
@@ -922,6 +919,9 @@ button, input, select{
 }
 /*Bootstrap_css Close*/
 
+/*** custom checkboxes ***/
+
+
 
 /* responsive css start */
 
@@ -938,10 +938,7 @@ button, input, select{
 }
 
 
-
-
 @media screen and (max-width: 767px) and (min-width: 640px){
-  .add_btn{padding: 5px 8px !important;}
   .add_btn_align{right: 0;} 
 }
 
@@ -962,7 +959,9 @@ button, input, select{
 	.header_right .navbar-default{ background-color:transparent; border:0}
    .prd_desc {height:98%; left: 0; top: 5px; width: 96%;}
 }
-
+@media screen and (max-width: 1299px) and (min-width: 1025px){
+  #call_to_action_cont h2{font-size: 23px;}
+}
 @media screen and (max-width: 1140px){
   .text_on_img{font-size: 28px;}
   #rotate{font-size: 28px;}
@@ -1005,6 +1004,13 @@ button, input, select{
 }
 @media (min-width: 992px) and (max-width: 1190px){
   .header_right{width: 87%;}
+}
+@media(max-width: 992px){
+  .add_aval_right {margin-top: 5%;}
+}
+
+@media screen and (max-width: 990px) and (min-width: 440px){
+  .call_action_txt em{padding-left: 14% !important;}
 }
 
 @media (min-width: 768px) and (max-width: 940px){

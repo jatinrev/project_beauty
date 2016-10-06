@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin:0; padding:0; font-family: Ubuntu}
+
+img{ border:0; outline:0;}
+img:hover{ border:0; outline:0;}
+a{ text-decoration:none}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('fonts/raleway-regular.woff2') format('woff2'),
+         url('fonts/raleway-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+ font-family: 'Ubuntu';
+ src: url('fonts/Ubuntu-Light.eot');
+ src: url('fonts/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Ubuntu-Light.woff') format('woff'),
+  url('fonts/Ubuntu-Light.ttf') format('truetype');
+ font-weight: 300;
+ font-style: normal;
+}
+
+/* Common classes */
+.trans_btn{background-color: transparent; border: 1px solid #fff; border-radius: 2px; color: #fff; 
+ text-transform: uppercase; cursor:pointer; height:50px; font-size: 16px;}
+.trans_btn:hover{background-color: #fff; color: #2F4052; }
+
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+.text-left{text-align: left;}
+
+.padd_top_botm_30px{padding-top: 30px; padding-bottom: 30px;}
+
+.margin_top_30px{ margin-top:30px;}
+.padd_left_right_all_zero{padding-left: 0; padding-right: 0;}
+
+/* Header Css */
+
+#header_outr{float:left; width:100%;  z-index: 9999;background-color: #2F4052;}
+#header_inr{max-width: 1365px; float: none; margin: 0 auto; width: 100%;}
+#header_cont{float: left; width: 100%; padding-top: 8px; padding-bottom:8px;}
+.header_left{float: left;}
+.header_left img{width: 70px;}
+.header_right{float: right;}
+.btn_right{margin: 10px 0;}
+.sign_up_btn{padding: 5px 12px; height: 30px;}
+
+/* Customer_reg Section*/
+#cust_reg_outr{float: left; width: 100%; background-color: #94264e;}
+#cust_reg_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#cust_reg_cont{float: left; width: 100%;}
+.cust_reg_left{float: left; background-image: url('../images/cust-reg-bg.jpg'); background-size: cover ;background-repeat:no-repeat; height: 370px;}
+.cust_img_inr{margin: 10% 18%; background-color: rgba(255,255,255,0.5); padding: 3%;}
+.cust_reg_right{color: #fff; padding: 4% 5%;}
+.cust_reg_right h2{font-weight: normal; line-height: 1.4;}
+.cust_reg_right h4{font-weight: normal; line-height: 1.5;}
+.reg_btn{padding: 9px 70px; font-size: 24px;}
+.reg_btn:hover{background-color: #6D243F; color: #fff;}
+
+/* Beauty_club CSS*/
+#beauty_club_outr{float: left; width: 100%; background-color: #fff;}
+#beauty_club_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#beauty_club_cont{float: left; width: 100%;}
+
+/*How_it_works css*/
+#how_it_works_outr{float: left; width: 100%; background-color: #ebebeb;}
+#how_it_works_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#how_it_works_cont{float: left; width: 100%;}
+.how_it_works_heading{margin: 0 38%;}
+.how_it_works_heading h3{background-color: #94264e; color: #fff; text-transform: uppercase; padding: 8px;}
+.beauty_prf_membership h3{text-transform: uppercase; color: #94264e; line-height: 1.4;}
+.beauty_cust_membership h3{text-transform: uppercase; color: #000; line-height: 1.4;}
+.beauty_prf_membership h5, .beauty_cust_membership h5{line-height: 1.4; font-weight: bold;}
+.beauty_membership_list ul{list-style: none;}
+.beauty_membership_list ul li{line-height: 1.7;}
+.beauty_membership_list ul li img{}

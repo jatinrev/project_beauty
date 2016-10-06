@@ -51,9 +51,8 @@
 					    	<input type="text" class="form-control">
 					 	</div>
 					 	<div class="form-group">
-					 		<label class="custom-control custom-radio">
-								<input type="radio" class="custom-control-input" value="1" name="serv">
-								<span class="custom-control-indicator"></span>
+					 		<label>
+								<input type="checkbox" checked="checked" value="1" name="serv" class="custom_checkbx">
     							<span class="custom-control-description">Mark as Holiday</span>	
     						</label>
 					 	</div>
@@ -62,85 +61,103 @@
 					 	</div>
 					</form>	
 				</div>
+
+		<!-- Right Section-->
 				<div class="add_aval_right col-md-7 col-ms-12 col-xs-12 pull-right">
 					<div class="table-responsive">
-	  					<table class="table">
-	  						<thead  class="hd_bg">
-	  							<tr>
-			  						<th>Repeat</th>
-			  						<th>Start Time/Date</th>
-			  						<th>End Time/Date</th>
-			  						<th>Action</th>
-			  					</tr>
-			  				</thead>
-			  				<tbody>
-			  					<tr>
-			  						<td>Daily</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>
-			  							<p data-placement="top" data-toggle="tooltip" title="Delete">
-			  								<a href="#" class="trash_btn">
-			  									<span class="glyphicon glyphicon-trash"></span>
-			  								</a>
-			  							</p>
-			  						</td>
-			  					</tr>
+						<div style="height: 270px;">
+		  					<table class="table">
+		  						<thead  class="hd_bg">
+		  							<tr>
+				  						<th>Repeat</th>
+				  						<th>Start Time&nbsp;/&nbsp;Date</th>
+				  						<th>End Time&nbsp;/&nbsp;Date</th>
+				  						<th>Action</th>
+				  					</tr>
+				  				</thead>
+				  				<tbody>
+				  					<tr class="bgcolor_grey">
+				  						<td>Daily</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>
+				  							<p data-placement="top" data-toggle="tooltip" title="Delete">
+				  								<a href="#" class="trash_btn">
+				  									<span class="glyphicon glyphicon-trash"></span>
+				  								</a>
+				  							</p>
+				  						</td>
+				  					</tr>
 
-			  					<tr>
-			  						<td>Mon</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>
-			  							<p data-placement="top" data-toggle="tooltip" title="Delete">
-			  								<a href="#" class="trash_btn">
-			  									<span class="glyphicon glyphicon-trash"></span>
-			  								</a>
-			  							</p>
-			  						</td>
-			  					</tr>
+				  					<tr class="bgcolor_light_grey">
+				  						<td>Mon</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>
+				  							<p data-placement="top" data-toggle="tooltip" title="Delete">
+				  								<a href="#" class="trash_btn">
+				  									<span class="glyphicon glyphicon-trash"></span>
+				  								</a>
+				  							</p>
+				  						</td>
+				  					</tr>
 
-			  					<tr>
-			  						<td>Tue</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>
-			  							<p data-placement="top" data-toggle="tooltip" title="Delete">
-			  								<a href="#" class="trash_btn">
-			  									<span class="glyphicon glyphicon-trash"></span>
-			  								</a>
-			  							</p>
-			  						</td>
-			  					</tr>
-			  				
-			  					<tr>
-			  						<td>Wed</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>
-			  							<p data-placement="top" data-toggle="tooltip" title="Delete">
-			  								<a href="#" class="trash_btn">
-			  									<span class="glyphicon glyphicon-trash"></span>
-			  								</a>
-			  							</p>
-			  						</td>
-			  					</tr>
-			  				
-			  					<tr>
-			  						<td>Thus</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>0hr 0min/M-D-Y</td>
-			  						<td>
-			  							<p data-placement="top" data-toggle="tooltip" title="Delete">
-			  								<a href="#" class="trash_btn">
-			  									<span class="glyphicon glyphicon-trash"></span>
-			  								</a>
-			  							</p>
-			  						</td>
-			  					</tr>
-			  				</tbody>
-			  				
-	  					</table>	
+
+				  					<tr class="bgcolor_grey">
+				  						<td>Tue</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>
+				  							<p data-placement="top" data-toggle="tooltip" title="Delete">
+				  								<a href="#" class="trash_btn">
+				  									<span class="glyphicon glyphicon-trash"></span>
+				  								</a>
+				  							</p>
+				  						</td>
+				  					</tr>
+				  				
+				  					<tr class="bgcolor_light_grey">
+				  						<td>Wed</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>
+				  							<p data-placement="top" data-toggle="tooltip" title="Delete">
+				  								<a href="#" class="trash_btn">
+				  									<span class="glyphicon glyphicon-trash"></span>
+				  								</a>
+				  							</p>
+				  						</td>
+				  					</tr>
+				  				
+				  					<tr class="bgcolor_grey">
+				  						<td>Thus</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>
+				  							<p data-placement="top" data-toggle="tooltip" title="Delete">
+				  								<a href="#" class="trash_btn">
+				  									<span class="glyphicon glyphicon-trash"></span>
+				  								</a>
+				  							</p>
+				  						</td>
+				  					</tr>
+
+				  					<tr class="bgcolor_light_grey">
+				  						<td>Daily</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>0hr 0min<br>M-D-Y</td>
+				  						<td>
+				  							<p data-placement="top" data-toggle="tooltip" title="Delete">
+				  								<a href="#" class="trash_btn">
+				  									<span class="glyphicon glyphicon-trash"></span>
+				  								</a>
+				  							</p>
+				  						</td>
+				  					</tr>
+				  				
+				  				</tbody>	
+		  					</table>
+	  					</div>	
 					</div>
 
 					<div class="das_serv_right_btn pull-right margin_top_65px">
