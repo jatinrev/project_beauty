@@ -85,7 +85,7 @@ class HomeController extends Controller
             $user_data->save();
         }
         return view('auth.dashboard')->with([
-            'user_data'          => $user_data
+            'user_data' => $user_data
         ]);
     }
 
@@ -146,7 +146,22 @@ class HomeController extends Controller
     /**
      * REGISTRATION STEP 5
      */
-    public function registration_add_gallery() {
+    public function registration_add_gallery(Request $request) {
+        if( !empty($request->all()) && trim($request->action) == 'add_gallery_image' ) {
+            dd($request->all());
+            /*if( $request->hasFile($user_image_attr) ){
+                $user_image = $request[$user_image_attr]->storeAs('user_images', time().$user_image_attr.'.jpg');
+                return str_replace('user_images/', '', $user_image);
+            }*/
+            DB::table('gallery')
+                ->insert([
+                    'user_id'    => Auth::user()->id,
+                    'image_name' => $request->user_id,
+                    'created_at' => \Carbon\Carbon::now()
+                ]);
+        } else if( !empty($request->all()) && trim($request->action) == 'delete_gallery_image' ) {
+
+        }
         return view('auth.add_gallery');
     }
 

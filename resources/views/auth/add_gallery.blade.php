@@ -2,13 +2,19 @@
 
 @section('script')
 <script type="text/javascript">
-	 $(document).ready(function()
-	 {
+	$(document).ready(function() {
 	 	if(!Modernizr.csscalc){
     		$('.del_gal_img img').width($(PARENT_EL).width() - 20)
     		alert("hi");
 		}
-	 });
+	});
+
+	function add_gallery_image() {
+		$('.gallery_file').click();
+	}
+	$('.gallery_file').change(function(e) {
+		$('#gallery_form').submit();
+	});
 </script>
 @endsection
 
@@ -75,8 +81,13 @@
 				<div class="col-md-3 col-sm-3 col-xs-12 ibp_prd_outr">
 						<div class="ibp_single_gal col-md-12 col-sm-12 col-xs-12 text-center padd_left_right_all_zero">
 							<div class="for_new_gal_img col-md-12 col-sm-12 col-xs-12">
-								<a href="#" class="add_new_gal_img"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
-								<span class="col-md-12 col-sm-12 col-xs-12 add_gal_img_text">Add Gallery Image</span>
+								<form id="gallery_form" method="POST" role="form" enctype="multipart/form-data">
+									{{ csrf_field() }}
+									<input type="hidden" name="action" value="add_gallery_image">
+									<input type="file" class="gallery_file" name="gallery_image" style="display: none;">
+									<a href="javascript:void(0)" onclick="add_gallery_image()" class="add_new_gal_img"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+									<span class="col-md-12 col-sm-12 col-xs-12 add_gal_img_text">Add Gallery Image</span>
+								</form>
 							</div>	
 						</div>
 				</div>
@@ -85,7 +96,8 @@
 	
 		</div>
 	</div>
-</div>		
+</div>	
+
 @endsection
 
 

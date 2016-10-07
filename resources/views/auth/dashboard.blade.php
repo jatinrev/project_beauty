@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-{{-- {{ dd($user_data) }} --}}
+{{-- {{ dd($user_data->user_image) }} --}}
 <div id="prf_dashboard_outr">
 	<div id="prf_dashboard_inr">
 		<div id="prf_dashboard_cont">
@@ -37,7 +37,7 @@
 					<div class="customer_detail col-md-3 col-sm-3 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 margin_top_85px margin_botm_40px">
 						<div class="add_pic_outr col-md-12 col-sm-12 col-xs-12 margin_botm_20px">
 							<div class="add_pic_inr text-center">
-								<img class="user_image_src" src="/images/user_images/1475650888user_profile_image.jpg" alt>
+								<img class="user_image_src" src="/images/user_images/{{ $user_data->user_image ? $user_data->user_image: 'dummy_image.jpg' }}" alt>
 								<div class="btn_on_img">
 									<a href="javascript:void(0)" onclick="select_image()">
 										<span class="glyphicon glyphicon-camera"></span>
