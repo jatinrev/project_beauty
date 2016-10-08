@@ -111,7 +111,7 @@ a{ text-decoration:none}
 .prf_benefit h3{background-color: #94264e;}
 .cust_benefit h3{background-color: #374D64;}
 .arrow-down {width: 0px; height: 0px; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #94264e;}
-.prf_benefit img, .cust_benefit img{margin-top: -28px;}
+.prf_benefit img, .cust_benefit img{margin-top: -14px;}
 .prf_benefit ul, .cust_benefit ul{list-style: none;}
 .prf_benefit ul li, .cust_benefit ul li{line-height: 2; font-size: 14px; text-align: left; padding-bottom: 10px;}
 .benefit_center h1{font-weight: bold; font-size: 45px;}
@@ -149,20 +149,6 @@ height: 450px; background-repeat: no-repeat; background-size: cover;}
 .send_btn{background-color: #952650; border: 1px solid #952650; border-radius: 2px; color: #fff; 
  text-transform: uppercase; cursor: pointer; height: 60px; font-size: 25px; padding: 12px 50px;}
 .send_btn:hover{background-color: #6D243F; color: #fff; }
-
-/*Subscribe news Css*/
-#sub_news_outr{float: left; width: 100%; background-image: url('../images/news_bg_img.png'); 
-background-size: cover; background-repeat: no-repeat;}
-#sub_news_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
-#sub_news_cont{float: left; width: 100%;}
-.sub_news{text-transform: uppercase;}
-.sub_news h3{line-height: 1.5; padding-bottom: 10px;}
-.submit_btn{background-color: #6D243F; border: 1px solid #6D243F; border-radius: 2px; color: #fff; 
- text-transform: uppercase; cursor: pointer; height: 50px; font-size: 20px; padding: 0;}
- .submit_btn:hover{background-color: #952650; color: #fff;}
- .cont_us_head{text-transform: uppercase;}
- .cont_us_head img{margin-top: -30px;}
- .arrow_img{margin-top: -40px; margin-left: 25px; width: 12%;}
 
 
 /*Footer CSS*/

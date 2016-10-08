@@ -1,3 +1,29 @@
+
+<?php
+	$conn= mysqli_connect('localhost', 'root', '','brc_landing_page') or die ("could not connect to mysql");
+	//$db_name= mysqli_select_db('brc_landing_page', $conn) or die ("no database");
+	
+	if(isset($_POST['submit'])){
+		
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$contact = $_POST['contact_number'];
+		$optionvalues = $_POST['option_values'];
+		$message = $_POST['message'];
+
+	if($name !=''||$email !=''){
+		$query= mysqli_query($conn,"insert into signup(name, email, contact_number, option_values, message) values ('$name', '$email', '$contact', '$optionvalues', '$message')");
+
+		echo "Data Inserted successfully...!!";
+	}
+	else{
+		echo "Insertion Failed. Some Fields are Blank....!!";
+	}
+	}
+mysqli_close($conn);
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +31,12 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="landing-page/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="landing-page/css/index-style.css" type="text/css" />
+	<script type="text/javascript" src="landing-page/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#sign_up_btn'). click(function() {window.location='#sign_up_form'});
+		});
+	</script>
 </head>
 <body>
 <!--Header section -->
@@ -50,7 +82,7 @@
 				<div class="cust_reg_right col-md-6 col-sm-6 col-xs-12 text-center padd_top_botm_30px">
 					<h2>GROW YOUR CUSTOMERS AND INCREASE YOUR SALE</h2>
 					<h4 class="margin_top_20px">Each of your customers have 100+ friends.<br>Do you want them to be your customer as well?</h4>
-					<button type="button" class="trans_btn reg_btn margin_top_20px">Register</button>
+					<button type="button" onclick="{window.location='#sign_up_form'}" id="sign_up_btn" class="trans_btn reg_btn margin_top_20px">Register</button>
 				</div>
 			</div>
 		</div>
@@ -58,11 +90,7 @@
 
 <!--beauty_club Section -->
 	<div id="beauty_club_outr">
-		<div id="beauty_club_inr" class="row">
-			<div id="beauty_club_cont" class="col-md-12 col-sm-12 col-xs-12">
-				
-			</div>
-		</div>
+		<img src="landing-page/images/section-2.jpg" style="width:100%">
 	</div>
 
 <!-- How_it_works Section-->
@@ -221,7 +249,7 @@
 					<div class="signup_text padd_top_botm_80px color_white text-center">
 						<h1>You will earn upto 20% commission from every repeated appointment from your refferals.</h1>
 						<div class="margin_top_80px">
-							<button type="button" class="white_btn signup_now_btn">Sign up now</button>
+							<button type="button" onclick="{window.location='#sign_up_form'}" id="sign_up_btn" class="white_btn signup_now_btn">Sign up now</button>
 						</div>
 					</div>
 				</div>
@@ -245,11 +273,13 @@
 	<!-- Join the club section-->
 					<div class="join_form_top text-center padd_top_40px">
 						<h3>Join the beauty referral club</h3>
-						<p>Sign Up and Stay Tuned Now latest updates.</p>
+						<p>Join our mailing list for updates and early access<br>
+						We’re developing this amazing product for all salon owners & independent beauty professionals freelancers.</p>
+						
 						<img src="landing-page/images/red-division-line.jpg" alt>
 
 						<div class="join_form_inr padd_top_40px">
-							<form class="form-horizontal" role="form" method="post">
+							<form class="form-horizontal" role="form" id="sign_up_form" method="post">
 								<div class="form-group col-md-6 col-sm-6 col-xs-12">
 									<input type="text" placeholder="Name" class="form-control" required
 									name="name">
@@ -260,13 +290,13 @@
 								</div>
 								<div class="form-group col-md-6 col-sm-6 col-xs-12">
 									<input type="text" placeholder="Contact Number" class="form-control"
-									required name="contact_num">
+									required name="contact_number">
 								</div>
 								<div class="form-group col-md-6 col-sm-6 col-xs-12">
-									<select class="form-control" name="option_value">
-										<option>Professional</option>
-										<option>Lorem Ipsum</option>
-										<option>Lorem Ipsum</option>
+									<select class="form-control" name="option_values" required>
+										<option>-Select-</option>
+										<option value="Beauty Professional">Beauty Professional</option>
+										<option value="Customer">Customer</option>
 									</select>
 								</div>
 								<div class="form-group col-md-12 col-sm-12 col-xs-12">
@@ -274,7 +304,7 @@
 									</textarea>
 								</div>
 								<div class="form-group col-md-12 col-sm-12 col-xs-12">
-									<button type="submit" class="send_btn">Send</button>
+									<button type="submit" class="send_btn" name="submit">Send</button>
 								</div>
 							</form>
 						</div>
@@ -285,45 +315,13 @@
 	</div>
 
 <!--Subscribe News Section -->
-	<div id="sub_news_outr">
-		<div id="sub_news_inr" class="row">
-			<div id="sub_news_cont" class="col-md-12 col-sm-12 col-xs-12 padd_top_40px padd_botm_60px">
-				<div class="container">
-					<div class="sub_news col-md-5 col-sm-6 col-xs-12 color_white ">
-						<h3>Subscribe to our newsletter for latest news</h3>
-						<form>
-							<input type="email" class="white_input_field col-md-8 col-sm-8 col-xs-12" placeholder="EMAIL ID ...">
-							<button type="submit" class="submit_btn col-md-3 col-sm-3 col-xs-12">send</button>
-						</form>
-					</div>
-					<div class="arrow_img col-md-2">
-						<img src="landing-page/images/arrow_img3.png" alt>
-					</div>
-					<div class="contact_us col-md-5 col-sm-6 col-xs-12 color_white ">
-						<div class="cont_us_head col-md-12 col-sm-12 col-xs-12">
-							<h3>Contact us</h3>
-							<img src="landing-page/images/white-division-line.jpg" alt>
-						</div>
-						<div class="col-md-7 col-sm-7 col-xs-7">
-							<p>Richard McClintock,</p>
-							<p>Hampden-Sydney College,</p>
-							<p>Virginia</p>
-						</div>
-						<div class="col-md-5 col-sm-5 col-xs-5">
-							<p><img src="landing-page/images/phn_icon.png" alt> 0123 456 789</p>
-							<p><img src="landing-page/images/msg_icon.png" alt> mail@brc.com</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 <!--Footer Section -->
 	<div id="footer_outr">
 		<div id="footer_inr" class="row">
 			<div id="footer_cont" class="col-md-12 col-sm-12 col-xs-12">
-				<div class="copy_right text-center padd_botm_20px color_white">Copyright © 2016 BRC
+				<div class="copy_right text-center padd_top_botm_20px color_white">Copyright © 2016 BRC
 				</div>
 			</div>
 		</div>
@@ -332,14 +330,3 @@
 </body>
 </html>
 
-<?php
-	$con= mysql_connect('localhost', 'root', '');
-	mysql_select_db('brc_landing_page', $con);
-	
-	if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-	} 
-	echo "Connected successfully";
-
-
-?>
