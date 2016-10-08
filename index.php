@@ -16,13 +16,13 @@
 		               	<a href="#"><img src="landing-page/images/site_logo.png" title="BRC"/></a>
 		           	</div>
 		           	<div class="header_social_link padd_top_botm_10px text-right">
-						<a href="www.facebook.com">
+						<a href="https://www.facebook.com/">
 							<img src="landing-page/images/fb_icon.png" alt>
 						</a>
-						<a href="www.twitter.com">
+						<a href="https://www.twitter.com">
 							<img src="landing-page/images/tw_icon.png" alt>
 						</a>
-						<a href="www.linkedin.com">
+						<a href="https://www.linkedin.com">
 							<img src="landing-page/images/linkdin_icon.png" alt>
 						</a>
 					</div>
