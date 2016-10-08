@@ -28,17 +28,40 @@ a{ text-decoration:none}
 
 /* Common classes */
 .trans_btn{background-color: transparent; border: 1px solid #fff; border-radius: 2px; color: #fff; 
- text-transform: uppercase; cursor:pointer; height:50px; font-size: 16px;}
+ text-transform: uppercase; cursor: pointer; height: 50px; font-size: 16px;}
 .trans_btn:hover{background-color: #fff; color: #2F4052; }
+.white_btn{background-color: #fff; border: 1px solid #fff; border-radius: 2px; color: #94264e; 
+	text-transform: uppercase; cursor: pointer; height: 60px; font-size: 26px;}
+.white_btn:hover{background-color: #fff; opacity: 0.6;}
+
+.white_input_field{border:0; padding:5px 10px;height:50px; line-height:normal;margin-right:10px; 
+	float:left; -webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px; font-size:17px; 
+	color: #000;}
 
 .text-center{text-align: center;}
 .text-right{text-align: right;}
 .text-left{text-align: left;}
+.color_white{color: #fff;}
 
+.padd_top_botm_10px{padding-top: 10px; padding-bottom: 10px;}
+.padd_top_botm_20px{padding-top: 20px; padding-bottom: 20px;}
 .padd_top_botm_30px{padding-top: 30px; padding-bottom: 30px;}
+.padd_top_botm_80px{padding-top: 80px; padding-bottom: 80px;}
+.padd_top_botm_90px{padding-top: 90px; padding-bottom: 90px;}
 
-.margin_top_30px{ margin-top:30px;}
+.padd_top_40px{padding-top: 40px;}
+.padd_top_60px{padding-top: 60px;}
+
+.padd_botm_20px{padding-bottom: 20px;}
+.padd_botm_30px{padding-bottom: 30px;}
+.padd_botm_40px{padding-bottom: 40px;}
+.padd_botm_60px{padding-bottom: 60px;}
+
+.margin_top_20px{margin-top: 20px;}
+.margin_top_80px{ margin-top:80px;}
+
 .padd_left_right_all_zero{padding-left: 0; padding-right: 0;}
+.padd_left_zero{padding-left: 0;}
 
 /* Header Css */
 
@@ -47,17 +70,15 @@ a{ text-decoration:none}
 #header_cont{float: left; width: 100%; padding-top: 8px; padding-bottom:8px;}
 .header_left{float: left;}
 .header_left img{width: 70px;}
-.header_right{float: right;}
-.btn_right{margin: 10px 0;}
-.sign_up_btn{padding: 5px 12px; height: 30px;}
+.header_social_link img{width: 30px; margin: 0 8px;}
 
 /* Customer_reg Section*/
 #cust_reg_outr{float: left; width: 100%; background-color: #94264e;}
 #cust_reg_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
 #cust_reg_cont{float: left; width: 100%;}
-.cust_reg_left{float: left; background-image: url('../images/cust-reg-bg.jpg'); background-size: cover ;background-repeat:no-repeat; height: 370px;}
+.cust_reg_left{float: left; background-image: url('../images/cust-reg-bg.jpg'); background-size: cover ;background-repeat:no-repeat;}
 .cust_img_inr{margin: 10% 18%; background-color: rgba(255,255,255,0.5); padding: 3%;}
-.cust_reg_right{color: #fff; padding: 4% 5%;}
+.cust_reg_right{color: #fff;}
 .cust_reg_right h2{font-weight: normal; line-height: 1.4;}
 .cust_reg_right h4{font-weight: normal; line-height: 1.5;}
 .reg_btn{padding: 9px 70px; font-size: 24px;}
@@ -69,7 +90,7 @@ a{ text-decoration:none}
 #beauty_club_cont{float: left; width: 100%;}
 
 /*How_it_works css*/
-#how_it_works_outr{float: left; width: 100%; background-color: #ebebeb;}
+#how_it_works_outr{float: left; width: 100%; background-color: #f1eff0;}
 #how_it_works_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
 #how_it_works_cont{float: left; width: 100%;}
 .how_it_works_heading{margin: 0 38%;}
@@ -78,5 +99,192 @@ a{ text-decoration:none}
 .beauty_cust_membership h3{text-transform: uppercase; color: #000; line-height: 1.4;}
 .beauty_prf_membership h5, .beauty_cust_membership h5{line-height: 1.4; font-weight: bold;}
 .beauty_membership_list ul{list-style: none;}
-.beauty_membership_list ul li{line-height: 1.7;}
-.beauty_membership_list ul li img{}
+.beauty_membership_list ul li{line-height: 2; padding-bottom: 10%; padding-top: 2%; font-size: 12px;}
+.center_img{padding-top: 12%;}
+.center_img img{width: 90%;}
+
+/*Benefits CSS*/
+#benefit_outr{float: left; width: 100%; background-color: #2F4052;}
+#benefit_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#benefit_cont{float: left; width: 100%;}
+.prf_benefit h3, .cust_benefit h3{background-color: #94264e; text-transform: uppercase; border-bottom: 3px groove #243040; padding: 8px 0;}
+.prf_benefit h3{background-color: #94264e;}
+.cust_benefit h3{background-color: #374D64;}
+.arrow-down {width: 0px; height: 0px; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #94264e;}
+.prf_benefit img, .cust_benefit img{margin-top: -28px;}
+.prf_benefit ul, .cust_benefit ul{list-style: none;}
+.prf_benefit ul li, .cust_benefit ul li{line-height: 2; font-size: 14px; text-align: left; padding-bottom: 10px;}
+.benefit_center h1{font-weight: bold; font-size: 45px;}
+.benefit_top{display: none;}
+.benefit_top h1{font-weight: bold;}
+
+
+/*Signup section css*/
+#signup_sec_outr{float: left; width: 100%; background-image: url('../images/signup_bg.jpg'); 
+height: 450px; background-repeat: no-repeat; background-size: cover;}
+#signup_sec_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#signup_sec_cont{float: left; width: 100%;}
+.signup_text h1{line-height: 1.5; font-weight: bold;}
+.signup_now_btn{padding: 10px 25px;}
+
+/*Message box css*/
+#msg_box_outr{float: left; width: 100%; background-color: #f1eff0;}
+#msg_box_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#msg_box_cont{float: left; width: 100%;}
+.msg_box_light_bg{background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; padding: 10px; 
+	width: 100px; margin :-4% 45% 0 45%;}
+.msg_box_dark_bg{background-color: #952650; border-radius: 50%; padding: 20%; width: 80px;}
+.msg_box_dark_bg img{width: 50px; padding: 8px 0;}
+
+/* Join Form css */
+.join_form_top h3{color: #952650; text-transform: uppercase; font-weight: bold;}
+.join_form_top p{font-size: 15px;}
+.join_form_inr .form-horizontal .form-group{margin-left: 0; margin-right: 0; margin-bottom: 30px;}
+.join_form_inr .form-control{border-radius: 0; height: 60px;}
+.join_form_inr .txtarea{height: auto;}
+.join_form_inr ::-webkit-input-placeholder {}
+.join_form_inr :-moz-placeholder { /* Firefox 18- */ font-size: 20px; }
+.join_form_inr ::-moz-placeholder {  /* Firefox 19+ */ font-size: 20px; }
+.join_form_inr :-ms-input-placeholder { font-size: 20px; }
+.send_btn{background-color: #952650; border: 1px solid #952650; border-radius: 2px; color: #fff; 
+ text-transform: uppercase; cursor: pointer; height: 60px; font-size: 25px; padding: 12px 50px;}
+.send_btn:hover{background-color: #6D243F; color: #fff; }
+
+/*Subscribe news Css*/
+#sub_news_outr{float: left; width: 100%; background-image: url('../images/news_bg_img.png'); 
+background-size: cover; background-repeat: no-repeat;}
+#sub_news_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#sub_news_cont{float: left; width: 100%;}
+.sub_news{text-transform: uppercase;}
+.sub_news h3{line-height: 1.5; padding-bottom: 10px;}
+.submit_btn{background-color: #6D243F; border: 1px solid #6D243F; border-radius: 2px; color: #fff; 
+ text-transform: uppercase; cursor: pointer; height: 50px; font-size: 20px; padding: 0;}
+ .submit_btn:hover{background-color: #952650; color: #fff;}
+ .cont_us_head{text-transform: uppercase;}
+ .cont_us_head img{margin-top: -30px;}
+ .arrow_img{margin-top: -40px; margin-left: 25px; width: 12%;}
+
+
+/*Footer CSS*/
+#footer_outr{float: left; width: 100%; background-color: #2F4052;}
+#footer_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#footer_cont{float: left; width: 100%;}
+.copy_right{font-size: 12px;}
+
+
+/*Responsive CSS*/
+
+
+@media(max-width: 1200px){
+	.cust_reg_right h2{font-size: 24px;}
+	.cust_reg_right h4, .reg_btn{margin-top: 10px;}
+	.reg_btn{padding: 8px 60px; font-size: 20px; height: 45px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 20px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 11px;}
+	.beauty_membership_list ul li{font-size: 10px; padding-top: 0;}
+	.center_img{padding-top: 13%;}
+	.beauty_membership_list ul li img{width: 23%;}
+	.center_img img{width: 85%;}
+
+}
+@media (max-width: 1024px){
+	.arrow_img{display: none;}	
+	
+}
+@media (max-width: 992px){
+	.cust_reg_right{padding: 0 20px;}
+	.cust_reg_right h2{font-size: 24px;}
+	.cust_reg_right h4{font-size: 15px;}
+	.reg_btn {padding: 9px 45px; font-size: 22px;}
+	.how_it_works_heading{margin: 0 34%;}
+	.beauty_membership_list ul li{padding-top: 2%; font-size: 7px;}
+	.center_img{padding-top: 15%;}
+	.center_img img{width: 100%;}
+	.signup_text h1{font-size: 30px;}
+	.signup_now_btn{padding: 10px 16px; height: 50px; font-size: 20px;}
+	.contact_us p{font-size: 13px;}
+}
+@media (max-width: 992px) and (min-width: 767px){
+	.sub_news h3{font-size: 22px;}
+	.prf_benefit h3, .cust_benefit h3{font-size: 18px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 15px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 8px;}
+}
+@media (max-width: 910px){
+	.cust_reg_right{padding: 0 10px;}
+}
+
+@media(max-width: 830px){
+	.reg_btn{height: 36px; padding: 3px 40px; font-size: 20px;}
+	.cust_reg_right h4, .reg_btn{margin-top: 0;}
+}
+
+@media (max-width: 767px){
+	.cust_reg_right{padding: 0 30px;}
+	.cust_reg_right h4, .reg_btn{margin-top: 20px;}
+	.cust_reg_right{padding: 3% 12%;}
+	.cust_reg_right h2{font-size: 28px;}
+	.cust_reg_right h4{font-size: 16px;}
+	.reg_btn{padding: 6px 45px; font-size: 22px; height: 45px; margin-bottom: 10px;}
+	.msg_box_light_bg{margin: -6% 42% 0 42%}
+	.how_it_works_heading{margin: 0 28%;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 24px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 14px;}
+	.beauty_membership_list ul li{font-size: 14px; padding-top: 4%;}
+	.center_img img{display: none;}
+	.benefit_top{display: block;}
+	.benefit_center{display: none;}
+}
+@media (max-width: 740px){
+	.signup_text h1{font-size: 26px;}
+}
+@media (max-width: 520px){
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 22px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 12px;}
+
+}
+@media (max-width: 580px){
+	.signup_text h1{font-size: 19px;}
+	.signup_now_btn{padding: 10px 12px;}
+	.how_it_works_heading h3{font-size: 20px;}
+}
+
+@media (max-width: 470px){
+	.reg_btn{padding: 9px 40px; font-size: 16px; height: 40px;}
+	.how_it_works_heading h3, .beauty_prf_membership h3, 
+	.beauty_cust_membership h3, .sub_news h3, .cont_us_head h3{font-size: 18px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 10px;}
+	.join_form_top h3{font-size: 20px;}
+	.join_form_top p{font-size: 13px;}
+	.msg_box_light_bg{margin: -14% 38% 0 38%}
+	.cust_reg_right h2{font-size: 22px;}
+	.cust_reg_right h4{font-size: 13px;}
+	.send_btn{height: 50px; font-size: 20px; padding: 11px 35px;}
+}
+@media (max-width: 457px){
+	.signup_text h1{font-size: 16px;}
+	.prf_benefit h3, .cust_benefit h3{font-size: 20px;}
+}
+@media (max-width: 410px){
+	.join_form_top h3{font-size: 18px;}
+	.how_it_works_heading{width: 70%; margin: 0 15%;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3, 
+	.sub_news h3, .cont_us_head h3{font-size: 15px;}
+}
+@media (max-width: 360px){
+	.cust_reg_right h2{font-size: 18px;}
+	.cust_reg_right h4{font-size: 11px;}
+	.reg_btn{padding: 7px 35px; font-size: 14px; height: 35px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 13px}
+	.join_form_top h3{font-size: 15px;}
+	.beauty_membership_list ul li a img{padding-top: 5%;}
+}
+
+@media (max-width: 340px){
+	.prf_benefit h3, .cust_benefit h3{font-size: 16px;}
+}
+
+@media (max-width: 296px){
+	.prf_benefit h3, .cust_benefit h3{font-size: 14px;}
+	.how_it_works_heading h3{font-size: 15px;}
+}
