@@ -145,24 +145,28 @@ class HomeController extends Controller
 
     /**
      * REGISTRATION STEP 5
+     * Model used : User.php
      */
     public function registration_add_gallery(Request $request) {
+        $custom_success = [];
         if( !empty($request->all()) && trim($request->action) == 'add_gallery_image' ) {
-            dd($request->all());
-            /*if( $request->hasFile($user_image_attr) ){
-                $user_image = $request[$user_image_attr]->storeAs('user_images', time().$user_image_attr.'.jpg');
-                return str_replace('user_images/', '', $user_image);
-            }*/
-            DB::table('gallery')
-                ->insert([
-                    'user_id'    => Auth::user()->id,
-                    'image_name' => $request->user_id,
-                    'created_at' => \Carbon\Carbon::now()
-                ]);
+            if( $request->hasFile('gallery_image') ){
+                $image_name = time().$request['gallery_image']->getClientOriginalName();
+                $request['gallery_image']->storeAs('all', $image_name);
+                DB::table('gallery')
+                    ->insert([
+                        'user_id'    => Auth::user()->id,
+                        'image_name' => $image_name,
+                        'created_at' => \Carbon\Carbon::now()
+                    ]);
+                $custom_success[] = 'Gallery image inserted.';
+            }
         } else if( !empty($request->all()) && trim($request->action) == 'delete_gallery_image' ) {
 
         }
-        return view('auth.add_gallery');
+        return view('auth.add_gallery')->with([
+            'custom_success' => $custom_success
+        ]);
     }
 
 
