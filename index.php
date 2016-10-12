@@ -126,7 +126,7 @@ mysqli_close($conn);
 						</div>
 					</div>
 
-					<div class="prof_heading_2 color_dark_grey col-md-12 col-sm-12 col-xs-12 padd_top_60px">
+					<div class="prof_heading_2 color_dark_grey col-md-12 col-sm-12 col-xs-12 padd_top_60px padd_botm_30px">
 						<h2>Are you also following the same marketing strategies?</h2>
 					</div>
 				</div>
