@@ -275,7 +275,7 @@ mysqli_close($conn);
 	                            	<img src="landing-page/images/5.png" alt class="col-md-12 col-sm-12">
 	                            </a>
 	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
-	                                Create a profile and get your unique referral code
+	                                Create a profile and get your unique referral code.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/6.png" alt class="col-md-12 col-sm-12">
@@ -287,7 +287,7 @@ mysqli_close($conn);
 	                            	<img src="landing-page/images/7.png" alt class="col-md-12 col-sm-12">
 	                            </a>
 	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
-	                            	Earn commission every time someone fulfils an appointment using your referral code.
+	                            	Earn commission every time someone fulfills an appointment using your referral code.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/8.png" alt class="col-md-12 col-sm-12">
