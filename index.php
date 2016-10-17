@@ -1,26 +1,86 @@
 
 <?php
-	$conn= mysqli_connect('localhost', 'root', '','brc_landing_page') or die ("could not connect to mysql");
+	$conn= mysqli_connect('localhost', 'brc', 'india@123','brc') or die ("could not connect to mysql");
 	//$db_name= mysqli_select_db('brc_landing_page', $conn) or die ("no database");
+
+	$variable = '';
+	$variable .= '<table>';
+	$variable .= '	<tr>';
+	$variable .= '		<td>Name</td>';
+	$variable .= '		<td>'.$name.'</td>';
+	$variable .= '	</tr>';
+	$variable .= '	<tr>';
+	$variable .= '		<td>Email</td>';
+	$variable .= '		<td>'.$email.'</td>';
+	$variable .= '	</tr>';
+	$variable .= '	<tr>';
+	$variable .= '		<td>Contact Number</td>';
+	$variable .= '		<td>'.$contact.'</td>';
+	$variable .= '	</tr>';
+	$variable .= '	<tr>';
+	$variable .= '		<td>User Type</td>';
+	$variable .= '		<td>'.$optionvalues.'</td>';
+	$variable .= '	</tr>';
+	$variable .= '	<tr>';
+	$variable .= '		<td>Message</td>';
+	$variable .= '		<td>'.$message.'</td>';
+	$variable .= '	</tr>';
+	$variable .= '</table>';
 	
 	if(isset($_POST['submit'])){
-		
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$contact = $_POST['contact_number'];
-		$optionvalues = $_POST['option_values'];
-		$message = $_POST['message'];
 
-	if($name !=''||$email !=''){
-		$query= mysqli_query($conn,"insert into signup(name, email, contact_number, option_values, message) values ('$name', '$email', '$contact', '$optionvalues', '$message')");
+		if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+			$secret = '6LchQQkUAAAAAPMAakcARq00Xkz5i0xWB8qHr2Nk';
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+            $responseData = json_decode($verifyResponse);
+            if($responseData->success){
 
-		echo "Data Inserted successfully...!!";
+            	    $name = $_POST['name'];
+					$email = $_POST['email'];
+					$contact = $_POST['contact_number'];
+					$optionvalues = $_POST['option_values'];
+					$message = $_POST['message'];
+
+					if($name !=''||$email !=''){
+						$query= mysqli_query($conn,"insert into signup(name, email, contact_number, option_values, message) values ('$name', '$email', '$contact', '$optionvalues', '$message')");
+					 }
+
+					 $to= "john.clarke852@gmail.com";
+					 send_mail($to, $variable, "BRC Registration Done");
+					 send_mail($email, $message, "Verification mail");
+					$succMsg = 'Your contact request have submitted successfully.';
+            }
+            else {
+            		$errMsg = 'Robot verification failed, please try again.';
+            }
+		}
+		else {
+			 $errMsg = 'Please click on the reCAPTCHA box.';
+		}	
 	}
-	else{
-		echo "Insertion Failed. Some Fields are Blank....!!";
+	else {
+		$errMsg = '';
+        $succMsg = '';
 	}
-	}
-mysqli_close($conn);
+
+mysqli_close($conn); 
+
+function send_mail($to_email, $send_data, $subject) {
+    $to      =  $to_email;
+    $subject =  $subject;
+    $message =  $send_data;
+
+    //$headers .= "Organization: Sender BRC\r\n";
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+  //  $headers .= "X-Priority: 3\r\n";
+    //$headers .= "X-Mailer: PHP". phpversion() ."\r\n";
+    // Additional headers
+    //$headers .= 'To: '. $to . "\r\n";
+    $headers .= 'From: BRC <no-reply@brc.com>' . "\r\n";
+    mail($to, $subject, $message, $headers);
+}
+
 	
 ?>
 
@@ -28,7 +88,7 @@ mysqli_close($conn);
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>BRC</title>
 	<link rel="stylesheet" href="landing-page/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="landing-page/css/index-style.css" type="text/css" />
 	<script type="text/javascript" src="landing-page/js/jquery-1.12.4.min.js"></script>
@@ -40,6 +100,7 @@ mysqli_close($conn);
 </head>
 <body>
 <!--Header section -->
+<div class="message"><?php if($errMsg !=''){ echo $errMsg; }?></div>
 	<div id="header_outr">
 		<div id="header_inr" class="row">
 			<div id="header_cont" class="col-md-12 col-sm-12 col-xs-12">
@@ -227,31 +288,30 @@ mysqli_close($conn);
 				text-center">
 					<h3>How it works</h3>
 				</div>
-				<div class="container">
-					<div class="beauty_prf_membership col-md-5 col-sm-5 col-xs-12 text-center pull-left">
+					<div class="beauty_prf_membership col-md-5 col-sm-5 col-xs-12 text-center padd_left_right_all_zero">
 						<h3>Beauty Professional Membership</h3>
 						<h4>Increase your bookings with your customer referrals.</h4>
 						<div class="beauty_membership_list padd_top_botm_30px text-right">
 							<ul class="col-md-12 col-sm-12 col-xs-12 padd_left_right_all_zero">
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-right padd_left_right_all_zero">
 	                                Order referral cards to give to your clients.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/1.png" alt class="col-md-12 col-sm-12">
 	                            </a>
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-right padd_left_right_all_zero">
 	                            	Offer your clients commission for referring your services.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/2.png" alt class="col-md-12 col-sm-12">
 	                            </a>
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-right padd_left_right_all_zero">
 	                                Track and confirm booked appointments with no monthly fees.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/3.png" alt class="col-md-12 col-sm-12">
 	                            </a>
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-right padd_left_right_all_zero">
 	                                Sit back and watch your clientele and sales grow.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
@@ -261,11 +321,12 @@ mysqli_close($conn);
 	                        </ul>
                     	</div>
 					</div>
-					<div class="center_img col-md-2 col-sm-2 col-xs-12">
+					<div class="center_img col-md-2 col-sm-2 col-xs-12 padd_left_right_all_zero 
+					text-center">
 						<img src="landing-page/images/11.png" alt>
 					</div>
 					<div class="beauty_cust_membership col-md-5 col-sm-5 col-xs-12 text-center 
-					pull-right">
+					padd_left_right_all_zero">
 						<h3>Beauty Customer Membership</h3>
 						<h4>Start earning commission for your beauty referrals.</h4>
 
@@ -274,32 +335,35 @@ mysqli_close($conn);
 								<a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/5.png" alt class="col-md-12 col-sm-12">
 	                            </a>
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
-	                                Create a profile and get your unique referral code
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-left
+	                            padd_left_right_all_zero">
+	                                Create a profile and get your unique referral code.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/6.png" alt class="col-md-12 col-sm-12">
 	                            </a>
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-left
+	                            padd_left_right_all_zero">
 	                                Refer family and friends to your favorite salon or beauty professional.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/7.png" alt class="col-md-12 col-sm-12">
 	                            </a>
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
-	                            	Earn commission every time someone fulfils an appointment using your referral code.
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-left
+	                            padd_left_right_all_zero">
+	                            	Earn commission every time someone fulfills an appointment using your referral code.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">
 	                            	<img src="landing-page/images/8.png" alt class="col-md-12 col-sm-12">
 	                            </a>
-	                            <li class="col-md-9 col-sm-8 col-xs-12 text-center padd_left_right_all_zero">
+	                            <li class="col-md-9 col-sm-8 col-xs-12 text-left
+	                            padd_left_right_all_zero">
 	                                Monitor and withdraw your commission directly to your bank or Pay Pal account.
 	                            </li>
 	                            </li>
 	                        </ul>
 	                    </div>
 					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -334,7 +398,7 @@ mysqli_close($conn);
 	<!-- Join the club section-->
 					<div class="join_form_top text-center padd_top_40px">
 						<h2>Join the beauty referral club</h2>
-						<h3>Join our mailing list for updates and request <br> an early invitation. We are nearly complete!</h3>
+						<h3>Join our mailing list for updates, and request <br> an early invitation. We are nearly complete!</h3>
 						<img src="landing-page/images/red-division-line.jpg" alt>
 
 						<div class="join_form_inr padd_top_40px">

@@ -6,7 +6,7 @@
   <div id="header_inr" class="row padd_top_5px">
       <div id="header_cont padd_top_10 padd_botm_8" class="col-md-12 col-xs-12">
           <div class="header_left col-md-1 col-sm-12 col-xs-12 text-center">
-              <a href="#"><img src="/images/site_logo.png" title="BRC"/></a>
+              <a href="#"><img src="{{ url('images/site_logo.png') }}" title="BRC"/></a>
           </div>
             
             <!-- -->

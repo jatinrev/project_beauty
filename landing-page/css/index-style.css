@@ -133,11 +133,11 @@ background-size: cover;}
 .beauty_prf_membership h3, 
 .beauty_cust_membership h3{
 	text-transform: uppercase; line-height: 1.4; font-weight: bold; color: #94264e; font-size: 22px;}
-.beauty_prf_membership h4, .beauty_cust_membership h4{line-height: 1.5;}
+.beauty_prf_membership h4, .beauty_cust_membership h4{line-height: 1.5; font-weight: 600;}
 .beauty_membership_list ul{list-style: none;}
-.beauty_membership_list ul li{line-height: 2; padding-bottom: 10%; padding-top: 2%; font-size: 15px;}
-.center_img{padding-top: 11%;}
-.center_img img{width: 90%;}
+.beauty_membership_list ul li{line-height: 2; padding-bottom: 10%; padding-top: 2%; font-size: 17px;}
+.center_img{padding-top: 10%;}
+.center_img img{width: 82%;}
 
 
 
@@ -182,7 +182,9 @@ height: 250px; background-repeat: no-repeat; background-size: 100%;}
 
 /*Responsive CSS*/
 
-
+@media (max-width: 1260px){
+	.beauty_membership_list ul li{font-size: 15px; padding-top: 0;}
+}
 @media(max-width: 1200px){
 	.cust_reg_right h2{margin-top: 30px;}
 	.prof_heading h2{font-size: 24px;}
@@ -190,12 +192,18 @@ height: 250px; background-repeat: no-repeat; background-size: 100%;}
 	.cust_reg_right h4, .reg_btn{margin-top: 10px;}
 	.reg_btn{padding: 8px 60px; font-size: 20px; height: 45px;}
 	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 16px;}
-	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 11px;}
-	.beauty_membership_list ul li{font-size: 11px; padding-top: 0;}
-	.center_img{padding-top: 15%;}
-	.beauty_membership_list ul li img{width: 23%;}
-	.center_img img{width: 85%;}
+	.beauty_prf_membership h4, .beauty_cust_membership h4{font-size: 14px;}
+	.beauty_membership_list ul li{font-size: 14px; padding-top: 6px;}
+	.center_img{padding-top: 11%;}
+	.center_img img{width: 77%;}
 
+}
+
+@media (max-width: 1200px) and (min-width: 992px){
+	.beauty_membership_list a img{padding-left: 10px; padding-right: 10px;}
+}
+@media (max-width: 1052px){
+	.beauty_membership_list ul li{font-size: 13px;}
 }
 @media (max-width: 1024px){
 	.header_left img{width: 70%;}
@@ -210,9 +218,9 @@ height: 250px; background-repeat: no-repeat; background-size: 100%;}
 	.cust_reg_right h3{font-size: 18px;}
 	.reg_btn {padding: 6px 40px; font-size: 20px; height: 40px;}
 	.how_it_works_heading{margin: 0 34%;}
-	.beauty_membership_list ul li{padding-top: 2%; font-size: 7px;}
-	.center_img{padding-top: 22%;}
-	.center_img img{width: 90%;}
+	.beauty_membership_list ul li{padding-top: 3%; font-size: 11px;}
+	.center_img{padding-top: 12%;}
+	.center_img img{width: 85%;}
 	.signup_text h1{font-size: 30px;}
 	.signup_now_btn{padding: 10px 16px; height: 50px; font-size: 20px;}
 	.contact_us p{font-size: 13px;}
@@ -228,6 +236,8 @@ height: 250px; background-repeat: no-repeat; background-size: 100%;}
 @media (max-width: 910px){
 	.cust_reg_right{padding: 0 10px;}
 	.header_left img{width: 85%;}
+	.beauty_membership_list ul li{font-size: 10px;}
+	.center_img{padding-top: 13%}
 }
 
 @media(max-width: 840px) and (min-width: 768px){
@@ -235,6 +245,9 @@ height: 250px; background-repeat: no-repeat; background-size: 100%;}
 	.cust_reg_right h2{font-size: 20px;}
 	.cust_reg_right h3, .reg_btn{margin-top: 10px;}
 	.cust_reg_right h3{font-size: 15px;}
+	.beauty_membership_list ul li{font-size: 9px;}
+	.center_img img{width: 82%;}
+	.beauty_prf_membership h4, .beauty_cust_membership h4{font-size: 12px;}
 }
 
 @media (max-width: 767px){
@@ -251,9 +264,10 @@ height: 250px; background-repeat: no-repeat; background-size: 100%;}
 	.msg_box_light_bg{margin: -6% 42% 0 42%}
 	.how_it_works_heading{margin: 0 28%;}
 	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 24px;}
-	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 14px;}
+	.beauty_prf_membership h4, .beauty_cust_membership h4{font-size: 18px;}
 	.beauty_membership_list ul a{padding-bottom: 20px;}
 	.beauty_prf_membership .beauty_membership_list ul li{font-size: 14px; padding-top: 4%; padding-bottom: 0;}
+	.beauty_membership_list ul li{text-align: center; float: none;}
 	.beauty_cust_membership .beauty_membership_list ul a{padding-bottom: 0px;}
 	.beauty_cust_membership .beauty_membership_list ul li{font-size: 14px; padding-top: 0;}
 	.center_img{padding-top: 20px;}
@@ -318,6 +332,7 @@ height: 250px; background-repeat: no-repeat; background-size: 100%;}
 @media (max-width: 457px){
 	.signup_text h1{font-size: 16px;}
 	.prf_benefit h3, .cust_benefit h3{font-size: 20px;}
+	.beauty_prf_membership h4, .beauty_cust_membership h4{font-size: 14px;}
 }
 @media(max-width: 435px){
 	.cust_reg_right h2{font-size: 18px;}

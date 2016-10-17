@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-{{-- <pre>
-<?php print_r($errors); ?>
-</pre> --}}
+ <pre>
+<?php //print_r($errors); ?>
+</pre> 
 {{-- {{ dd($products) }} --}}
 <div id="prf_dashboard_outr">
 	<div id="prf_dashboard_inr">
@@ -22,7 +22,7 @@
 	<div class="prog_bar_inr">
 		<div class="prog_bar">
 			<div class="web_prog_bar">
-				<img src="http://localhost:8000/assets/images/step4.jpg" alt="step1">
+				<img src="{{ asset('assets/images/step4.jpg') }}" alt="step4">
 			</div>
 		</div>
 	</div>
@@ -86,8 +86,8 @@
 					</div>
 				</div>
 				<div class="col-md-12 col-sm-12 col-xs-12 text-right margin_top_40px">
-					<button type="submit" class="black_btn serv_back_btn">Back</button>
-					<button type="submit" class="light_red_btn serv_cont_btn">Continue</button>
+					<button type="submit" class="black_btn serv_back_btn" onclick="previous_url();">Back</button>
+					<button type="submit" class="light_red_btn serv_cont_btn" onclick="next_url();">Continue</button>
 				</div>
 			</div>
 		</div>
@@ -113,6 +113,14 @@
 			}
 		}
 	</script>
+ <script>
+ function next_url(){
+ 	window.location = 'add-gallery';
+ }
+ function previous_url(){
+ 	window.location = 'add-availability';	
+ }
+ </script>   	
 @endsection
 
 

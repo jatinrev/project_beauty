@@ -11,7 +11,7 @@
 |
 */
 // ROUTE TO GET DATA FROM STORAGE
-Route::get('images/{filename}', function ($filename)
+Route::get('/images/{filename}', function ($filename)
 {
     if (is_array($filename)) {
         $filename = implode('/', $filename);
@@ -24,7 +24,7 @@ Route::get('images/{filename}', function ($filename)
     return \Response::make($file,200)
         ->header("Content-Type", $type);
 });
-Route::get('images/{action}/{filename}', 'withoutLogin@show_image');
+Route::get('/images/{action}/{filename}', 'withoutLogin@show_image');
 
 
 Route::match(['get', 'post'], '/', 'withoutLogin@index');
@@ -58,6 +58,7 @@ Route::match(['get', 'post'], '/user/add-gallery', 'HomeController@registration_
 
 
 Route::match(['get', 'post'], '/ajax/{action}', 'AjaxCtrl@ajax');
+Route::match(['get', 'post'], '/get_sub_category/{id}', 'AjaxCtrl@ajax_cat');
 
 
 

@@ -16,6 +16,20 @@
     <script type="text/javascript" src="{{ asset('assets/js/index.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/product_index.js') }}"></script>
     <script type="text/javascript" src="{{asset('assets/js/jquery.scrollbox.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.datetimepicker.full.js') }}"> </script>  
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.timepicker.js') }}"> </script> 
+   <script>
+   $(document).ready(function(){
+   	/*$('#timepicker').datetimepicker({
+		  datepicker:false,
+		  format:'H:i'
+		});*/
+		 $('#timepicker').timepicker({ 'timeFormat': 'H:i:s' });
+   });
+  
+   </script>
+
+
     
 	@yield('script')
 

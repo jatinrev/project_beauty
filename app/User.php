@@ -56,8 +56,8 @@ class User extends Authenticatable
      */
     public function get_service_list($user_id = null) {
         $user_id = ( $user_id == null ? $this->id : $user_id );
-        return DB::table('list_services')
-                    ->where('user_id', $user_id);
+
+       return DB::table('services')->select(['id','service_name','sub_service_name','service_description','service_price','service_time','service_image_1','service_image_2'])->where('user_id', $user_id)->get();
     }
 
     /*
@@ -97,6 +97,8 @@ class User extends Authenticatable
         return '';
     }
 
+
+    
 }
 
 

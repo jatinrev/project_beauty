@@ -30,7 +30,7 @@
 	<div class="prog_bar_inr">
 		<div class="prog_bar">
 			<div class="web_prog_bar">
-				<img src="/assets/images/step5.jpg" alt="step1">
+				<img src="{{ asset('assets/images/step5.jpg') }}" alt="step5">
 			</div>
 		</div>
 	</div>

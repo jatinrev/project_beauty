@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox.css?v=2.1.5') }}" media="screen" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/js/jquery-ui-1.12.1.custom/jquery-ui.css') }}" />
     <link href="{{ asset('assets/css/jquery.scrollbox.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/jquery.datetimepicker.css') }}" media="screen" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/jquery.timepicker.css') }}" media="screen" rel="stylesheet" type="text/css" />
     
 	<script>
         window.Laravel = <?php echo json_encode([

@@ -83,10 +83,14 @@ class HomeController extends Controller
             $user_data->address        = $request->address;
             $user_data->about          = $request->about;
             $user_data->save();
+
+           return redirect('user/add-services'); 
         }
-        return view('auth.dashboard')->with([
+        else{
+           return view('auth.dashboard')->with([
             'user_data'          => $user_data
-        ]);
+           ]);    
+        }
     }
 
 
@@ -96,18 +100,67 @@ class HomeController extends Controller
      */
     public function registration_add_services( Request $request ) {
         $user_model = new User();
+
+       // dd($user_model->get_service_list());
         if( !empty($request->all()) ) {
+        	//dd($request->all());
             // this function is to add main category to the table
             $user_model->add_user_category();
             // this function is here to add sub category to the admin.
             $user_model->add_user_sub_category();
-            dd($request);
             $this->validate($request, [
-                
+            	'main_service' => 'required',
+            	'serv'         => 'required|max:255',
+                'serv_price'   => 'required',
+                'serv_time'    => 'required',
+                'serv_desc'    => 'required',
             ]);
-            DB::table();
+            if( $request->hasFile('serv_image_1') ){
+            	//$imagename = $request->file('serv_image_1')->getClientOriginalName();
+	            //$user_image = $request['serv_image_1']->storeAs('serv_images', time().$imagename);
+	           // $serv_image_1 = str_replace('serv_images/', '', $user_image);
+
+	              $file = $request->file('serv_image_1');   
+		          $desinationPath = public_path().'/assets/serv_images/';
+		          $serv_image_1 = time()."_". $file->getClientOriginalName();
+		          $file->move($desinationPath, $serv_image_1);  
+	           // $service_image1 = array('service_image_1' => $serv_image_1);
+            }
+            else{
+            	$serv_image_1  = "";
+            }
+
+            if( $request->hasFile('serv_image_2') ){
+            	// $imagename = $request->file('serv_image_2')->getClientOriginalName();
+	            // $user_image = $request['serv_image_2']->storeAs('serv_images', time().$imagename);
+	            // $serv_image_2 = str_replace('serv_images/', '', $user_image);
+	           // $service_image1 = array('service_image_1' => $serv_image_1);
+
+	              $file = $request->file('serv_image_2');   
+		          $desinationPath = public_path().'/assets/serv_images/';
+		          $serv_image_2 = time()."_". $file->getClientOriginalName();
+		          $file->move($desinationPath, $serv_image_2);  
+            }
+            else{
+            	$serv_image_2  = "";
+            }
+
+            DB::table('services')->insert([
+			    'user_id'        => Auth::user()->id, 
+			    'main_category_id'    =>  $request->main_service,
+			    'sub_category_id'     =>  $request->serv,
+			    'service_description'  => $request->serv_desc,
+			    'service_price'       =>  $request->serv_price,
+			    'service_time'       =>   $request->serv_time, 
+			    'service_image_1'    =>   $serv_image_1,
+			    'service_image_2'    =>   $serv_image_2,
+			    'created_at'         =>  \Carbon\Carbon::now()
+			]);
+	
+          
         }
-        return view('auth.add_services_step');
+        
+			return view('auth.add_services_step')->with(['services'=> $user_model->get_service_list(Auth::user()->id)]);
     }
 
     /**

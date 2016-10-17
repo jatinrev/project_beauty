@@ -19,9 +19,12 @@ class CreateUserServicesTable extends Migration
             $table->integer('main_category_id')->comment = 'Parent id i.e id from service_main_category';
             $table->integer('sub_category_id');
             $table->string('service_name');
+            $table->string('sub_service_name');
             $table->text('service_description');
             $table->integer('service_price');
             $table->time('service_time');
+            $table->string('service_image_1');
+            $table->string('service_image_2');
             $table->timestamps();
         });
     }

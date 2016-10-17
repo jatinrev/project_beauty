@@ -22,7 +22,7 @@
 	<div class="prog_bar_inr">
 		<div class="prog_bar">
 			<div class="web_prog_bar">
-				<img src="/assets/images/step3.jpg" alt="step1">
+				<img src="{{ asset('assets/images/step3.jpg') }}" alt="step3">
 			</div>
 		</div>
 	</div>
@@ -161,14 +161,22 @@
 					</div>
 
 					<div class="das_serv_right_btn pull-right margin_top_65px">
-						<button type="submit" class="black_btn serv_back_btn">Back</button>
-						<button type="submit" class="light_red_btn serv_cont_btn">Continue</button>
+						<button type="submit" class="black_btn serv_back_btn" onclick="previous_url();">Back</button>
+						<button type="submit" class="light_red_btn serv_cont_btn" onclick="next_url();">Continue</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>		
+<script>
+ function next_url(){
+ 	window.location = 'add-products';
+ }
+ function previous_url(){
+ 	window.location = 'add-services';	
+ }
+ </script>  
 		
 @endsection
 

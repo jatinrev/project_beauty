@@ -17,7 +17,7 @@
                         
                     <!---->
             	<div class="header_left col-md-1 col-sm-12 col-xs-12 text-center">
-                	<a href="#"><img src="images/site_logo.png" title="BRC"/></a>
+                	<a href="#"><img src="{{ url('images/site_logo.png') }}" title="BRC"/></a>
            		</div>
                 
                 <!-- -->

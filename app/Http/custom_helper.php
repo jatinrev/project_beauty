@@ -17,6 +17,17 @@ function send_mail($to_email, $send_data, $subject) {
     mail($to, $subject, $message, $headers);
 }
 
+ function get_main_categories(){
+ 	return DB::table('service_main_category')->select('id','service_category')->where('user_id',1)->get();
+
+ }
+function getUserName($user_id,$col='name',$table='users',$w1='id'){
+	
+  $data =  DB::table($table)->select($col)->where($w1,'=',$user_id)->get();
+  if(count($data)>0 && isset($data[0])) {
+    return $data[0]->$col;
+  }
+}
 
 
 
