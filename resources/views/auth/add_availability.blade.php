@@ -9,6 +9,10 @@
 @endsection
 
 @section('content')
+<<<<<<< HEAD
+ 
+@endsection
+=======
 <div id="prf_dashboard_outr">
 	<div id="prf_dashboard_inr">
 		<div id="prf_dashboard_cont">
@@ -182,3 +186,4 @@
 
 
 
+>>>>>>> 67b9c57eaaf49988b9988214eba48179f6bdad92

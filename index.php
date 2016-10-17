@@ -187,7 +187,7 @@ function send_mail($to_email, $send_data, $subject) {
 						</div>
 					</div>
 
-					<div class="prof_heading_2 color_dark_grey col-md-12 col-sm-12 col-xs-12 padd_top_60px">
+					<div class="prof_heading_2 color_dark_grey col-md-12 col-sm-12 col-xs-12 padd_top_60px padd_botm_30px">
 						<h2>Are you also following the same marketing strategies?</h2>
 					</div>
 				</div>
@@ -351,6 +351,7 @@ function send_mail($to_email, $send_data, $subject) {
 	                            </a>
 	                            <li class="col-md-9 col-sm-8 col-xs-12 text-left
 	                            padd_left_right_all_zero">
+
 	                            	Earn commission every time someone fulfills an appointment using your referral code.
 	                            </li>
 	                            <a href="#" class="col-md-3 col-sm-4 col-xs-12 text-center">

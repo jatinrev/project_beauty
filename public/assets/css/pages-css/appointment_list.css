@@ -1,0 +1,66 @@
+.prog_bar_outr{
+	height: 100px;
+	background-color: #952650;
+}
+.prog_bar_outr.calendr_main_div{
+	min-height: 64px;
+	height: auto;
+}
+
+.appointment_cal_cont{  display: inline-block;
+float: none;
+margin: 0 auto;
+max-width: 800px;
+padding-bottom: 15px;
+padding-top: 15px;
+}
+.appointment_cal_cont span {
+    color: #fff;
+    font-weight: bold;
+    padding-top: 6px;
+}
+
+.botm_space > tr {
+    border-bottom: 3px solid #fff;
+    border-top: 3px solid #fff;
+}
+tbody.botm_space {
+    background-color: #f7f7f9;
+}
+table.table.table_col {
+    text-align: center;
+}
+th{
+	text-align: center;
+}
+.appointment_list_hover > tbody > tr:hover {
+    background-color: #f5f5f5;
+    box-shadow: #AEAEAE;
+}
+.botm_space .app_list_img {
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+}
+tbody.botm_space td:nth-child(1) {
+    color: #000;
+    font-size: 15px;
+}
+tbody.botm_space td:nth-child(2) {
+    color: #808080;
+    font-size: 15px;
+}
+tbody.botm_space td:nth-child(3) {
+    color: #808080;
+    font-size: 15px;
+}
+tbody.botm_space td:nth-child(4) {
+    color: #000;
+    font-size: 15px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+.appointment_list_hover th:nth-child(1) {
+    padding-right: 5%;
+}
