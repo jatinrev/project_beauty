@@ -50,7 +50,11 @@ h2, h3{ line-height:40px;}
 .color_grey{color: #bebebe;}
 .bgcolor_grey{background-color: #f2f2f2;}
 .bgcolor_light_grey{background-color: #f8f8f8}
+.bgcolor_pink{background-color: #952650;}
 .color_pink{color: #94264e;}
+
+.bg_white_color{background-color: #fff;}
+.bg_light_color{background-color: #f7f7f7;}
 
 .font_size_12{ font-size: 12px;}
 .font_size_13{ font-size: 13px;}
@@ -64,6 +68,7 @@ h2, h3{ line-height:40px;}
 .padd_right_zero{padding-right:0;}
 .padd_top_30px{ padding-top:30px;}
 .padd_top_25px{ padding-top:25px;}
+.padd_top_20px{padding-top: 20px;}
 .padd_top_5px{padding-top: 5px;}
 #padd_top_10{padding-top: 10px;}
 #padd_botm_8{padding-bottom: 8px;}
@@ -71,9 +76,9 @@ h2, h3{ line-height:40px;}
 .padd_top_botm_10px{padding-top: 10px; padding-bottom: 10px;}
 .padd_top_botm_20px{padding-top: 20px; padding-bottom: 20px;}
 .padd_top_botm_40px{padding-top: 40px; padding-bottom: 40px;}
+.padd_top_botm_50px{padding-top: 50px; padding-bottom: 50px;}
 .padd_botm_30px{padding-bottom: 30px;}
 .padd_botm_100px{ padding-bottom: 100px;}
-.padd_top_20px{padding-top: 20px;}
 .padd_botm_20px{padding-bottom: 20px;}
 .padd_top_botm_90px{padding-top: 90px; padding-bottom: 90px}
 .padd_botm_60px{padding-bottom: 60px;}
@@ -919,7 +924,6 @@ button, input, select{
 }
 /*Bootstrap_css Close*/
 
-/*** custom checkboxes ***/
 
 
 
@@ -1137,3 +1141,22 @@ button, input, select{
   .banner_btn{height: 20px; padding: 6px; font-size: 7px;}
   .banner_scrolling_text_outr{top: 33%; line-height: 3}
 }
+
+
+
+/*** How It works Page css ***/
+
+                /*Common CSS for How it works page*/
+#howitwork_page_outr{float: left; width: 100%;}
+#howitwork_page_inr{max-width: 1349px; width: 100%; float: none; margin: 0 auto;}
+#howitwork_page_cont{float: left; width: 100%;}
+
+
+.howitwork_top_sec{background-color: #CCC; }
+.howitwork_steps h1{line-height: 1.5;}
+.howitwork_steps p{line-height: 1.8; font-size: 16px;}
+
+.path_arrow{margin-top: -10%; margin-bottom: 0;}
+.left_text h2{text-transform: uppercase; font-weight: bold;}
+.ryt_reg_btn{height: 50px; padding: 10px 40px; font-size: 18px; font-weight: bold;}
+

@@ -7,76 +7,369 @@ img{ border:0; outline:0;}
 img:hover{ border:0; outline:0;}
 a{ text-decoration:none}
 
-@font-face {
-    font-family: 'ralewayregular';
-    src: url('fonts/raleway-regular.woff2') format('woff2'),
-         url('fonts/raleway-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 @font-face {
  font-family: 'Ubuntu';
- src: url('fonts/Ubuntu-Light.eot');
- src: url('fonts/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
-  url('fonts/Ubuntu-Light.woff') format('woff'),
-  url('fonts/Ubuntu-Light.ttf') format('truetype');
+ src: url('../fonts/Ubuntu-Light.eot');
+ src: url('../fonts/Ubuntu-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Ubuntu-Light.woff') format('woff'),
+  url('../fonts/Ubuntu-Light.ttf') format('truetype');
  font-weight: 300;
  font-style: normal;
 }
 
 /* Common classes */
 .trans_btn{background-color: transparent; border: 1px solid #fff; border-radius: 2px; color: #fff; 
- text-transform: uppercase; cursor:pointer; height:50px; font-size: 16px;}
+ text-transform: uppercase; cursor: pointer; height: 50px; font-size: 16px;}
 .trans_btn:hover{background-color: #fff; color: #2F4052; }
+.white_btn{background-color: #fff; border: 1px solid #fff; border-radius: 2px; color: #94264e; 
+	text-transform: uppercase; cursor: pointer; height: 50px; font-size: 30px; font-weight: bold;}
+.white_btn:hover{background-color: #fff; opacity: 0.6;}
+
+.white_input_field{border:0; padding:5px 10px;height:50px; line-height:normal;margin-right:10px; 
+	float:left; -webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px; font-size:17px; 
+	color: #000;}
 
 .text-center{text-align: center;}
 .text-right{text-align: right;}
 .text-left{text-align: left;}
+.color_white{color: #fff;}
+.color_grey{color: #bebebe;}
+.color_dark_grey{color: #606060;}
 
+.padd_top_botm_10px{padding-top: 10px; padding-bottom: 10px;}
 .padd_top_botm_30px{padding-top: 30px; padding-bottom: 30px;}
+.padd_top_botm_40px{padding-top: 40px; padding-bottom: 40px;}
+.padd_top_botm_90px{padding-top: 90px; padding-bottom: 90px;}
+.padd_top_10px{padding-top: 10px;}
+.padd_top_40px{padding-top: 40px;}
+.padd_top_60px{padding-top: 60px;}
 
-.margin_top_30px{ margin-top:30px;}
+.padd_botm_20px{padding-bottom: 20px;}
+.padd_botm_30px{padding-bottom: 30px;}
+.padd_botm_40px{padding-bottom: 40px;}
+.padd_botm_60px{padding-bottom: 60px;}
+
+.margin_top_20px{margin-top: 20px;}
+.margin_top_85px{ margin-top:85px;}
+
 .padd_left_right_all_zero{padding-left: 0; padding-right: 0;}
+.padd_left_right_40px{padding-left: 40px; padding-right: 40px;}
+.padd_left_zero{padding-left: 0;}
 
 /* Header Css */
 
 #header_outr{float:left; width:100%;  z-index: 9999;background-color: #2F4052;}
 #header_inr{max-width: 1365px; float: none; margin: 0 auto; width: 100%;}
-#header_cont{float: left; width: 100%; padding-top: 8px; padding-bottom:8px;}
+#header_cont{float: left; width: 100%; padding-top: 7px; padding-bottom: 2px;}
 .header_left{float: left;}
-.header_left img{width: 70px;}
-.header_right{float: right;}
-.btn_right{margin: 10px 0;}
-.sign_up_btn{padding: 5px 12px; height: 30px;}
+.header_left img{width: 55%;}
+.header_social_link img{width: 40px; margin: 0 2px;}
 
 /* Customer_reg Section*/
 #cust_reg_outr{float: left; width: 100%; background-color: #94264e;}
 #cust_reg_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
 #cust_reg_cont{float: left; width: 100%;}
-.cust_reg_left{float: left; background-image: url('../images/cust-reg-bg.jpg'); background-size: cover ;background-repeat:no-repeat; height: 370px;}
-.cust_img_inr{margin: 10% 18%; background-color: rgba(255,255,255,0.5); padding: 3%;}
-.cust_reg_right{color: #fff; padding: 4% 5%;}
-.cust_reg_right h2{font-weight: normal; line-height: 1.4;}
-.cust_reg_right h4{font-weight: normal; line-height: 1.5;}
-.reg_btn{padding: 9px 70px; font-size: 24px;}
-.reg_btn:hover{background-color: #6D243F; color: #fff;}
+.cust_reg_left{float: left;}
+.cust_reg_right h2{font-weight: bold; line-height: 1.2; margin-top: 60px;}
+.cust_reg_right h3{font-weight: normal; line-height: 1.5;}
+.cust_reg_right p{font-size: 20px; line-height: 2;}
+.reg_btn{padding: 9px 60px; font-size: 24px;}
 
-/* Beauty_club CSS*/
-#beauty_club_outr{float: left; width: 100%; background-color: #fff;}
-#beauty_club_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
-#beauty_club_cont{float: left; width: 100%;}
+/* Professions mistakes CSS*/
+#prof_sec_outr{float: left; width: 100%; background-color: #fff;}
+#prof_sec_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#prof_sec_cont{float: left; width: 100%;}
+.prof_heading h2{font-size: 26px; font-weight: bold; line-height: 1.6; text-transform: uppercase;}
+.prof_heading_2 h2{ font-weight: bold; line-height: 1.6;}
+.prof_sec{color: #fff;}
+.prof_sec h2{font-weight: bold; padding-top: 40px;}
+.prof_sec img{width: 50%;}
+.sec_1{background-image: url('../images/advertise.jpg'); background-repeat: no-repeat; 
+background-size: cover;}
+.sec_2{background-image: url('../images/storefront.jpg'); background-repeat: no-repeat; 
+background-size: cover;}
+.sec_3{background-image: url('../images/price.jpg'); background-repeat: no-repeat; 
+background-size: cover;}
+.sec_1, .sec_2, .sec_3{box-shadow: 0 3px 3px 3px #e4e4e4; padding: 80px 50px;}
+
+/* BRC Benefits CSS*/
+#brc_benefit_outr{float: left; width: 100%; background-color: #d8d8d8;}
+#brc_benefit_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#brc_benefit_cont{float: left; width: 100%;}
+.brc_heading h2{color: #94264e; font-weight: bold;}
+.brc_heading h3{line-height: 1.5; font-weight: bold;}
+
+
+/*Benefits Divisions CSS*/
+#benefit_outr{float: left; width: 100%; background-color: #2F4052;}
+#benefit_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#benefit_cont{float: left; width: 100%;}
+.prf_benefit h3, .cust_benefit h3{background-color: #94264e; text-transform: uppercase; border-bottom: 3px groove #243040; padding: 8px 0;}
+.prf_benefit h3{background-color: #94264e;}
+.cust_benefit h3{background-color: #374D64;}
+.arrow-down {width: 0px; height: 0px; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #94264e;}
+.prf_benefit img, .cust_benefit img{margin-top: -28px;}
+.prf_benefit ul, .cust_benefit ul{list-style: none;}
+.prf_benefit ul li, .cust_benefit ul li{line-height: 2; font-size: 14px; text-align: left; 
+	padding-bottom: 15px;}
+.benefit_center h1{font-weight: bold; font-size: 45px;}
+.benefit_top{display: none;}
+.benefit_top h1{font-weight: bold;}
+
+/*BRC tools*/
+#brc_tool_outr{float: left; width: 100%; background-color: #d8d8d8;}
+#brc_tool_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#brc_tool_cont{float: left; width: 100%;}
+.tools_sec img{height: 160px;}
+.tools_sec h2{font-weight: bold; color: #606060;}
 
 /*How_it_works css*/
-#how_it_works_outr{float: left; width: 100%; background-color: #ebebeb;}
+#how_it_works_outr{float: left; width: 100%; background-color: #f1eff0;}
 #how_it_works_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
 #how_it_works_cont{float: left; width: 100%;}
 .how_it_works_heading{margin: 0 38%;}
 .how_it_works_heading h3{background-color: #94264e; color: #fff; text-transform: uppercase; padding: 8px;}
-.beauty_prf_membership h3{text-transform: uppercase; color: #94264e; line-height: 1.4;}
-.beauty_cust_membership h3{text-transform: uppercase; color: #000; line-height: 1.4;}
-.beauty_prf_membership h5, .beauty_cust_membership h5{line-height: 1.4; font-weight: bold;}
+.beauty_prf_membership h3, 
+.beauty_cust_membership h3{
+	text-transform: uppercase; line-height: 1.4; font-weight: bold; color: #94264e; font-size: 22px;}
+.beauty_prf_membership h4, .beauty_cust_membership h4{line-height: 1.5;}
 .beauty_membership_list ul{list-style: none;}
-.beauty_membership_list ul li{line-height: 1.7;}
-.beauty_membership_list ul li img{}
+.beauty_membership_list ul li{line-height: 2; padding-bottom: 10%; padding-top: 2%; font-size: 14px;}
+.center_img{padding-top: 11%;}
+.center_img img{width: 90%;}
+
+
+
+/*Signup section css*/
+#signup_sec_outr{float: left; width: 100%; background-image: url('../images/signup_bg.jpg'); 
+height: 250px; background-repeat: no-repeat; background-size: 100%;}
+#signup_sec_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#signup_sec_cont{float: left; width: 100%;}
+.signup_text h1{line-height: 1.5; font-weight: bold;}
+.signup_now_btn{padding: 4px 25px;}
+
+/*Message box css*/
+#msg_box_outr{float: left; width: 100%; background-color: #f1eff0;}
+#msg_box_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#msg_box_cont{float: left; width: 100%;}
+.msg_box_light_bg{background-color: rgba(255, 255, 255, 0.5); border-radius: 50%; padding: 10px; 
+	width: 100px; margin :-4% 45% 0 45%;}
+.msg_box_dark_bg{background-color: #952650; border-radius: 50%; padding: 20%; width: 80px;}
+.msg_box_dark_bg img{width: 50px; padding: 8px 0;}
+
+/* Join Form css */
+.join_form_top h2{color: #952650; text-transform: uppercase; font-weight: bold;}
+.join_form_top h3{font-weight: bold; color: #606060; line-height: 1.2;}
+.join_form_inr .form-horizontal .form-group{margin-left: 0; margin-right: 0; margin-bottom: 30px;}
+.join_form_inr .form-control{border-radius: 0; height: 60px;}
+.join_form_inr .txtarea{height: auto;}
+.join_form_inr ::-webkit-input-placeholder {}
+.join_form_inr :-moz-placeholder { /* Firefox 18- */ font-size: 20px; }
+.join_form_inr ::-moz-placeholder {  /* Firefox 19+ */ font-size: 20px; }
+.join_form_inr :-ms-input-placeholder { font-size: 20px; }
+.send_btn{background-color: #952650; border: 1px solid #952650; border-radius: 2px; color: #fff; 
+ text-transform: uppercase; cursor: pointer; height: 60px; font-size: 25px; padding: 12px 50px;}
+.send_btn:hover{background-color: #6D243F; color: #fff; }
+
+
+/*Footer CSS*/
+#footer_outr{float: left; width: 100%; background-color: #2F4052;}
+#footer_inr{float: none; max-width: 1365px; margin: 0 auto; width: 100%;}
+#footer_cont{float: left; width: 100%;}
+.copy_right{font-size: 12px;}
+
+
+/*Responsive CSS*/
+
+
+@media(max-width: 1200px){
+	.cust_reg_right h2{margin-top: 30px;}
+	.prof_heading h2{font-size: 24px;}
+	.cust_reg_right h3{font-size: 20px;}
+	.cust_reg_right h4, .reg_btn{margin-top: 10px;}
+	.reg_btn{padding: 8px 60px; font-size: 20px; height: 45px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 16px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 11px;}
+	.beauty_membership_list ul li{font-size: 11px; padding-top: 0;}
+	.center_img{padding-top: 15%;}
+	.beauty_membership_list ul li img{width: 23%;}
+	.center_img img{width: 85%;}
+
+}
+@media (max-width: 1024px){
+	.header_left img{width: 70%;}
+	.arrow_img{display: none;}	
+	
+}
+@media (max-width: 992px){
+	.prof_heading h2{font-size: 18px;}
+	.prof_heading_2 h2{font-size: 18px;}
+	.cust_reg_right{padding: 0 20px;}
+	.cust_reg_right h2{font-size: 24px; margin-top: 20px;}
+	.cust_reg_right h3{font-size: 18px;}
+	.reg_btn {padding: 6px 40px; font-size: 20px; height: 40px;}
+	.how_it_works_heading{margin: 0 34%;}
+	.beauty_membership_list ul li{padding-top: 2%; font-size: 7px;}
+	.center_img{padding-top: 22%;}
+	.center_img img{width: 90%;}
+	.signup_text h1{font-size: 30px;}
+	.signup_now_btn{padding: 10px 16px; height: 50px; font-size: 20px;}
+	.contact_us p{font-size: 13px;}
+}
+@media (max-width: 992px) and (min-width: 768px){
+	.prf_benefit h3, .cust_benefit h3{font-size: 18px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 14px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 8px;}
+	.brc_heading h3{font-size: 20px;}
+	.sec_1, .sec_2, .sec_3{padding: 60px 15px;}
+	.prof_sec h2{font-size: 24px;}
+}
+@media (max-width: 910px){
+	.cust_reg_right{padding: 0 10px;}
+	.header_left img{width: 85%;}
+}
+
+@media(max-width: 840px) and (min-width: 768px){
+	.reg_btn{height: 35px; padding: 3px 40px; font-size: 20px;}
+	.cust_reg_right h2{font-size: 20px;}
+	.cust_reg_right h3, .reg_btn{margin-top: 10px;}
+	.cust_reg_right h3{font-size: 15px;}
+}
+
+@media (max-width: 767px){
+	.header_left{text-align: center; margin-bottom: 4%;}
+	.header_left img{width: 45%;}
+	.header_social_link{text-align: center;}
+	.cust_reg_right{padding: 0 30px;}
+	.cust_reg_right h4, .reg_btn{margin-top: 20px;}
+	.cust_reg_right{padding: 3% 12%;}
+	.cust_reg_right h2{font-size: 28px;}
+	.cust_reg_right h4{font-size: 16px;}
+	.prof_heading h2{font-size: 16px;}
+	.reg_btn{padding: 6px 45px; font-size: 22px; height: 45px; margin-bottom: 10px;}
+	.msg_box_light_bg{margin: -6% 42% 0 42%}
+	.how_it_works_heading{margin: 0 28%;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 24px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 14px;}
+	.beauty_membership_list ul a{padding-bottom: 20px;}
+	.beauty_prf_membership .beauty_membership_list ul li{font-size: 14px; padding-top: 4%; padding-bottom: 0;}
+	.beauty_cust_membership .beauty_membership_list ul a{padding-bottom: 0px;}
+	.beauty_cust_membership .beauty_membership_list ul li{font-size: 14px; padding-top: 0;}
+	.center_img{padding-top: 20px;}
+	.center_img img{display: none;}
+	.brc_heading h2{font-size: 20px;}
+	.brc_heading h3{font-size: 15px;}
+	.benefit_top{display: block;}
+	.benefit_center{display: none;}
+	.tools_sec{margin-bottom: 12%;}
+	#signup_sec_outr{height: 200px;}
+	#signup_sec_cont{margin-top: 50px;}
+	.sec_1, .sec_2, .sec_3{margin-bottom: 20px;}
+}
+@media (max-width: 740px){
+	.signup_text h1{font-size: 26px;}
+}
+@media (max-width: 700px){
+	.prof_heading h2{font-size: 13px;}
+}
+
+@media (max-width: 600px){
+	#signup_sec_outr{height: 170px;}
+}
+
+
+@media (max-width: 580px){
+	.signup_text h1{font-size: 19px;}
+	.signup_now_btn{padding: 10px 12px;}
+	.how_it_works_heading h3{font-size: 20px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3, .join_form_top h2{font-size: 22px}
+	.join_form_top h3{font-size: 18px;}
+	.brc_heading h2{font-size: 17px;}
+	.brc_heading h3{font-size: 12px;}
+}
+
+@media (max-width: 520px){
+	.header_left a img{width: 55%;}
+	.header_social_link img{width: 30px; margin: 0 4px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 22px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 12px;}
+	#signup_sec_outr{height: 160px;}
+
+}
+
+@media (max-width: 470px){
+	.reg_btn{padding: 9px 35px; font-size: 16px; height: 40px;}
+	.how_it_works_heading h3, .beauty_prf_membership h3, 
+	.beauty_cust_membership h3{font-size: 18px;}
+	.beauty_prf_membership h5, .beauty_cust_membership h5{font-size: 10px;}
+	.join_form_top h3{font-size: 16px;}
+	.join_form_top p{font-size: 13px;}
+	.msg_box_light_bg{margin: -14% 34% 0 34%}
+	.cust_reg_right h2{font-size: 22px;}
+	.cust_reg_right h4{font-size: 13px;}
+	.send_btn{height: 50px; font-size: 20px; padding: 11px 35px;}
+	#signup_sec_cont{margin-top: 30px;}
+	#signup_sec_outr{height: 135px;}
+	.signup_now_btn{font-size: 16px; padding: 10px; height: 45px;}
+	.brc_heading h2{font-size: 15px;}
+	.brc_heading h3{font-size: 10px;}
+}
+@media (max-width: 457px){
+	.signup_text h1{font-size: 16px;}
+	.prf_benefit h3, .cust_benefit h3{font-size: 20px;}
+}
+@media(max-width: 435px){
+	.cust_reg_right h2{font-size: 18px;}
+	.cust_reg_right h3{font-size: 12px;}
+	.cust_reg_right p{font-size: 16px;}
+	.reg_btn{padding: 7px 20px; font-size: 14px; height: 38px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 15px;}
+	.join_form_top h2{font-size: 18px}
+	.join_form_top h3{font-size: 14px;}
+}
+@media (max-width: 410px){
+	.join_form_top h3{font-size: 18px;}
+	.how_it_works_heading{width: 70%; margin: 0 15%;}
+	#signup_sec_outr{height: 120px;}
+	.join_form_top h3{font-size: 12px;}
+	.brc_heading h2{font-size: 12px;}
+}
+
+@media (max-width: 380px){
+	.header_social_link img{width: 20px; margin: 0 2px;}
+	.beauty_prf_membership h3, .beauty_cust_membership h3{font-size: 13px}
+	.join_form_top h2{font-size: 15px}
+	.sec_1, .sec_2, .sec_3{padding: 70px 25px;}
+	.prof_sec h2{font-size: 22px;}
+}
+@media (max-width: 360px){
+	.cust_reg_right h2{font-size: 15px;}
+	.cust_reg_right h3{font-size: 10px;}
+	.cust_reg_right p{font-size: 14px;}
+	.reg_btn{padding: 7px 15px; font-size: 14px; height: 35px;}
+	.prof_heading h2{font-size: 12px;}
+	.prof_heading_2 h2{font-size: 14px;}
+	.reg_btn{padding: 7px 35px; font-size: 14px; height: 35px;}
+	.beauty_membership_list ul li a img{padding-top: 5%;}
+	#signup_sec_outr{height: 100px;}
+	#signup_sec_cont{margin-top: 20px;}
+	.signup_now_btn {font-size: 14px; padding: 7px; height: 40px;}
+
+@media (max-width: 320px){
+	.join_form_top h3{font-size: 10px}
+}
+@media (max-width: 340px){
+	.prf_benefit h3, .cust_benefit h3{font-size: 16px;}
+}
+
+@media (max-width: 296px){
+	.cust_reg_right h2{font-size: 14px;}
+	.cust_reg_right h3{font-size: 10px;}
+	.cust_reg_right p{font-size: 12px;}
+	.reg_btn{padding: 7px 15px; font-size: 12px; height: 32px;}
+	.prf_benefit h3, .cust_benefit h3{font-size: 14px;}
+	.how_it_works_heading h3{font-size: 15px;}
+	.sec_1, .sec_2, .sec_3{padding: 55px 10px;}
+	.prof_sec h2{font-size: 20px;}
+}
