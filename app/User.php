@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use DB;
+use Illuminate\Http\Request;
 
 class User extends Authenticatable
 {
@@ -28,17 +29,27 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    // working on
+    /**
+     * Get the Products record associated with the user.
+     * src = https://laravel.com/docs/5.3/eloquent-relationships
+     *
+    public function products()
+    {
+        return $this->hasMany('App\Products');
+    }*/
+
+
+    // INCOMPLETE
     public function get_service_main_category_table() {
         return DB::table('service_main_category');
     }
 
-    // working on
+    // INCOMPLETE
     public function get_service_sub_category_table() {
         return DB::table('service_sub_category');
     }
 
-    // working on
+    // INCOMPLETE
     /**
      *  get_service_list()          => 'current user all services'
      *  get_service_list($user_id)  => '$user_id all services'
@@ -62,6 +73,18 @@ class User extends Authenticatable
             $output[] = $value->language_name;
         }
         return $output;
+    }
+    /**
+     * [insert_user_image]
+     * USED IN REGISTRATION STEP-1
+     * @return [type] [description]
+     */
+    public function insert_user_image(Request $request, $user_image_attr) {
+        if( $request->hasFile($user_image_attr) ){
+            $user_image = $request[$user_image_attr]->storeAs('user_images', time().$user_image_attr.'.jpg');
+            return str_replace('user_images/', '', $user_image);
+        }
+        return false;
     }
 
     /*

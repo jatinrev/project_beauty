@@ -26,7 +26,7 @@
                 	<div class="col-md-12 phone_heading">
                 	<h2>PHONE</h2>
                 	<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-                	<a href="#">0123 45 67 89</a>
+                	<span>0123 45 67 89</span>
                     </div>
                     <div class="col-md-12 envelope_heading">
                 	<h2>EMAIL</h2>

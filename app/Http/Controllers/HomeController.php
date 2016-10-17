@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Auth;
 use DB;
 use App\User;
+use App\Products;
 
 class HomeController extends Controller
 {
@@ -43,6 +44,7 @@ class HomeController extends Controller
     public function basic_detail( Request $request) {
         $user_data = Auth::user(); // this is elloquent
         if(!empty($request->all())){
+            // dd($request->all());
             $this->validate($request, [
                 'name'           => 'required|max:255',
                 'profession'     => 'required',
@@ -58,6 +60,7 @@ class HomeController extends Controller
             DB::table('user_language')
                 ->where('user_id', $user_data->id)
                 ->delete();
+            // Insert new languages
             foreach ($user_language_array as $value) {
                 if( trim($value) != '' ) {
                     DB::table('user_language')->insert([
@@ -68,6 +71,10 @@ class HomeController extends Controller
                 }
             }
 
+            // INSERT USER IMAGE
+            $user_image_name = $user_data->insert_user_image($request, "user_profile_image");
+
+            $user_data->user_image     = $user_image_name;
             $user_data->facebook_link  = $request->facebook_link;
             $user_data->twitter_link   = $request->twitter_link;
             $user_data->linked_in_link = $request->linked_in_link;
@@ -107,14 +114,33 @@ class HomeController extends Controller
      * REGISTRATION STEP 3
      */
     public function registration_add_availability() {
-        return view('auth.add_products');
+        return view('auth.add_availability');
     }
 
     /**
      * REGISTRATION STEP 4
      */
-    public function registration_add_products() {
-        return view('auth.add_products');
+    public function registration_add_products(Request $request) {
+        $custom_success = [];
+        $product = new Products();
+        if( !empty($request->all()) && trim($request->action) == 'delete_product_action' ) {
+            Products::where('id', $request->product_id)
+                ->delete();
+            $custom_success[] = 'Product was successfully delete.';
+        } else if( !empty($request->all()) && trim($request->action) == 'add_products' ) {
+            $this->validate($request, [
+                'title'         => 'required|max:255',
+                'price'         => 'required|digits_between:0,10',
+                'description'   => 'required',
+                'product_image' => 'required'
+            ]);
+            $product->add_products($request);
+        }
+        return view('auth.add_products')
+                    ->with([
+                        'products'       => $product->get_all_products_pagination(),
+                        'custom_success' => $custom_success
+                    ]);
     }
 
     /**

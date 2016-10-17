@@ -71,7 +71,7 @@ class AdminCtrl extends Controller
         // --------------upload professsional image ---------------------
         if (!empty($request_data['action']) && trim($request['action']) == 'Professional_text') {
             for($i=0; $i<8; $i++) {
-                if($request->hasFile('Professional_image'.$i) == true){
+                if($request->hasFile('Professional_image'.$i)){
                     $Professional_image = $request_data['Professional_image'.$i]->storeAs('uploaded_images','professional_image'.$i.'.jpg');
                 }
             }

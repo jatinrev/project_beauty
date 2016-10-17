@@ -31,6 +31,7 @@
 .scrollbox-bar {
     min-height: 30px;
     background-color: #94264e;
+    height: 530px !important;
 }
 .scrollbox-bar:hover{
     background-color: #6D243F;

@@ -24,6 +24,8 @@ Route::get('images/{filename}', function ($filename)
     return \Response::make($file,200)
         ->header("Content-Type", $type);
 });
+Route::get('images/{action}/{filename}', 'withoutLogin@show_image');
+
 
 Route::match(['get', 'post'], '/', 'withoutLogin@index');
 Route::match(['get'], '/how-it-works', 'withoutLogin@how_it_works');
