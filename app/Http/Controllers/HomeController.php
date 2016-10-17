@@ -86,11 +86,9 @@ class HomeController extends Controller
 
            return redirect('user/add-services'); 
         }
-        else{
-           return view('auth.dashboard')->with([
-            'user_data'          => $user_data
-           ]);    
-        }
+        return view('auth.dashboard')->with([
+            'user_data' => $user_data
+        ]);
     }
 
 
@@ -198,9 +196,28 @@ class HomeController extends Controller
 
     /**
      * REGISTRATION STEP 5
+     * Model used : User.php
      */
-    public function registration_add_gallery() {
-        return view('auth.add_gallery');
+    public function registration_add_gallery(Request $request) {
+        $custom_success = [];
+        if( !empty($request->all()) && trim($request->action) == 'add_gallery_image' ) {
+            if( $request->hasFile('gallery_image') ){
+                $image_name = time().$request['gallery_image']->getClientOriginalName();
+                $request['gallery_image']->storeAs('all', $image_name);
+                DB::table('gallery')
+                    ->insert([
+                        'user_id'    => Auth::user()->id,
+                        'image_name' => $image_name,
+                        'created_at' => \Carbon\Carbon::now()
+                    ]);
+                $custom_success[] = 'Gallery image inserted.';
+            }
+        } else if( !empty($request->all()) && trim($request->action) == 'delete_gallery_image' ) {
+
+        }
+        return view('auth.add_gallery')->with([
+            'custom_success' => $custom_success
+        ]);
     }
 
 

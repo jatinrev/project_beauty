@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserLanguageTable extends Migration
+class CreateGalleryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateUserLanguageTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_language', function (Blueprint $table) {
+        Schema::create('gallery', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('language_name');
+            $table->string('image_name');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateUserLanguageTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_language');
+        Schema::dropIfExists('gallery');
     }
 }
